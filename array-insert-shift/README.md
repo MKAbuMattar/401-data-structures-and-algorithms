@@ -9,4 +9,3 @@ build java method to shift array an array.
 ## Approach & Efficiency
 
 Analyzing inputs and outputs, beginning to understand the meaning of an idea and analyze.
-
