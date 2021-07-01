@@ -4,11 +4,34 @@
 package linked.list;
 
 import org.junit.Test;
+import types.LinkedList;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+    private LinkedList<String> list;
+
+    @Test public void testLinkedListTrue(){
+        list=new LinkedList<>();
+        list.add("Mohammad");
+        list.insert("Khaled");
+        assertEquals(true, list.includes("Mohammad"));
+    }
+
+    @Test public void testLinkedListFalse(){
+        list=new LinkedList<>();
+        list.add("Rana");
+        list.insert("Khaled");
+        assertEquals(false, list.includes("Mohammad"));
+    }
+
+    @Test public void testLinkedListToString(){
+        list = new LinkedList<>();
+        list.add("Mohammad");
+        list.add("Khaled");
+        list.insert("Abu");
+        list.insert("Mattar");
+        assertEquals("{Mohammad}-> {Khaled}-> {Abu}-> {Mattar}-> NULL", list.toString());
     }
 }
