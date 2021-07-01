@@ -7,5 +7,6 @@
 | array insert shift | [Link](./array-insert-shift/) |
 | array binary search | [Link](./array-binary-search/) |
 | fibonacci| [Link](./fibonacci/) |
+| linked list | [Link](./linked-list/) |
 
 
