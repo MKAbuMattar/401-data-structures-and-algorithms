@@ -15,4 +15,4 @@ Analyzing inputs and outputs, beginning to understand the meaning of an idea and
 
 Bayan Khalil
 
-Notes [Link](https://docs.google.com/document/d/1yVLdpR1fikA2fr4xgNrJtq96Lj93qFW53xHZkO1cqwU/edit)
+Notes [Link](https://docs.google.com/spreadsheets/d/1QtuvuyDUXiRvYwAt_f0oJR34RYpxSH84ymzrmRoYKtw/edit?usp=sharing)
