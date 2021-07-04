@@ -30,8 +30,14 @@ public class Main {
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method includes " + (stopTime - startTime) + "ms");
 
+
+
 //    startTime = System.currentTimeMillis();
     System.out.println(list);
+    list.insertAfter(2,5);
+    System.out.println(list);
+//    list.insertBefore(2,5);
+//    System.out.println(list);
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method toString "+ (stopTime - startTime) + "ms");
   }
