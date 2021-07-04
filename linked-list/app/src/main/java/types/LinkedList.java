@@ -54,14 +54,10 @@ public class LinkedList<T> {
     }
     StringBuilder showList = new StringBuilder();
     while(current != null){
-      if(!showList.toString().equals("")){
-        showList.append("-> {").append(current.getData()).append("}");
-      }else {
-        showList.append("{").append(current.getData()).append("}");
-      }
+      showList.append("{").append(current.getData()).append("}-> ");
       current = current.getNext();
     }
-    showList.append("-> NULL");
+    showList.append("NULL");
     return showList.toString();
   }
 }
