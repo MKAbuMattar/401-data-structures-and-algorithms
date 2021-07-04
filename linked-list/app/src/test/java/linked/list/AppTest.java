@@ -10,28 +10,57 @@ import static org.junit.Assert.*;
 
 public class AppTest {
 
-    private LinkedList<String> list;
+    private LinkedList<Integer> list;
 
     @Test public void testLinkedListTrue(){
         list=new LinkedList<>();
-        list.add("Mohammad");
-        list.insert("Khaled");
-        assertEquals(true, list.includes("Mohammad"));
+        list.add(1);
+        list.insert(2);
+        assertEquals(true, list.includes(1));
     }
 
     @Test public void testLinkedListFalse(){
         list=new LinkedList<>();
-        list.add("Rana");
-        list.insert("Khaled");
-        assertEquals(false, list.includes("Mohammad"));
+        list.add(0);
+        list.insert(2);
+        assertEquals(false, list.includes(1));
+    }
+
+    @Test public void testLinkedListAppend(){
+        list = new LinkedList<>();
+        list.append(1);
+        list.append(2);
+        list.append(3);
+        list.append(4);
+        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
     }
 
     @Test public void testLinkedListToString(){
         list = new LinkedList<>();
-        list.add("Mohammad");
-        list.add("Khaled");
-        list.insert("Abu");
-        list.insert("Mattar");
-        assertEquals("{Mohammad}-> {Khaled}-> {Abu}-> {Mattar}-> NULL", list.toString());
+        list.add(1);
+        list.add(2);
+        list.insert(3);
+        list.insert(4);
+        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
+    }
+
+    @Test public void testLinkedListInsertAfter(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.insert(3);
+        list.insert(4);
+        list.insertAfter(2,55);
+        assertEquals("{1}-> {2}-> {55}-> {3}-> {4}-> NULL", list.toString());
+    }
+
+    @Test public void testLinkedListInsertBefore(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.insert(3);
+        list.insert(4);
+        list.insertBefore(2,55);
+        assertEquals("{1}-> {55}-> {2}-> {3}-> {4}-> NULL", list.toString());
     }
 }
