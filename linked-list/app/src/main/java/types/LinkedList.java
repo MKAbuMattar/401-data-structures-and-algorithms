@@ -86,17 +86,16 @@ public class LinkedList<T> {
     }
   }
 
-  public void insertAtFirst(T value){
+  public void insertAtFirst(T value) {
     Node<T> node = new Node(value);
-    if (this.head == null){
-      this.head=node;
+    if (this.head == null) {
+      this.head = node;
     } else {
       node.setNext(this.head);
-      this.head=node;
+      this.head = node;
     }
     size++;
   }
-
 
   public boolean includes(T value) {
     Node<T> current = head;
@@ -112,19 +111,18 @@ public class LinkedList<T> {
   }
 
   public T kthFromEnd(int index) {
-
     if ((index > -1) && (index > size)) {
       return null;
     }
-    if (index > -1){
+    if (index > -1) {
       Node<T> current = head;
-    int i = size - index;
-    while (i > 0) {
-      current = current.getNext();
-      i--;
-    }
-    return current.getData();
-  } else {
+      int i = size - index;
+      while (i > 0) {
+        current = current.getNext();
+        i--;
+      }
+      return current.getData();
+    } else {
       return null;
     }
   }
