@@ -36,7 +36,6 @@ public class AppTest {
     /**
      * The head property will properly point to the first node in the linked list
      */
-
     @Test public void testLinkedListPoint(){
         list = new LinkedList<>();
         list.insert(1);
@@ -47,7 +46,6 @@ public class AppTest {
     /**
      * Can properly insert multiple nodes into the linked list
      */
-
     @Test public void testLinkedListMultipleInsert(){
         list = new LinkedList<>();
         list.insert(1);
@@ -60,7 +58,6 @@ public class AppTest {
     /**
      * Will return true when finding a value within the linked list that exists
      */
-
     @Test public void testLinkedListIncludesTrue(){
         list = new LinkedList<>();
         list.insert(1);
@@ -85,7 +82,6 @@ public class AppTest {
     /**
      * Can properly return a collection of all the values that exist in the linked list
      */
-
     @Test public void testLinkedListToString(){
         list = new LinkedList<>();
         list.insert(1);
@@ -170,4 +166,64 @@ public class AppTest {
         list.insertAfter(3, 30);
         assertEquals("{1}-> {2}-> {3}-> {30}-> NULL", list.toString());
     }
+
+    /**
+     * Code Challenge: Class 07
+     */
+
+    /**
+     * Where k is greater than the length of the linked list
+     */
+    @Test public void testLinkedListKthFromEndGreaterThanTheLength(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        assertEquals(null, list.kthFromEnd(5));
+    }
+
+    /**
+     * Where k and the length of the list are the same
+     */
+    @Test public void testLinkedListKthFromEndSameLength(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        assertEquals((Integer) 1, list.kthFromEnd(3));
+    }
+
+    /**
+     * Where k is not a positive integer
+     */
+    @Test public void testLinkedListKthFromEndNegativeNumber(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        assertEquals(null, list.kthFromEnd(-12));
+    }
+
+    /**
+     * Where the linked list is of a size 1
+     */
+    @Test public void testLinkedListKthFromEndSizeOne(){
+        list = new LinkedList<>();
+        list.insert(12);
+        assertEquals((Integer) 12, list.kthFromEnd(1));
+    }
+
+    /**
+     * “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+     */
+    @Test public void testLinkedListKthFromEndHappyPath(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        list.insert(5);
+        assertEquals((Integer) 3, list.kthFromEnd(3));
+    }
+
 }

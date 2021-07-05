@@ -34,10 +34,12 @@ public class Main {
 
 //    startTime = System.currentTimeMillis();
     System.out.println(list);
-    list.insertAfter(2,55);
-    System.out.println("insert after 2: "+list);
-    list.insertBefore(2,55);
-    System.out.println("insert before 2: " +list);
+//    list.insertAfter(2,55);
+//    System.out.println("insert after 2: "+list);
+//    list.insertBefore(2,66);
+//    System.out.println("insert before 2: " +list);
+
+    System.out.println(list.kthFromEnd(12));
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method toString "+ (stopTime - startTime) + "ms");
   }
