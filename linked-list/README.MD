@@ -29,7 +29,7 @@ public method.
 
 `insert` insert the data and check if 
 Linked List have head or not, in this 
-method it will not returns anything, 
+method it will not return anything, 
 it is a public method.
 
 `includes` search reserve value and 
@@ -38,7 +38,21 @@ will search at each data in Linked List,
 in this method it will return true or 
 false, it is a public method.
 
+`append` insert the data and check if
+Linked List have head or not, in this
+method it will not return anything,
+it is a public method.
 
+`insertAfter` passing two arguments (after, data)
+search for after at Linked List after that insert
+data in next node.
+
+`insertBefore` passing two arguments (before, data)
+search for after at Linked List after that insert
+data in previous node.
+
+`insertAtFirst` insert at the first and move the
+head to new node add it.
 
 `toString` build in method to print 
 the data in class
