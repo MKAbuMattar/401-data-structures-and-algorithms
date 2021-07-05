@@ -12,33 +12,84 @@ public class AppTest {
 
     private LinkedList<Integer> list;
 
-    @Test public void testLinkedListTrue(){
-        list=new LinkedList<>();
-        list.add(1);
-        list.insert(2);
-        assertEquals(true, list.includes(1));
-    }
+    /**
+     * Code Challenge: Class 05: Linked List Implementation
+     */
 
-    @Test public void testLinkedListFalse(){
-        list=new LinkedList<>();
-        list.add(0);
-        list.insert(2);
-        assertEquals(false, list.includes(1));
-    }
-
-    @Test public void testLinkedListAppend(){
+    /**
+     * Can successfully instantiate an empty linked list
+     */
+    @Test public void testLinkedListEmpty(){
         list = new LinkedList<>();
-        list.append(1);
-        list.append(2);
-        list.append(3);
-        list.append(4);
+        assertEquals("Linked list is empty", list.toString());
+    }
+
+    /**
+     * Can properly insert into the linked list
+     */
+    @Test public void testLinkedListInsert(){
+        list = new LinkedList<>();
+        list.insert(1);
+        assertEquals("{1}-> NULL", list.toString());
+    }
+
+    /**
+     * The head property will properly point to the first node in the linked list
+     */
+
+    @Test public void testLinkedListPoint(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        assertEquals("{1}-> {2}-> NULL", list.toString());
+    }
+
+    /**
+     * Can properly insert multiple nodes into the linked list
+     */
+
+    @Test public void testLinkedListMultipleInsert(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
         assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
     }
 
+    /**
+     * Will return true when finding a value within the linked list that exists
+     */
+
+    @Test public void testLinkedListIncludesTrue(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        assertEquals(true, list.includes(3));
+    }
+
+    /**
+     * Will return false when searching for a value in the linked list that does not exist
+     */
+    @Test public void testLinkedListIncludesFalse(){
+        list = new LinkedList<>();
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
+        list.insert(4);
+        assertEquals(false, list.includes(55));
+    }
+
+    /**
+     * Can properly return a collection of all the values that exist in the linked list
+     */
+
     @Test public void testLinkedListToString(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
+        list.insert(1);
+        list.insert(2);
         list.insert(3);
         list.insert(4);
         assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
@@ -53,8 +104,8 @@ public class AppTest {
      */
     @Test public void testLinkedListAddToEnd(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
+        list.insert(1);
+        list.insert(2);
         list.append(3);
         assertEquals("{1}-> {2}-> {3}-> NULL", list.toString());
     }
@@ -64,8 +115,8 @@ public class AppTest {
      */
     @Test public void testLinkedListAddMultipleToEnd(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
+        list.insert(1);
+        list.insert(2);
         list.append(3);
         list.append(4);
         list.append(5);
@@ -77,9 +128,9 @@ public class AppTest {
      */
     @Test public void testLinkedListInsertBefore(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
         list.insertBefore(2, 30);
         assertEquals("{1}-> {30}-> {2}-> {3}-> NULL", list.toString());
     }
@@ -89,9 +140,9 @@ public class AppTest {
      */
     @Test public void testLinkedListInsertBeforeFirstNode(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
         list.insertBefore(1, 30);
         assertEquals("{30}-> {1}-> {2}-> {3}-> NULL", list.toString());
     }
@@ -101,9 +152,9 @@ public class AppTest {
      */
     @Test public void testLinkedListInsertAfter(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
         list.insertAfter(2, 30);
         assertEquals("{1}-> {2}-> {30}-> {3}-> NULL", list.toString());
     }
@@ -113,9 +164,9 @@ public class AppTest {
      */
     @Test public void testLinkedListInsertAfterLastNode(){
         list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        list.insert(1);
+        list.insert(2);
+        list.insert(3);
         list.insertAfter(3, 30);
         assertEquals("{1}-> {2}-> {3}-> {30}-> NULL", list.toString());
     }
