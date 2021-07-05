@@ -10,164 +10,238 @@ import static org.junit.Assert.*;
 
 public class AppTest {
 
-    private LinkedList<Integer> list;
+  private LinkedList<Integer> list;
 
-    /**
-     * Code Challenge: Class 05: Linked List Implementation
-     */
+  /**
+   * Code Challenge: Class 05: Linked List Implementation
+   */
 
-    /**
-     * Can successfully instantiate an empty linked list
-     */
-    @Test public void testLinkedListEmpty(){
-        list = new LinkedList<>();
-        assertEquals("Linked list is empty", list.toString());
-    }
+  /**
+   * Can successfully instantiate an empty linked list
+   */
+  @Test
+  public void testLinkedListEmpty() {
+    list = new LinkedList<>();
+    assertEquals("Linked list is empty", list.toString());
+  }
 
-    /**
-     * Can properly insert into the linked list
-     */
-    @Test public void testLinkedListInsert(){
-        list = new LinkedList<>();
-        list.insert(1);
-        assertEquals("{1}-> NULL", list.toString());
-    }
+  /**
+   * Can properly insert into the linked list
+   */
+  @Test
+  public void testLinkedListInsert() {
+    list = new LinkedList<>();
+    list.insert(1);
+    assertEquals("{1}-> NULL", list.toString());
+  }
 
-    /**
-     * The head property will properly point to the first node in the linked list
-     */
+  /**
+   * The head property will properly point to the first node in the linked list
+   */
+  @Test
+  public void testLinkedListPoint() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    assertEquals("{1}-> {2}-> NULL", list.toString());
+  }
 
-    @Test public void testLinkedListPoint(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        assertEquals("{1}-> {2}-> NULL", list.toString());
-    }
+  /**
+   * Can properly insert multiple nodes into the linked list
+   */
+  @Test
+  public void testLinkedListMultipleInsert() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
+  }
 
-    /**
-     * Can properly insert multiple nodes into the linked list
-     */
+  /**
+   * Will return true when finding a value within the linked list that exists
+   */
+  @Test
+  public void testLinkedListIncludesTrue() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    assertEquals(true, list.includes(3));
+  }
 
-    @Test public void testLinkedListMultipleInsert(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insert(4);
-        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
-    }
+  /**
+   * Will return false when searching for a value in the linked list that does not exist
+   */
+  @Test
+  public void testLinkedListIncludesFalse() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    assertEquals(false, list.includes(55));
+  }
 
-    /**
-     * Will return true when finding a value within the linked list that exists
-     */
+  /**
+   * Can properly return a collection of all the values that exist in the linked list
+   */
+  @Test
+  public void testLinkedListToString() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
+  }
 
-    @Test public void testLinkedListIncludesTrue(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insert(4);
-        assertEquals(true, list.includes(3));
-    }
+  /**
+   * Code Challenge: Class 06
+   */
 
-    /**
-     * Will return false when searching for a value in the linked list that does not exist
-     */
-    @Test public void testLinkedListIncludesFalse(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insert(4);
-        assertEquals(false, list.includes(55));
-    }
+  /**
+   * Can successfully add a node to the end of the linked list
+   */
+  @Test
+  public void testLinkedListAddToEnd() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.append(3);
+    assertEquals("{1}-> {2}-> {3}-> NULL", list.toString());
+  }
 
-    /**
-     * Can properly return a collection of all the values that exist in the linked list
-     */
+  /**
+   * Can successfully add multiple nodes to the end of a linked list
+   */
+  @Test
+  public void testLinkedListAddMultipleToEnd() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    assertEquals("{1}-> {2}-> {3}-> {4}-> {5}-> NULL", list.toString());
+  }
 
-    @Test public void testLinkedListToString(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insert(4);
-        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
-    }
+  /**
+   * Can successfully insert a node before a node located i the middle of a linked list
+   */
+  @Test
+  public void testLinkedListInsertBefore() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertBefore(2, 30);
+    assertEquals("{1}-> {30}-> {2}-> {3}-> NULL", list.toString());
+  }
 
-    /**
-     * Code Challenge: Class 06
-     */
+  /**
+   * Can successfully insert a node before the first node of a linked list
+   */
+  @Test
+  public void testLinkedListInsertBeforeFirstNode() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertBefore(1, 30);
+    assertEquals("{30}-> {1}-> {2}-> {3}-> NULL", list.toString());
+  }
 
-    /**
-     * Can successfully add a node to the end of the linked list
-     */
-    @Test public void testLinkedListAddToEnd(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.append(3);
-        assertEquals("{1}-> {2}-> {3}-> NULL", list.toString());
-    }
+  /**
+   * Can successfully insert after a node in the middle of the linked list
+   */
+  @Test
+  public void testLinkedListInsertAfter() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertAfter(2, 30);
+    assertEquals("{1}-> {2}-> {30}-> {3}-> NULL", list.toString());
+  }
 
-    /**
-     * Can successfully add multiple nodes to the end of a linked list
-     */
-    @Test public void testLinkedListAddMultipleToEnd(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.append(3);
-        list.append(4);
-        list.append(5);
-        assertEquals("{1}-> {2}-> {3}-> {4}-> {5}-> NULL", list.toString());
-    }
+  /**
+   * Can successfully insert a node after the last node of the linked list
+   */
+  @Test
+  public void testLinkedListInsertAfterLastNode() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insertAfter(3, 30);
+    assertEquals("{1}-> {2}-> {3}-> {30}-> NULL", list.toString());
+  }
 
-    /**
-     * Can successfully insert a node before a node located i the middle of a linked list
-     */
-    @Test public void testLinkedListInsertBefore(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insertBefore(2, 30);
-        assertEquals("{1}-> {30}-> {2}-> {3}-> NULL", list.toString());
-    }
+  /**
+   * Code Challenge: Class 07
+   */
 
-    /**
-     * Can successfully insert a node before the first node of a linked list
-     */
-    @Test public void testLinkedListInsertBeforeFirstNode(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insertBefore(1, 30);
-        assertEquals("{30}-> {1}-> {2}-> {3}-> NULL", list.toString());
-    }
+  /**
+   * Where k is greater than the length of the linked list
+   */
+  @Test
+  public void testLinkedListKthFromEndGreaterThanTheLength() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    assertEquals(null, list.kthFromEnd(5));
+  }
 
-    /**
-     * Can successfully insert after a node in the middle of the linked list
-     */
-    @Test public void testLinkedListInsertAfter(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insertAfter(2, 30);
-        assertEquals("{1}-> {2}-> {30}-> {3}-> NULL", list.toString());
-    }
+  /**
+   * Where k and the length of the list are the same
+   */
+  @Test
+  public void testLinkedListKthFromEndSameLength() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    assertEquals((Integer) 1, list.kthFromEnd(3));
+  }
 
-    /**
-     * Can successfully insert a node after the last node of the linked list
-     */
-    @Test public void testLinkedListInsertAfterLastNode(){
-        list = new LinkedList<>();
-        list.insert(1);
-        list.insert(2);
-        list.insert(3);
-        list.insertAfter(3, 30);
-        assertEquals("{1}-> {2}-> {3}-> {30}-> NULL", list.toString());
-    }
+  /**
+   * Where k is not a positive integer
+   */
+  @Test
+  public void testLinkedListKthFromEndNegativeNumber() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    assertEquals(null, list.kthFromEnd(-12));
+  }
+
+  /**
+   * Where the linked list is of a size 1
+   */
+  @Test
+  public void testLinkedListKthFromEndSizeOne() {
+    list = new LinkedList<>();
+    list.insert(12);
+    assertEquals((Integer) 12, list.kthFromEnd(1));
+  }
+
+  /**
+   * “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+   */
+  @Test
+  public void testLinkedListKthFromEndHappyPath() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    list.insert(5);
+    assertEquals((Integer) 3, list.kthFromEnd(3));
+  }
+
 }

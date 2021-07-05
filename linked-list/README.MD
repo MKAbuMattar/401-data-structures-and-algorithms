@@ -24,7 +24,7 @@ because I use `while` for `add`,
 
 `add` add the data and check if Linked 
 List have head or not, in this method 
-it will not returns anything, it is a 
+it will not return anything, it is a 
 public method.
 
 `insert` insert the data and check if 
@@ -54,6 +54,9 @@ data in previous node.
 `insertAtFirst` insert at the first and move the
 head to new node add it.
 
+`kthFromEnd` return node from the tail until 
+the end depends on k(index) insert
+
 `toString` build in method to print 
 the data in class
 
@@ -61,6 +64,11 @@ the data in class
 <!-- Embedded whiteboard image -->
 
 ![linked list](./linked-list.jpg)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+![linked list](./kthFromEnd.jpg)
 
 
 
