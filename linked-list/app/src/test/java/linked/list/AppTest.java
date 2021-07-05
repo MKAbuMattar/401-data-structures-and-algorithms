@@ -44,23 +44,79 @@ public class AppTest {
         assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", list.toString());
     }
 
-    @Test public void testLinkedListInsertAfter(){
+    /**
+     * Code Challenge: Class 06
+     */
+
+    /**
+     * Can successfully add a node to the end of the linked list
+     */
+    @Test public void testLinkedListAddToEnd(){
         list = new LinkedList<>();
         list.add(1);
         list.add(2);
-        list.insert(3);
-        list.insert(4);
-        list.insertAfter(2,55);
-        assertEquals("{1}-> {2}-> {55}-> {3}-> {4}-> NULL", list.toString());
+        list.append(3);
+        assertEquals("{1}-> {2}-> {3}-> NULL", list.toString());
     }
 
+    /**
+     * Can successfully add multiple nodes to the end of a linked list
+     */
+    @Test public void testLinkedListAddMultipleToEnd(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.append(3);
+        list.append(4);
+        list.append(5);
+        assertEquals("{1}-> {2}-> {3}-> {4}-> {5}-> NULL", list.toString());
+    }
+
+    /**
+     * Can successfully insert a node before a node located i the middle of a linked list
+     */
     @Test public void testLinkedListInsertBefore(){
         list = new LinkedList<>();
         list.add(1);
         list.add(2);
-        list.insert(3);
-        list.insert(4);
-        list.insertBefore(2,55);
-        assertEquals("{1}-> {55}-> {2}-> {3}-> {4}-> NULL", list.toString());
+        list.add(3);
+        list.insertBefore(2, 30);
+        assertEquals("{1}-> {30}-> {2}-> {3}-> NULL", list.toString());
+    }
+
+    /**
+     * Can successfully insert a node before the first node of a linked list
+     */
+    @Test public void testLinkedListInsertBeforeFirstNode(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.insertBefore(1, 30);
+        assertEquals("{30}-> {1}-> {2}-> {3}-> NULL", list.toString());
+    }
+
+    /**
+     * Can successfully insert after a node in the middle of the linked list
+     */
+    @Test public void testLinkedListInsertAfter(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.insertAfter(2, 30);
+        assertEquals("{1}-> {2}-> {30}-> {3}-> NULL", list.toString());
+    }
+
+    /**
+     * Can successfully insert a node after the last node of the linked list
+     */
+    @Test public void testLinkedListInsertAfterLastNode(){
+        list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.insertAfter(3, 30);
+        assertEquals("{1}-> {2}-> {3}-> {30}-> NULL", list.toString());
     }
 }
