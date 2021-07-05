@@ -12,7 +12,7 @@ public class LinkedList<T> {
       head = node;
       return;
     }
-    Node<T> current = this.head;
+    Node<T> current = head;
     while (current.getNext() != null) {
       current = current.getNext();
     }
@@ -22,10 +22,10 @@ public class LinkedList<T> {
 
   public void insert(T data) {
     Node<T> node = new Node<>(data);
-    if (this.head == null) {
-      this.head = node;
+    if (head == null) {
+      head = node;
     } else {
-      Node<T> current = this.head;
+      Node<T> current = head;
       while (current.getNext() != null) {
         current = current.getNext();
       }
@@ -36,10 +36,10 @@ public class LinkedList<T> {
 
   public void append(T data) {
     Node<T> node = new Node<>(data);
-    if (this.head == null) {
-      this.head = node;
+    if (head == null) {
+      head = node;
     } else {
-      Node<T> current = this.head;
+      Node<T> current = head;
       while (current.getNext() != null) {
         current = current.getNext();
       }
@@ -53,7 +53,7 @@ public class LinkedList<T> {
 
     if (isIncludes) {
       Node<T> newNode = new Node<>(data);
-      Node<T> current = this.head;
+      Node<T> current = head;
       Node<T> aftCurrent = current;
       while (current.getData() != after) {
         current = aftCurrent;
@@ -71,18 +71,32 @@ public class LinkedList<T> {
       Node<T> newNode = new Node<>(data);
       Node<T> current = head;
       Node<T> prevCurrent = current;
-      while (current.getData() != before) {
-        prevCurrent = current;
-        current = current.getNext();
+      if (this.head.getData() == before) {
+        insertAtFirst(data);
+      } else {
+        while (current.getData() != before) {
+          prevCurrent = current;
+          current = current.getNext();
+        }
+        newNode.setNext(current);
+        prevCurrent.setNext(newNode);
       }
-      newNode.setNext(current);
-      prevCurrent.setNext(newNode);
+    }
+  }
+
+  public void insertAtFirst(T value){
+    Node<T> node = new Node(value);
+    if (this.head==null){
+      this.head=node;
+    } else {
+      node.setNext(this.head);
+      this.head=node;
     }
   }
 
 
   public boolean includes(T value) {
-    Node<T> current = this.head;
+    Node<T> current = head;
     if (size != 0) {
       while (current != null) {
         if (current.getData() == value) {
@@ -95,7 +109,7 @@ public class LinkedList<T> {
   }
 
   public String toString() {
-    Node<T> current = this.head;
+    Node<T> current = head;
     if (current == null) {
       return "Linked list is empty";
     }
