@@ -86,7 +86,7 @@ public class LinkedList<T> {
 
   public void insertAtFirst(T value){
     Node<T> node = new Node(value);
-    if (this.head==null){
+    if (this.head == null){
       this.head=node;
     } else {
       node.setNext(this.head);

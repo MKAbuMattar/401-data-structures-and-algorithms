@@ -56,3 +56,12 @@ head to new node add it.
 
 `toString` build in method to print 
 the data in class
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+![linked list](./linked-list.jpg)
+
+
+
+
