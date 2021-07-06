@@ -16,6 +16,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/linked/list/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/linked/list/AppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/classes/linked.list.AppTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/classes/linked.list.AppTest.html" afterDir="false" />
@@ -23,6 +25,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/packages/linked.list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/packages/linked.list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/test-results/test/TEST-linked.list.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/TEST-linked.list.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" afterDir="false" />
     </list>
@@ -81,33 +85,19 @@
     <option name="showLigatures" value="true" />
   </component>
   <component name="RunManager" selected="Gradle.AppTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="linked-list.app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;linked.list.AppTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AppTest.testLinkedListZipLists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipLists&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -187,8 +177,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.AppTest" />
-      <item itemvalue="Gradle.AppTest.testLinkedListZipLists" />
       <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
       <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
       <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
@@ -196,10 +186,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.AppTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
         <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
         <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
-        <item itemvalue="Gradle.AppTest.testLinkedListZipLists" />
       </list>
     </recent_temporary>
   </component>

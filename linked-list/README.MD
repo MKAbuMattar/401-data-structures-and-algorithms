@@ -57,6 +57,13 @@ head to new node add it.
 `kthFromEnd` return node from the tail until 
 the end depends on k(index) insert
 
+`zipLists` insert in it 2 list, and it will 
+merge them, start form 
+list one to list two and `zipListsInsert` 
+reserve each node form 2 list and start 
+throw of list like a chain intel get 
+end of node.
+
 `toString` build in method to print 
 the data in class
 
@@ -71,5 +78,8 @@ the data in class
 ![linked list](./kthFromEnd.jpg)
 
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
 
+![linked list](./zipLists.jpg)
 

@@ -305,20 +305,4 @@ public class AppTest {
     list.zipLists(list,list2);
     assertEquals("{1}-> {5}-> {3}-> {9}-> {4}-> NULL", list.toString());
   }
-
-  /**
-   * test case list two is empty
-   */
-  @Test
-  public void testLinkedListZipListsEmptyListTwo() {
-    list = new LinkedList<>();
-    list.insert(1);
-    list.insert(3);
-    list.insert(2);
-
-    list2 = new LinkedList<>();
-
-    list.zipLists(list,list2);
-    assertEquals("{1}-> {3}-> {2}-> NULL", list.toString());
-  }
 }

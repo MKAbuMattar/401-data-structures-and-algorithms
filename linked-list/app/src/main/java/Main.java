@@ -1,8 +1,8 @@
 import types.LinkedList;
 
 public class Main {
-  private static final LinkedList<Integer> list = new LinkedList<>();
-  private static final LinkedList<Integer> list2 = new LinkedList<>();
+  private static final LinkedList<String> list = new LinkedList<>();
+  private static final LinkedList<String> list2 = new LinkedList<>();
   private static final LinkedList<Integer> list3 = new LinkedList<>();
 
   public static void main(String[] args) {
@@ -45,13 +45,12 @@ public class Main {
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method toString "+ (stopTime - startTime) + "ms");
 
-    list.add(1);
-    list.add(3);
-    list.add(2);
+    list.add("Mohammad");
+    list.add("Mohammad");
+    list.add("Mattar");
 
-    list2.add(5);
-    list2.add(9);
-    list2.add(4);
+    list2.add("Kaled");
+    list2.add("Abu");
 
     list.zipLists(list, list2);
 
