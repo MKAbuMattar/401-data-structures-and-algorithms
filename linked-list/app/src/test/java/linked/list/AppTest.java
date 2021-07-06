@@ -6,6 +6,7 @@ package linked.list;
 import org.junit.Test;
 import types.LinkedList;
 
+
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -31,8 +32,8 @@ public class AppTest {
   @Test
   public void testLinkedListInsert() {
     list = new LinkedList<>();
-    list.insert(1);
-    assertEquals("{1}-> NULL", list.toString());
+    list.insert(13);
+    assertEquals("{13}-> NULL", list.toString());
   }
 
   /**
@@ -82,7 +83,7 @@ public class AppTest {
     list.insert(2);
     list.insert(3);
     list.insert(4);
-    assertEquals(false, list.includes(55));
+    assertEquals(false, list.includes(44));
   }
 
   /**

@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="linked.list.AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-03T12:53:27" hostname="mkabumattar" time="0.003">
+<testsuite name="linked.list.AppTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2021-07-06T11:28:21" hostname="mkabumattar" time="0.013">
   <properties/>
-  <testcase name="testLinkedListFalse" classname="linked.list.AppTest" time="0.002"/>
-  <testcase name="testLinkedListTrue" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListEmpty" classname="linked.list.AppTest" time="0.006"/>
+  <testcase name="testLinkedListPoint" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListKthFromEndSameLength" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListIncludesFalse" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListIncludesTrue" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListMultipleInsert" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsertBefore" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListKthFromEndHappyPath" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsertBeforeFirstNode" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsertAfter" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsertAfterLastNode" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsert" classname="linked.list.AppTest" time="0.0"/>
   <testcase name="testLinkedListToString" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListAddToEnd" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListKthFromEndNegativeNumber" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListKthFromEndGreaterThanTheLength" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListKthFromEndSizeOne" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListAddMultipleToEnd" classname="linked.list.AppTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
