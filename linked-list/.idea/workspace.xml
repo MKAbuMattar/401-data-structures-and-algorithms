@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f83d11c-8942-4b5d-aab8-e4edea2451dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/linked-list.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -17,12 +15,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/data/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/data/Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/test/linked/list/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/test/linked/list/AppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/classes/linked.list.AppTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/classes/linked.list.AppTest.html" afterDir="false" />
@@ -30,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/reports/tests/test/packages/linked.list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/reports/tests/test/packages/linked.list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/test-results/test/TEST-linked.list.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/TEST-linked.list.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" afterDir="false" />
     </list>
@@ -88,14 +80,7 @@
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="linked-list.app.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.AppTest">
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -117,12 +102,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListKthFromEndHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListZipLists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListKthFromEndHappyPath&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipLists&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +123,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListKthFromEndNegativeNumber" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListZipListsEmptyListTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListKthFromEndNegativeNumber&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsEmptyListTwo&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -159,12 +144,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListKthFromEndSizeOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListZipListsShorterListOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListKthFromEndSizeOne&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsShorterListOne&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppTest.testLinkedListZipListsShorterListTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsShorterListTwo&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -181,19 +187,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndNegativeNumber" />
-      <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndSizeOne" />
-      <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndHappyPath" />
       <item itemvalue="Gradle.AppTest" />
+      <item itemvalue="Gradle.AppTest.testLinkedListZipLists" />
+      <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
+      <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
+      <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.AppTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndHappyPath" />
-        <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndSizeOne" />
-        <item itemvalue="Gradle.AppTest.testLinkedListKthFromEndNegativeNumber" />
+        <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
+        <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
+        <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
+        <item itemvalue="Gradle.AppTest.testLinkedListZipLists" />
       </list>
     </recent_temporary>
   </component>

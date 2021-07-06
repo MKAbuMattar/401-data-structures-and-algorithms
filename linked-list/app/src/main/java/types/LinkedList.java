@@ -127,26 +127,26 @@ public class LinkedList<T> {
     }
   }
 
-  public static LinkedList zipLists(LinkedList firstList, LinkedList secondList){
-    if(firstList.head != null && secondList.head != null) {
-      firstList.head = (callBackZipListsInsert(firstList.head, secondList.head));
-      return firstList;
+  public static LinkedList zipLists(LinkedList listOne, LinkedList ListTwo){
+    if(listOne.head != null && ListTwo.head != null) {
+      listOne.head = zipListsInsert(listOne.head, ListTwo.head);
+      return listOne;
     } else {
       return null;
     }
   }
 
-  private static Node callBackZipListsInsert(Node firstNode, Node secondNode) {
-    if ( firstNode == null ) {
-      return secondNode;
+  private static Node zipListsInsert(Node nodeOne, Node NodeTwo) {
+    if ( nodeOne == null ) {
+      return NodeTwo;
     }
-    else if (secondNode == null) {
-      return firstNode;
+    else if (NodeTwo == null) {
+      return nodeOne;
     } else {
-      Node remainingNods = callBackZipListsInsert(firstNode.getNext(), secondNode.getNext());
-      secondNode.setNext(remainingNods);
-      firstNode.setNext(secondNode);
-      return firstNode;
+      Node mergeNode = zipListsInsert(nodeOne.getNext(), NodeTwo.getNext());
+      NodeTwo.setNext(mergeNode);
+      nodeOne.setNext(NodeTwo);
+      return nodeOne;
     }
   }
 

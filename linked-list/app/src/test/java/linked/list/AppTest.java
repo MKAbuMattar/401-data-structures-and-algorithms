@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 public class AppTest {
 
   private LinkedList<Integer> list;
+  private LinkedList<Integer> list2;
 
   /**
    * Code Challenge: Class 05: Linked List Implementation
@@ -245,4 +246,79 @@ public class AppTest {
     assertEquals((Integer) 3, list.kthFromEnd(3));
   }
 
+  /**
+   * Code Challenge: Class 08
+   */
+
+  /**
+   * test case one normal input and two lists have the same size
+   */
+  @Test
+  public void testLinkedListZipListsNormal() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+    list.insert(2);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(9);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {9}-> {2}-> {4}-> NULL", list.toString());
+  }
+
+
+  /**
+   * test case list one is shorter than list two
+   */
+  @Test
+  public void testLinkedListZipListsShorterListOne() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+    list.insert(2);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {4}-> {2}-> NULL", list.toString());
+  }
+
+  /**
+   * test case list two is shorter than list one
+   */
+  @Test
+  public void testLinkedListZipListsShorterListTwo() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(9);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {9}-> {4}-> NULL", list.toString());
+  }
+
+  /**
+   * test case list two is empty
+   */
+  @Test
+  public void testLinkedListZipListsEmptyListTwo() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+    list.insert(2);
+
+    list2 = new LinkedList<>();
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {3}-> {2}-> NULL", list.toString());
+  }
 }
