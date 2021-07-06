@@ -6,11 +6,13 @@ package linked.list;
 import org.junit.Test;
 import types.LinkedList;
 
+
 import static org.junit.Assert.*;
 
 public class AppTest {
 
   private LinkedList<Integer> list;
+  private LinkedList<Integer> list2;
 
   /**
    * Code Challenge: Class 05: Linked List Implementation
@@ -31,8 +33,8 @@ public class AppTest {
   @Test
   public void testLinkedListInsert() {
     list = new LinkedList<>();
-    list.insert(1);
-    assertEquals("{1}-> NULL", list.toString());
+    list.insert(13);
+    assertEquals("{13}-> NULL", list.toString());
   }
 
   /**
@@ -82,7 +84,7 @@ public class AppTest {
     list.insert(2);
     list.insert(3);
     list.insert(4);
-    assertEquals(false, list.includes(55));
+    assertEquals(false, list.includes(44));
   }
 
   /**
@@ -244,4 +246,63 @@ public class AppTest {
     assertEquals((Integer) 3, list.kthFromEnd(3));
   }
 
+  /**
+   * Code Challenge: Class 08
+   */
+
+  /**
+   * test case one normal input and two lists have the same size
+   */
+  @Test
+  public void testLinkedListZipListsNormal() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+    list.insert(2);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(9);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {9}-> {2}-> {4}-> NULL", list.toString());
+  }
+
+
+  /**
+   * test case list one is shorter than list two
+   */
+  @Test
+  public void testLinkedListZipListsShorterListOne() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+    list.insert(2);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {4}-> {2}-> NULL", list.toString());
+  }
+
+  /**
+   * test case list two is shorter than list one
+   */
+  @Test
+  public void testLinkedListZipListsShorterListTwo() {
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(3);
+
+    list2 = new LinkedList<>();
+    list2.insert(5);
+    list2.insert(9);
+    list2.insert(4);
+
+    list.zipLists(list,list2);
+    assertEquals("{1}-> {5}-> {3}-> {9}-> {4}-> NULL", list.toString());
+  }
 }
