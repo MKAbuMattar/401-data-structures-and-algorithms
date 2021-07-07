@@ -169,7 +169,7 @@ public class LinkedList<T> {
    * @param ListTwo
    * @return
    */
-  public static LinkedList zipLists(LinkedList listOne, LinkedList ListTwo){
+  public LinkedList zipLists(LinkedList listOne, LinkedList ListTwo){
     if(listOne.head != null && ListTwo.head != null) {
       listOne.head = zipListsInsert(listOne.head, ListTwo.head);
       return listOne;
@@ -181,20 +181,99 @@ public class LinkedList<T> {
   /**
    *
    * @param nodeOne
-   * @param NodeTwo
+   * @param nodeTwo
    * @return
    */
-  private static Node zipListsInsert(Node nodeOne, Node NodeTwo) {
+  private Node zipListsInsert(Node nodeOne, Node nodeTwo) {
     if ( nodeOne == null ) {
-      return NodeTwo;
-    } else if (NodeTwo == null) {
+      return nodeTwo;
+    } else if (nodeTwo == null) {
       return nodeOne;
     } else {
-      Node mergeNode = zipListsInsert(nodeOne.getNext(), NodeTwo.getNext());
-      NodeTwo.setNext(mergeNode);
-      nodeOne.setNext(NodeTwo);
+      Node mergeNode = zipListsInsert(nodeOne.getNext(), nodeTwo.getNext());
+      nodeTwo.setNext(mergeNode);
+      nodeOne.setNext(nodeTwo);
       return nodeOne;
     }
+  }
+
+  /**
+   *
+   */
+  public void reverse() {
+    if(head != null && head.getNext() != null) {
+      Node<T> previous = null;
+      Node<T> current = head;
+      Node<T> next = current.getNext();
+      while(current != null) {
+        current.setNext(previous);
+        previous = current;
+        current = next;
+        if(next != null) {
+          next = next.getNext();
+        }
+      }
+      head = previous;
+    }
+  }
+
+  /**
+   *
+   * @return
+   */
+  public boolean palindrome(){
+    boolean result = false;
+
+    Node printerFirst = head;
+    Node printerSecond = head;
+    Node previousPrinter = head;
+    Node middleNode = null;
+
+    if (head != null && head.getNext() != null) {
+      while (printerSecond != null && printerSecond.getNext() != null) {
+        printerSecond = printerSecond.getNext().getNext();
+        previousPrinter = printerFirst;
+        printerFirst = printerFirst.getNext();
+      }
+
+      if (printerSecond != null) {
+        middleNode = printerFirst;
+        printerFirst = printerFirst.getNext();
+      }
+
+      Node secondHalfNode = printerFirst;
+      previousPrinter.setNext(null);
+
+      reverse();
+
+      Node tempNodeOne = head;
+      Node tempNodeTwo = secondHalfNode;
+
+      while (tempNodeOne != null && tempNodeTwo != null) {
+        if (tempNodeOne.getData() == tempNodeTwo.getData()) {
+          tempNodeOne = tempNodeOne.getNext();
+          tempNodeTwo = tempNodeTwo.getNext();
+        } else {
+          return false;
+        }
+      }
+
+      if (tempNodeOne == null && tempNodeTwo == null){
+        return true;
+      }
+
+      reverse();
+
+      if (middleNode != null) {
+        previousPrinter.setNext(middleNode);
+        middleNode.setNext(secondHalfNode);
+      } else {
+        previousPrinter.setNext(secondHalfNode);
+      }
+    } else {
+      result = true;
+    }
+    return result;
   }
 
   /**
