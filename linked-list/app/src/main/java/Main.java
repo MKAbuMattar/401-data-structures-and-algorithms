@@ -3,7 +3,8 @@ import types.LinkedList;
 public class Main {
   private static final LinkedList<String> list = new LinkedList<>();
   private static final LinkedList<String> list2 = new LinkedList<>();
-  private static final LinkedList<Integer> list3 = new LinkedList<>();
+  private static final LinkedList<String> list3 = new LinkedList<>();
+  private static final LinkedList<Integer> list4 = new LinkedList<>();
 
   public static void main(String[] args) {
 
@@ -54,6 +55,11 @@ public class Main {
 
     list.zipLists(list, list2);
 
-    System.out.println(list);
+    System.out.println("list 1: " + list);
+    System.out.println("list 2: " + list2);
+
+    System.out.println("zipLists: " + list3);
+
+
   }
 }
