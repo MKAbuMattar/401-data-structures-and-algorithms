@@ -6,10 +6,7 @@ public class LinkedList<T> {
   private Node<T> head;
   private int size;
 
-  /**
-   *
-   * @param data
-   */
+
   public void add(T data) {
     Node<T> node = new Node<>(data);
     if (head == null) {
@@ -24,10 +21,6 @@ public class LinkedList<T> {
     size++;
   }
 
-  /**
-   *
-   * @param data
-   */
   public void insert(T data) {
     Node<T> node = new Node<>(data);
     if (head == null) {
@@ -42,10 +35,7 @@ public class LinkedList<T> {
     size++;
   }
 
-  /**
-   *
-   * @param data
-   */
+
   public void append(T data) {
     Node<T> node = new Node<>(data);
     if (head == null) {
@@ -60,11 +50,6 @@ public class LinkedList<T> {
     size++;
   }
 
-  /**
-   *
-   * @param after
-   * @param data
-   */
   public void insertAfter(T after, T data) {
     boolean isIncludes = includes(after);
 
@@ -82,11 +67,6 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   * @param before
-   * @param data
-   */
   public void insertBefore(T before, T data) {
     boolean isIncludes = includes(before);
 
@@ -108,10 +88,6 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   * @param value
-   */
   public void insertAtFirst(T value) {
     Node<T> node = new Node(value);
     if (this.head == null) {
@@ -123,11 +99,6 @@ public class LinkedList<T> {
     size++;
   }
 
-  /**
-   *
-   * @param value
-   * @return
-   */
   public boolean includes(T value) {
     Node<T> current = head;
     if (size != 0) {
@@ -141,11 +112,6 @@ public class LinkedList<T> {
     return false;
   }
 
-  /**
-   *
-   * @param index
-   * @return
-   */
   public T kthFromEnd(int index) {
     if ((index > -1) && (index > size)) {
       return null;
@@ -163,14 +129,8 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   * @param listOne
-   * @param ListTwo
-   * @return
-   */
-  public LinkedList zipLists(LinkedList listOne, LinkedList ListTwo){
-    if(listOne.head != null && ListTwo.head != null) {
+  public LinkedList zipLists(LinkedList listOne, LinkedList ListTwo) {
+    if (listOne.head != null && ListTwo.head != null) {
       listOne.head = zipListsInsert(listOne.head, ListTwo.head);
       return listOne;
     } else {
@@ -178,14 +138,8 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   * @param nodeOne
-   * @param nodeTwo
-   * @return
-   */
   private Node zipListsInsert(Node nodeOne, Node nodeTwo) {
-    if ( nodeOne == null ) {
+    if (nodeOne == null) {
       return nodeTwo;
     } else if (nodeTwo == null) {
       return nodeOne;
@@ -197,19 +151,16 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   */
   public void reverse() {
-    if(head != null && head.getNext() != null) {
+    if (head != null && head.getNext() != null) {
       Node<T> previous = null;
       Node<T> current = head;
       Node<T> next = current.getNext();
-      while(current != null) {
+      while (current != null) {
         current.setNext(previous);
         previous = current;
         current = next;
-        if(next != null) {
+        if (next != null) {
           next = next.getNext();
         }
       }
@@ -217,12 +168,8 @@ public class LinkedList<T> {
     }
   }
 
-  /**
-   *
-   * @return
-   */
-  public boolean palindrome(){
-    boolean result = false;
+  public boolean palindrome() {
+    boolean result;
 
     Node printerFirst = head;
     Node printerSecond = head;
@@ -246,21 +193,7 @@ public class LinkedList<T> {
 
       reverse();
 
-      Node tempNodeOne = head;
-      Node tempNodeTwo = secondHalfNode;
-
-      while (tempNodeOne != null && tempNodeTwo != null) {
-        if (tempNodeOne.getData() == tempNodeTwo.getData()) {
-          tempNodeOne = tempNodeOne.getNext();
-          tempNodeTwo = tempNodeTwo.getNext();
-        } else {
-          return false;
-        }
-      }
-
-      if (tempNodeOne == null && tempNodeTwo == null){
-        return true;
-      }
+      result = comparison(head, secondHalfNode);
 
       reverse();
 
@@ -276,10 +209,22 @@ public class LinkedList<T> {
     return result;
   }
 
-  /**
-   *
-   * @return
-   */
+  public boolean comparison(Node NodeOne, Node NodeTwo) {
+    Node tempNodeOne = NodeOne;
+    Node tempNodeTwo = NodeTwo;
+
+    while (tempNodeOne != null && tempNodeTwo != null) {
+      if (tempNodeOne.getData() == tempNodeTwo.getData()) {
+        tempNodeOne = tempNodeOne.getNext();
+        tempNodeTwo = tempNodeTwo.getNext();
+      } else {
+        return false;
+      }
+    }
+
+    return tempNodeOne == null && tempNodeTwo == null;
+  }
+
   public String toString() {
     Node<T> current = head;
     if (current == null) {
