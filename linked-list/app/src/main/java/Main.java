@@ -3,7 +3,8 @@ import types.LinkedList;
 public class Main {
   private static final LinkedList<String> list = new LinkedList<>();
   private static final LinkedList<String> list2 = new LinkedList<>();
-  private static final LinkedList<Integer> list3 = new LinkedList<>();
+  private static final LinkedList<String> list3 = new LinkedList<>();
+  private static final LinkedList<Integer> list4 = new LinkedList<>();
 
   public static void main(String[] args) {
 
@@ -15,7 +16,7 @@ public class Main {
 //    list.add(1);
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method add "+ (stopTime - startTime) + "ms");
-//
+
 //    list.add(2);
 //    list.add(3);
 
@@ -32,8 +33,6 @@ public class Main {
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method includes " + (stopTime - startTime) + "ms");
 
-
-
 //    startTime = System.currentTimeMillis();
 //    System.out.println(list);
 //    list.insertAfter(2,55);
@@ -45,15 +44,33 @@ public class Main {
 //    stopTime = System.currentTimeMillis();
 //    System.out.println("execution time for method toString "+ (stopTime - startTime) + "ms");
 
-    list.add("Mohammad");
-    list.add("Mohammad");
-    list.add("Mattar");
+//    list.add("Mohammad");
+//    list.add("Mohammad");
+//    list.add("Mattar");
+//
+//    list2.add("Kaled");
+//    list2.add("Abu");
 
-    list2.add("Kaled");
-    list2.add("Abu");
+//    list.zipLists(list, list2);
 
-    list.zipLists(list, list2);
+//    System.out.println("list 1: " + list);
+//    System.out.println("list 2: " + list2);
 
-    System.out.println(list);
+    list3.add("m");
+    list3.add("k");
+    list3.add("m");
+
+
+    System.out.println(list3.palindrome());
+    System.out.println(list3);
+
+//    list4.add(1);
+//    list4.add(2);
+//    list4.add(3);
+//    list4.add(4);
+//    System.out.println("list 4 reverse: " + list4);
+//    list4.reverse();
+//    System.out.println("list 4 reverse: " + list4);
+
   }
 }
