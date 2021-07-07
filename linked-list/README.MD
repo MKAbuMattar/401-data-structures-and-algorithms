@@ -105,3 +105,9 @@ the data in class
 
 ![palindrome](./palindrome.jpg)
 
+Interviewer: Motasim Al-Azzam
+
+Student: Mohammad Abu Mattar
+
+rviewer dic link: https://docs.google.com/spreadsheets/d/1YQz7FJkXwwB7D60bMAneqv-tHTe83Wfb1T1WqSRMI-Y/edit?usp=sharing
+
