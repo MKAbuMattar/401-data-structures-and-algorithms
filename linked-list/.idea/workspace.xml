@@ -14,7 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/types/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/types/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linked/list/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,14 +70,7 @@
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="linked-list.app.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.AppTest">
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -99,12 +92,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListZipListsEmptyListTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListPalindromeEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsEmptyListTwo&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListPalindromeEmpty&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -120,12 +113,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListZipListsShorterListOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListPalindromeFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsShorterListOne&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListPalindromeFalse&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -141,12 +134,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testLinkedListZipListsShorterListTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testLinkedListPalindromeOneElement" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListZipListsShorterListTwo&quot;" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListPalindromeOneElement&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppTest.testLinkedListReverseEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;linked.list.AppTest.testLinkedListReverseEmpty&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -163,19 +177,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.AppTest.testLinkedListPalindromeFalse" />
+      <item itemvalue="Gradle.AppTest.testLinkedListPalindromeOneElement" />
+      <item itemvalue="Gradle.AppTest.testLinkedListPalindromeEmpty" />
+      <item itemvalue="Gradle.AppTest.testLinkedListReverseEmpty" />
       <item itemvalue="Gradle.AppTest" />
-      <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
-      <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
-      <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.AppTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.AppTest.testLinkedListZipListsEmptyListTwo" />
-        <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListTwo" />
-        <item itemvalue="Gradle.AppTest.testLinkedListZipListsShorterListOne" />
+        <item itemvalue="Gradle.AppTest.testLinkedListReverseEmpty" />
+        <item itemvalue="Gradle.AppTest.testLinkedListPalindromeOneElement" />
+        <item itemvalue="Gradle.AppTest.testLinkedListPalindromeEmpty" />
+        <item itemvalue="Gradle.AppTest.testLinkedListPalindromeFalse" />
       </list>
     </recent_temporary>
   </component>

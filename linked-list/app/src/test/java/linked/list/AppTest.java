@@ -13,6 +13,7 @@ public class AppTest {
 
   private LinkedList<Integer> list;
   private LinkedList<Integer> list2;
+  private LinkedList<String> list3;
 
   /**
    * Code Challenge: Class 05: Linked List Implementation
@@ -304,5 +305,77 @@ public class AppTest {
 
     list.zipLists(list,list2);
     assertEquals("{1}-> {5}-> {3}-> {9}-> {4}-> NULL", list.toString());
+  }
+
+  /**
+   * Code Challenge: Class 09
+   */
+
+  @Test
+  public void testLinkedListReverse(){
+    list = new LinkedList<>();
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.insert(4);
+    list.insert(5);
+    list.reverse();
+    assertEquals("{5}-> {4}-> {3}-> {2}-> {1}-> NULL", list.toString());
+  }
+
+  @Test
+  public void testLinkedListReverseOneElement(){
+    list = new LinkedList<>();
+    list.insert(1);
+    list.reverse();
+    assertEquals("{1}-> NULL", list.toString());
+  }
+
+  @Test
+  public void testLinkedListReverseEmpty(){
+    list = new LinkedList<>();
+    list.reverse();
+    assertEquals("Linked list is empty", list.toString());
+  }
+
+  @Test
+  public void testLinkedListPalindromeTrue(){
+    list3 = new LinkedList<>();
+    list3.insert("t");
+    list3.insert("a");
+    list3.insert("c");
+    list3.insert("o");
+    list3.insert("c");
+    list3.insert("a");
+    list3.insert("t");
+
+    assertEquals(true, list3.palindrome());
+  }
+
+  @Test
+  public void testLinkedListPalindromeFalse(){
+    list3 = new LinkedList<>();
+    list3.insert("h");
+    list3.insert("o");
+    list3.insert("u");
+    list3.insert("s");
+    list3.insert("e");
+
+    assertEquals(false, list3.palindrome());
+  }
+
+  @Test
+  public void testLinkedListPalindromeOneElement(){
+    list3 = new LinkedList<>();
+    list3.insert("h");
+
+    assertEquals(true, list3.palindrome());
+  }
+
+  @Test
+  public void testLinkedListPalindromeEmpty(){
+    list3 = new LinkedList<>();
+
+    assertEquals(true, list3.palindrome());
   }
 }

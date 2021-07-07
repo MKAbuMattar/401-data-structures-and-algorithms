@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="linked.list.AppTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2021-07-06T12:54:39" hostname="mkabumattar" time="0.009">
+<testsuite name="linked.list.AppTest" tests="28" skipped="0" failures="0" errors="0" timestamp="2021-07-07T15:43:20" hostname="mkabumattar" time="0.026">
   <properties/>
   <testcase name="testLinkedListEmpty" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListPoint" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListKthFromEndSameLength" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListIncludesFalse" classname="linked.list.AppTest" time="0.001"/>
-  <testcase name="testLinkedListIncludesTrue" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListPalindromeEmpty" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListPalindromeFalse" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListIncludesFalse" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListPalindromeOneElement" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListReverseEmpty" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListReverse" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListIncludesTrue" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListMultipleInsert" classname="linked.list.AppTest" time="0.0"/>
   <testcase name="testLinkedListInsertBefore" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListZipListsNormal" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListZipListsNormal" classname="linked.list.AppTest" time="0.01"/>
   <testcase name="testLinkedListKthFromEndHappyPath" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListInsertBeforeFirstNode" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListInsertAfter" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListPalindromeTrue" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListInsertBeforeFirstNode" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListInsertAfter" classname="linked.list.AppTest" time="0.002"/>
   <testcase name="testLinkedListInsertAfterLastNode" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListInsert" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListReverseOneElement" classname="linked.list.AppTest" time="0.0"/>
   <testcase name="testLinkedListZipListsShorterListOne" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListZipListsShorterListTwo" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListZipListsShorterListTwo" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListToString" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListAddToEnd" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListKthFromEndNegativeNumber" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListAddToEnd" classname="linked.list.AppTest" time="0.001"/>
+  <testcase name="testLinkedListKthFromEndNegativeNumber" classname="linked.list.AppTest" time="0.001"/>
   <testcase name="testLinkedListKthFromEndGreaterThanTheLength" classname="linked.list.AppTest" time="0.0"/>
   <testcase name="testLinkedListKthFromEndSizeOne" classname="linked.list.AppTest" time="0.0"/>
-  <testcase name="testLinkedListAddMultipleToEnd" classname="linked.list.AppTest" time="0.0"/>
+  <testcase name="testLinkedListAddMultipleToEnd" classname="linked.list.AppTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
