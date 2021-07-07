@@ -64,6 +64,23 @@ reserve each node form 2 list and start
 throw of list like a chain intel get 
 end of node.
 
+`reverse` git a head form likened list
+start chain the previous to current,
+and current to next unto get null at
+current then restore all previous at 
+new head.
+
+`palindrome` divided the node into 
+the middle and second half, get 
+head at printer first, second, 
+previous, check if head not null 
+and next node, not null, start 
+looping to get the half get a 
+`reverse()` after that start 
+comparison the node after getting 
+the result, re `reverse()` 
+node start reaching the liked list.
+
 `toString` build in method to print 
 the data in class
 
@@ -82,4 +99,9 @@ the data in class
 <!-- Embedded whiteboard image -->
 
 ![linked list](./zipLists.jpg)
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+![palindrome](./palindrome.jpg)
 

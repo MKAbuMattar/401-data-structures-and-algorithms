@@ -56,13 +56,10 @@ public class Main {
 //    System.out.println("list 1: " + list);
 //    System.out.println("list 2: " + list2);
 
-    list3.add("t");
-    list3.add("a");
-    list3.add("c");
-    list3.add("o");
-    list3.add("c");
-    list3.add("a");
-    list3.add("t");
+    list3.add("m");
+    list3.add("k");
+    list3.add("m");
+
 
     System.out.println(list3.palindrome());
     System.out.println(list3);
