@@ -148,7 +148,7 @@ public class LinkedList<T> {
     }
   }
 
-  public boolean isPalindrome() {
+  public boolean testPalindrome() {
     boolean result = true;
 
     Node<T> first = head;

@@ -63,7 +63,10 @@ public class Main {
 //    System.out.println(list3.palindrome());
 //    System.out.println(list3);
 
-    System.out.println(list3.isPalindrome());
+    System.out.println(list3.palindrome());
+    System.out.println(list3);
+
+    System.out.println(list3.testPalindrome());
 
 //    list4.add(1);
 //    list4.add(2);
