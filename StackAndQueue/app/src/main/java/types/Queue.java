@@ -57,7 +57,7 @@ public class Queue<T>  {
 
   public String toString() {
     Node<T> current = front;
-    if (current == null) {
+    if (current.getData() == null) {
       return "Queue list is empty";
     }
     StringBuilder showList = new StringBuilder();
