@@ -227,7 +227,9 @@ public class LinkedList<T> {
       pointerPrevious.setNext(null);
 
       reverse();
+
       result = comparison(head, secondHalfNode);
+
       reverse();
 
       if (middleNode != null) {
