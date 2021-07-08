@@ -7,50 +7,52 @@ public class Queue<T>  {
   private Node<T> back;
 
   public Queue() {
-    this.front = new Node<>();
-    this.back = new Node<>();
-    this.front.setNext(this.back);
+    front = new Node<>();
+    back = new Node<>();
+    front.setNext(back);
   }
 
   public void enqueue(T data) {
-    if (this.isEmpty()) {
-      this.front.setData(data);
-    } else if (this.back.getData() == null) {
-      this.back.setData(data);
+    if (isEmpty()) {
+      front.setData(data);
+    } else if (back.getData() == null) {
+      back.setData(data);
     } else {
       Node<T> newNode = new Node<>(data);
-      this.back.setNext(newNode);
-      this.back = newNode;
+      back.setNext(newNode);
+      back = newNode;
     }
   }
 
   public T dequeue() {
-    if (this.isEmpty()) {
+    Node<T> temp;
+    if (isEmpty()) {
       return null;
-    } else if (this.front.getNext() == this.back) {
-      Node<T> temp = new Node<>(this.front.getData());
-      this.front = this.front.getNext();
-      Node<T> newBack = new Node<>();
-      this.back = newBack;
-      this.front.setNext(this.back);
+    } else if (front.getNext() == back) {
+      temp = new Node<>(front.getData());
+      front = front.getNext();
+      back = new Node<>();
+      front.setNext(back);
+      temp.setNext(null);
       return temp.getData();
     } else {
-      Node<T> temp = new Node<>(this.front.getData());
-      this.front = this.front.getNext();
+      temp = new Node<>(front.getData());
+      front = front.getNext();
+      temp.setNext(null);
       return temp.getData();
     }
   }
 
   public T peek() {
-    if (this.isEmpty()) {
+    if (isEmpty()) {
       return null;
     } else {
-      return this.front.getData();
+      return front.getData();
     }
   }
 
   public boolean isEmpty() {
-    return this.front.getData() == null;
+    return front.getData() == null;
   }
 
   public String toString() {

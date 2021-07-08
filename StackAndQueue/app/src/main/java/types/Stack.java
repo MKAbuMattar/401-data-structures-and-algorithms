@@ -11,35 +11,35 @@ public class Stack<T> {
 
   public void push(T data) {
     Node<T> newNode = new Node<>(data);
-    Node<T> temp = this.top;
-    this.top = newNode;
-    this.top.setNext(temp);
+    Node<T> temp = top;
+    top = newNode;
+    top.setNext(temp);
   }
 
   public T pop() {
-    if (this.isEmpty()) {
+    if (isEmpty()) {
       return null;
     }
-    Node<T> temp = this.top;
-    if (this.top.getNext() == null) {
-      this.top = null;
+    Node<T> temp = top;
+    if (top.getNext() == null) {
+      top = null;
     } else {
-      this.top = this.top.getNext();
+      top = top.getNext();
       temp.setNext(null);
     }
     return temp.getData();
   }
 
   public T peek() {
-    if (this.isEmpty()) {
+    if (isEmpty()) {
       return null;
     } else {
-      return this.top.getData();
+      return top.getData();
     }
   }
 
   public boolean isEmpty() {
-    return this.top == null;
+    return top == null;
   }
 
   public String toString() {
