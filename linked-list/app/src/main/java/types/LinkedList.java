@@ -35,7 +35,6 @@ public class LinkedList<T> {
     size++;
   }
 
-
   public void append(T data) {
     Node<T> node = new Node<>(data);
     if (head == null) {
@@ -89,13 +88,11 @@ public class LinkedList<T> {
   }
 
   public void insertAtFirst(T value) {
-    Node<T> node = new Node(value);
-    if (this.head == null) {
-      this.head = node;
-    } else {
+    Node<T> node = new Node<>(value);
+    if (this.head != null) {
       node.setNext(this.head);
-      this.head = node;
     }
+    this.head = node;
     size++;
   }
 
@@ -129,7 +126,7 @@ public class LinkedList<T> {
     }
   }
 
-  public LinkedList zipLists(LinkedList listOne, LinkedList ListTwo) {
+  public LinkedList<T> zipLists(LinkedList<T> listOne, LinkedList<T> ListTwo) {
     if (listOne.head != null && ListTwo.head != null) {
       listOne.head = zipListsInsert(listOne.head, ListTwo.head);
       return listOne;
@@ -138,17 +135,55 @@ public class LinkedList<T> {
     }
   }
 
-  private Node zipListsInsert(Node nodeOne, Node nodeTwo) {
+  private Node<T> zipListsInsert(Node<T> nodeOne, Node<T> nodeTwo) {
     if (nodeOne == null) {
       return nodeTwo;
     } else if (nodeTwo == null) {
       return nodeOne;
     } else {
-      Node mergeNode = zipListsInsert(nodeOne.getNext(), nodeTwo.getNext());
+      Node<T> mergeNode = zipListsInsert(nodeOne.getNext(), nodeTwo.getNext());
       nodeTwo.setNext(mergeNode);
       nodeOne.setNext(nodeTwo);
       return nodeOne;
     }
+  }
+
+  public boolean testPalindrome() {
+    boolean result = true;
+
+    Node<T> first = head;
+    Node<T> second = head;
+    Node<T> previous;
+    Node<T> temp;
+
+    while (second != null && second.getNext() != null) {
+      first = first.getNext() ;
+      second = second.getNext().getNext();
+    }
+
+    previous = first;
+    first = first.getNext();
+    previous.setNext(null);
+
+    while (first != null) {
+      temp = first.getNext();
+      first.setNext(previous);
+      previous = first;
+      first = temp;
+    }
+
+    second = head;
+    first = previous;
+
+    while (first != null) {
+      if (second.getData() != first.getData()){
+        result = false;
+      }
+      second = second.getNext();
+      first = first.getNext();
+    }
+
+    return result;
   }
 
   public void reverse() {
@@ -171,25 +206,25 @@ public class LinkedList<T> {
   public boolean palindrome() {
     boolean result;
 
-    Node printerFirst = head;
-    Node printerSecond = head;
-    Node previousPrinter = head;
-    Node middleNode = null;
+    Node<T> pointerFirst = head;
+    Node<T> pointerSecond = head;
+    Node<T> pointerPrevious = head;
+    Node<T> middleNode = null;
 
     if (head != null && head.getNext() != null) {
-      while (printerSecond != null && printerSecond.getNext() != null) {
-        printerSecond = printerSecond.getNext().getNext();
-        previousPrinter = printerFirst;
-        printerFirst = printerFirst.getNext();
+      while (pointerSecond != null && pointerSecond.getNext() != null) {
+        pointerSecond = pointerSecond.getNext().getNext();
+        pointerPrevious = pointerFirst;
+        pointerFirst = pointerFirst.getNext();
+      }
+      if (pointerSecond != null) {
+        middleNode = pointerFirst;
+        pointerFirst = pointerFirst.getNext();
       }
 
-      if (printerSecond != null) {
-        middleNode = printerFirst;
-        printerFirst = printerFirst.getNext();
-      }
+      Node<T> secondHalfNode = pointerFirst;
 
-      Node secondHalfNode = printerFirst;
-      previousPrinter.setNext(null);
+      pointerPrevious.setNext(null);
 
       reverse();
 
@@ -198,10 +233,10 @@ public class LinkedList<T> {
       reverse();
 
       if (middleNode != null) {
-        previousPrinter.setNext(middleNode);
+        pointerPrevious.setNext(middleNode);
         middleNode.setNext(secondHalfNode);
       } else {
-        previousPrinter.setNext(secondHalfNode);
+        pointerPrevious.setNext(secondHalfNode);
       }
     } else {
       result = true;
@@ -209,9 +244,9 @@ public class LinkedList<T> {
     return result;
   }
 
-  public boolean comparison(Node NodeOne, Node NodeTwo) {
-    Node tempNodeOne = NodeOne;
-    Node tempNodeTwo = NodeTwo;
+  public boolean comparison(Node<T> NodeOne, Node<T> NodeTwo) {
+    Node<T> tempNodeOne = NodeOne;
+    Node<T> tempNodeTwo = NodeTwo;
 
     while (tempNodeOne != null && tempNodeTwo != null) {
       if (tempNodeOne.getData() == tempNodeTwo.getData()) {
