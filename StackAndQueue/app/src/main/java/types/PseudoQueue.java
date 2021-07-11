@@ -10,28 +10,72 @@ public class PseudoQueue<T> {
     this.temp = new Stack<>();
   }
 
+//  public void enqueue(T data) {
+//    while (!isEmpty()) {
+//      this.temp.push(this.main.pop());
+//    }
+//    this.temp.push(data);
+//    while (!this.temp.isEmpty()) {
+//      this.main.push(this.temp.pop());
+//    }
+//    size++;
+//  }
+
   public void enqueue(T data) {
-    while (!isEmpty()) {
-      this.temp.push(this.main.pop());
+
+    if (temp.getTop() != null) {
+      while (temp.getTop() != null) {
+        main.push(temp.pop());
+      }
     }
-    this.temp.push(data);
-    while (!this.temp.isEmpty()) {
-      this.main.push(this.temp.pop());
-    }
+    main.push(data);
     size++;
   }
 
-  public T dequeue() {
-    if (!isEmpty()) {
-      size--;
-      return this.main.pop();
-    } else {
+//  public T dequeue() {
+//    if (!isEmpty()) {
+//      size--;
+//      return this.main.pop();
+//    } else {
+//      return null;
+//    }
+//  }
+
+  public T dequeue(){
+    T tempData = null;
+    if (temp.getTop() == null && main.getTop() == null){
       return null;
     }
+
+    if (main.getTop() != null) {
+      while (main.getTop() != null) {
+        temp.push(main.pop());
+      }
+      tempData = temp.pop();
+      while (temp.getTop() != null) {
+        main.push(temp.pop());
+      }
+    }
+    size--;
+    return tempData;
   }
 
   public T peek() {
-    return this.main.peek();
+    T tempData = null;
+    if (temp.getTop() == null && main.getTop() == null){
+      return null;
+    }
+
+    if (main.getTop() != null) {
+      while (main.getTop() != null) {
+        temp.push(main.pop());
+      }
+      tempData = temp.peek();
+      while (temp.getTop() != null) {
+        main.push(temp.pop());
+      }
+    }
+    return tempData;
   }
 
   public boolean isEmpty() {

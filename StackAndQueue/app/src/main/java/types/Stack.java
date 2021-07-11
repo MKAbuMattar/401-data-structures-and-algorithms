@@ -42,6 +42,10 @@ public class Stack<T> {
     return top == null;
   }
 
+  public Node<T> getTop() {
+    return top;
+  }
+
   public String toString() {
     Node<T> current = top;
     if (current == null) {

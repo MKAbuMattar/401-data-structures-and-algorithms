@@ -76,29 +76,46 @@ public class App {
 //
 //    System.out.println("Queue list peek(): " + queueList.peek());
 
-    System.out.println(pseudoQueueList);
+//    System.out.println(pseudoQueueList);
 
-    pseudoQueueList.enqueue(1);
-    pseudoQueueList.enqueue(2);
-    pseudoQueueList.enqueue(3);
-
-    System.out.println("PseudoQueue List: "+pseudoQueueList.peek());
-
-    System.out.println("Pseudo Queue List get size: " + pseudoQueueList.getSize());
+    pseudoQueueList.enqueue(20);
+    pseudoQueueList.enqueue(15);
+    pseudoQueueList.enqueue(10);
 
     System.out.println(pseudoQueueList);
 
-    System.out.println("Pseudo Queue List dequeue: " + pseudoQueueList.dequeue());
+    pseudoQueueList.enqueue(5);
+//
+    System.out.println(pseudoQueueList);
 
-    System.out.println("Pseudo Queue List get size: " + pseudoQueueList.getSize());
+    System.out.println("peek: " + pseudoQueueList.peek());
+
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
 
     System.out.println(pseudoQueueList);
 
-    System.out.println("Pseudo Queue List dequeue: " + pseudoQueueList.dequeue());
-    System.out.println("Pseudo Queue List dequeue: " + pseudoQueueList.dequeue());
-
-    System.out.println("Pseudo Queue List get size: " + pseudoQueueList.getSize());
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
 
     System.out.println(pseudoQueueList);
+
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+
+    System.out.println(pseudoQueueList);
+
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+
+    System.out.println(pseudoQueueList);
+
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+
+    System.out.println(pseudoQueueList);
+
+    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+
+    System.out.println(pseudoQueueList);
+
+//    System.out.println("PseudoQueue List: "+pseudoQueueList.dequeue());
+
+//    System.out.println(pseudoQueueList);
   }
 }
