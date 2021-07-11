@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import types.Queue;
 import types.Stack;
 
@@ -6,8 +7,8 @@ import static org.junit.Assert.*;
 
 public class AppTest {
 
- private Stack<Integer> stack;
-  private Queue<Integer> queue;
+  public Stack<Integer> stack;
+  public Queue<Integer> queue;
 
   /**
    * Code Challenge: Class 10: Stack and a Queue Implementation
@@ -16,11 +17,19 @@ public class AppTest {
   /**
    * Can successfully push onto a stack
    */
+
+  //Queue
+
+  @BeforeEach
+  public void initSetUpStack() {
+
+  }
+
   @Test
   public void testStackIsEmpty() {
     stack = new Stack<>();
     stack.push(1);
-    assertEquals(false, stack.isEmpty());
+    assertFalse(stack.isEmpty());
   }
 
   /**
@@ -41,7 +50,7 @@ public class AppTest {
     stack.push(10);
     stack.push(11);
     stack.push(12);
-    assertEquals(false, stack.isEmpty());
+    assertFalse(stack.isEmpty());
   }
 
   /**
@@ -71,7 +80,7 @@ public class AppTest {
     stack.pop();
     stack.pop();
     stack.pop();
-    assertEquals(true, stack.isEmpty());
+    assertTrue(stack.isEmpty());
   }
 
   /**
@@ -93,7 +102,7 @@ public class AppTest {
   @Test
   public void testStackEmpty() {
     stack = new Stack<>();
-    assertEquals(true, stack.isEmpty());
+    assertTrue(stack.isEmpty());
   }
 
   /**
@@ -102,8 +111,19 @@ public class AppTest {
   @Test
   public void testStackEmptyPopAndPeek() {
     stack = new Stack<>();
-    assertEquals(null, stack.pop());
-    assertEquals(null, stack.peek());
+    assertNull(stack.pop());
+    assertNull(stack.peek());
+  }
+
+  //Queue
+
+  @BeforeEach
+  public void initSetUpQueue() {
+//    queue = new Queue<>();
+//    queue.enqueue(1);
+//    queue.enqueue(2);
+//    queue.enqueue(3);
+//    queue.enqueue(4);
   }
 
   /**
@@ -113,7 +133,7 @@ public class AppTest {
   public void testQueueEnqueue() {
     queue = new Queue<>();
     queue.enqueue(1);
-    assertEquals(false, queue.isEmpty());
+    assertFalse(queue.isEmpty());
   }
 
   /**
@@ -126,7 +146,8 @@ public class AppTest {
     queue.enqueue(2);
     queue.enqueue(3);
     queue.enqueue(4);
-    assertEquals(false, queue.isEmpty());
+    assertFalse(queue.isEmpty());
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", queue.toString());
   }
 
   /**
@@ -139,7 +160,9 @@ public class AppTest {
     queue.enqueue(2);
     queue.enqueue(3);
     queue.enqueue(4);
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", queue.toString());
     assertEquals((Integer) 1, queue.dequeue());
+    assertEquals("{2}-> {3}-> {4}-> NULL", queue.toString());
   }
 
   /**
@@ -152,7 +175,9 @@ public class AppTest {
     queue.enqueue(2);
     queue.enqueue(3);
     queue.enqueue(4);
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", queue.toString());
     assertEquals((Integer) 1, queue.peek());
+    assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", queue.toString());
   }
 
   /**
@@ -169,7 +194,7 @@ public class AppTest {
     queue.dequeue();
     queue.dequeue();
     queue.dequeue();
-    assertEquals(true, queue.isEmpty());
+    assertTrue(queue.isEmpty());
   }
 
   /**
@@ -178,7 +203,7 @@ public class AppTest {
   @Test
   public void testQueueEmpty() {
     queue = new Queue<>();
-    assertEquals(true, queue.isEmpty());
+    assertTrue(queue.isEmpty());
   }
 
   /**
@@ -187,7 +212,7 @@ public class AppTest {
   @Test
   public void testQueueEmptyDequeueAndPeek() {
     queue = new Queue<>();
-    assertEquals(null, queue.dequeue());
-    assertEquals(null, queue.peek());
+    assertNull(queue.dequeue());
+    assertNull(queue.peek());
   }
 }
