@@ -97,3 +97,70 @@ Create tests for each of the items below:
   the front of the queue without removing it
 
 * `isEmpty()` check whether the queue is empty
+
+***
+
+# Challenge Summary
+<!-- Description of the challenge -->
+
+Implement a Queue using two Stacks, 
+Create a new PseudoQueue class. 
+Do not use an existing Queue. Instead, 
+this PseudoQueue class will implement 
+our standard queue interface (the two 
+methods listed below), but will 
+internally only utilize 2 Stack objects.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+![PseudoQueue](./PseudoQueue.jpg)
+
+### This object should be aware of a default empty value assigned to front when the queue is created.
+1. Define a method called 
+   enqueue which takes any value 
+   as an argument and adds a 
+   new node with that value to
+   the back of the queue 
+   with an O(1) Time performance.
+   
+2. Define a method called 
+   dequeue that does not take 
+   any argument, removes the 
+   node from the front of the 
+   queue, and returns the node’s value.
+   
+3. Define a method called 
+   peek that does not take an 
+   argument and returns the value 
+   of the node located in the front 
+   of the queue, without removing 
+   it from the queue.
+4. Define a method called 
+   isEmpty that does not take 
+   an argument, and returns a 
+   boolean indicating whether 
+   the queue is empty.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+* `enqueue(data)` add an element to the queue
+
+* `dequeue()` return an element from the front of the queue
+
+* `peek()` returns a copy of the element on
+  the front of the queue without removing it
+
+* `isEmpty()` check whether the queue is empty
+
+
+
+
+
+
+
+
