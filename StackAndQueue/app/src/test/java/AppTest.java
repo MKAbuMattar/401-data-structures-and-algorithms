@@ -336,7 +336,7 @@ public class AppTest {
    */
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     emptyAnimalShelter = new AnimalShelter();
 
     singleAnimalShelter = new AnimalShelter();
