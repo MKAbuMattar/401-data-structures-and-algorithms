@@ -10,9 +10,9 @@ public class AppTest {
 
   public Stack<Integer> stack;
   public Queue<Integer> queue;
-  public PseudoQueue<Integer> pseudoQueueList;
+  public PseudoQueue<Integer> pseudoQueue;
 
-  /**
+  /*
    * Code Challenge: Class 10: Stack and a Queue Implementation
    */
 
@@ -216,8 +216,8 @@ public class AppTest {
     assertEquals("Queue list is empty", queue.toString());
   }
 
-  /**
-   * Code Challenge: Class 11
+  /*
+    Code Challenge: Class 11
    */
 
   /**
@@ -225,11 +225,11 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueEnqueue() {
-    pseudoQueueList = new PseudoQueue<>();
-    pseudoQueueList.enqueue(1);
-    assertFalse(pseudoQueueList.isEmpty());
-    assertEquals(1, pseudoQueueList.getSize());
-    assertEquals("{1}-> NULL", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    pseudoQueue.enqueue(1);
+    assertFalse(pseudoQueue.isEmpty());
+    assertEquals(1, pseudoQueue.getSize());
+    assertEquals("{1}-> NULL", pseudoQueue.toString());
   }
 
   /**
@@ -237,14 +237,14 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueEnqueueMultiple() {
-    pseudoQueueList = new PseudoQueue<>();
-    pseudoQueueList.enqueue(1);
-    pseudoQueueList.enqueue(2);
-    pseudoQueueList.enqueue(3);
-    pseudoQueueList.enqueue(4);
-    assertFalse(pseudoQueueList.isEmpty());
-    assertEquals(4, pseudoQueueList.getSize());
-    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    pseudoQueue.enqueue(1);
+    pseudoQueue.enqueue(2);
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(4);
+    assertFalse(pseudoQueue.isEmpty());
+    assertEquals(4, pseudoQueue.getSize());
+    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueue.toString());
   }
 
   /**
@@ -252,16 +252,16 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueDequeue() {
-    pseudoQueueList = new PseudoQueue<>();
-    pseudoQueueList.enqueue(1);
-    pseudoQueueList.enqueue(2);
-    pseudoQueueList.enqueue(3);
-    pseudoQueueList.enqueue(4);
-    assertEquals(4, pseudoQueueList.getSize());
-    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueueList.toString());
-    assertEquals((Integer) 1, pseudoQueueList.dequeue());
-    assertEquals(3, pseudoQueueList.getSize());
-    assertEquals("{4}-> {3}-> {2}-> NULL", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    pseudoQueue.enqueue(1);
+    pseudoQueue.enqueue(2);
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(4);
+    assertEquals(4, pseudoQueue.getSize());
+    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueue.toString());
+    assertEquals((Integer) 1, pseudoQueue.dequeue());
+    assertEquals(3, pseudoQueue.getSize());
+    assertEquals("{4}-> {3}-> {2}-> NULL", pseudoQueue.toString());
   }
 
   /**
@@ -269,16 +269,16 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueuePeek() {
-    pseudoQueueList = new PseudoQueue<>();
-    pseudoQueueList.enqueue(1);
-    pseudoQueueList.enqueue(2);
-    pseudoQueueList.enqueue(3);
-    pseudoQueueList.enqueue(4);
-    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueueList.toString());
-    assertEquals(4, pseudoQueueList.getSize());
-    assertEquals((Integer) 1, pseudoQueueList.peek());
-    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueueList.toString());
-    assertEquals(4, pseudoQueueList.getSize());
+    pseudoQueue = new PseudoQueue<>();
+    pseudoQueue.enqueue(1);
+    pseudoQueue.enqueue(2);
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(4);
+    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueue.toString());
+    assertEquals(4, pseudoQueue.getSize());
+    assertEquals((Integer) 1, pseudoQueue.peek());
+    assertEquals("{4}-> {3}-> {2}-> {1}-> NULL", pseudoQueue.toString());
+    assertEquals(4, pseudoQueue.getSize());
   }
 
   /**
@@ -286,18 +286,18 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueMultipleDequeue() {
-    pseudoQueueList = new PseudoQueue<>();
-    pseudoQueueList.enqueue(1);
-    pseudoQueueList.enqueue(2);
-    pseudoQueueList.enqueue(3);
-    pseudoQueueList.enqueue(4);
-    pseudoQueueList.dequeue();
-    pseudoQueueList.dequeue();
-    pseudoQueueList.dequeue();
-    pseudoQueueList.dequeue();
-    assertTrue(pseudoQueueList.isEmpty());
-    assertEquals(0, pseudoQueueList.getSize());
-    assertEquals("Pseudo Queue list is empty", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    pseudoQueue.enqueue(1);
+    pseudoQueue.enqueue(2);
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(4);
+    pseudoQueue.dequeue();
+    pseudoQueue.dequeue();
+    pseudoQueue.dequeue();
+    pseudoQueue.dequeue();
+    assertTrue(pseudoQueue.isEmpty());
+    assertEquals(0, pseudoQueue.getSize());
+    assertEquals("Pseudo Queue list is empty", pseudoQueue.toString());
   }
 
   /**
@@ -305,10 +305,10 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueEmpty() {
-    pseudoQueueList = new PseudoQueue<>();
-    assertTrue(pseudoQueueList.isEmpty());
-    assertEquals(0, pseudoQueueList.getSize());
-    assertEquals("Pseudo Queue list is empty", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    assertTrue(pseudoQueue.isEmpty());
+    assertEquals(0, pseudoQueue.getSize());
+    assertEquals("Pseudo Queue list is empty", pseudoQueue.toString());
   }
 
   /**
@@ -316,10 +316,10 @@ public class AppTest {
    */
   @Test
   public void testPseudoQueueEmptyDequeueAndPeek() {
-    pseudoQueueList = new PseudoQueue<>();
-    assertNull(pseudoQueueList.dequeue());
-    assertNull(pseudoQueueList.peek());
-    assertEquals(0, pseudoQueueList.getSize());
-    assertEquals("Pseudo Queue list is empty", pseudoQueueList.toString());
+    pseudoQueue = new PseudoQueue<>();
+    assertNull(pseudoQueue.dequeue());
+    assertNull(pseudoQueue.peek());
+    assertEquals(0, pseudoQueue.getSize());
+    assertEquals("Pseudo Queue list is empty", pseudoQueue.toString());
   }
 }
