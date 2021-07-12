@@ -1,3 +1,7 @@
+import animalShelter.AnimalShelter;
+import animalShelter.CatShelter;
+import animalShelter.DogShelter;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import types.PseudoQueue;
@@ -11,6 +15,10 @@ public class AppTest {
   public Stack<Integer> stack;
   public Queue<Integer> queue;
   public PseudoQueue<Integer> pseudoQueue;
+
+  public AnimalShelter emptyAnimalShelter;
+  public AnimalShelter singleAnimalShelter;
+  public AnimalShelter multipleAnimalShelter;
 
   /*
    * Code Challenge: Class 10: Stack and a Queue Implementation
@@ -321,5 +329,59 @@ public class AppTest {
     assertNull(pseudoQueue.peek());
     assertEquals(0, pseudoQueue.getSize());
     assertEquals("Pseudo Queue list is empty", pseudoQueue.toString());
+  }
+
+  /*
+   * Code Challenge: Class 12
+   */
+
+  @Before
+  public void setUp() throws Exception {
+    emptyAnimalShelter = new AnimalShelter();
+
+    singleAnimalShelter = new AnimalShelter();
+    singleAnimalShelter.enqueue(new DogShelter( "KeKe", 5));
+
+    multipleAnimalShelter = new AnimalShelter();
+    multipleAnimalShelter.enqueue(new DogShelter("Max", 13));
+    multipleAnimalShelter.enqueue(new DogShelter("semsem", 15));
+    multipleAnimalShelter.enqueue(new CatShelter("MishMish", 7));
+    multipleAnimalShelter.enqueue(new CatShelter("Zatar", 14));
+  }
+
+  @Test
+  public void testAnimalShelterConstructor() {
+    assertNotNull(emptyAnimalShelter);
+  }
+
+  @Test
+  public void testEmptyAnimalShelterDequeue() {
+    assertNull(emptyAnimalShelter.dequeue("dog"));
+    assertNull(emptyAnimalShelter.dequeue("cat"));
+    assertNull(emptyAnimalShelter.dequeue("hhh"));
+  }
+
+  @Test
+  public void testSingleAnimalShelterDequeue() {
+    assertEquals("KeKe", singleAnimalShelter.dequeue("dog").getName());
+    assertNotNull(singleAnimalShelter);
+  }
+
+  @Test
+  public void testMultipleAnimalShelterDequeueNotSpecified() {
+    assertNotNull(multipleAnimalShelter);
+    assertEquals("MishMish", multipleAnimalShelter.dequeue("cat").getName());
+    assertEquals("Max", multipleAnimalShelter.dequeue("dog").getName());
+  }
+
+  @Test
+  public void testMultipleAnimalShelterDequeueSpecified() {
+    assertNotNull(multipleAnimalShelter);
+    assertEquals("Max", multipleAnimalShelter.dequeue("dog").getName());
+    assertEquals("MishMish", multipleAnimalShelter.dequeue("cat").getName());
+    assertEquals("Zatar", multipleAnimalShelter.dequeue("cat").getName());
+    assertEquals("semsem", multipleAnimalShelter.dequeue("dog").getName());
+    assertNull(multipleAnimalShelter.dequeue("dog"));
+    assertNull(multipleAnimalShelter.dequeue("cat"));
   }
 }
