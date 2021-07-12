@@ -157,10 +157,52 @@ internally only utilize 2 Stack objects.
 
 * `isEmpty()` check whether the queue is empty
 
+***
+
+# Challenge Summary
+<!-- Description of the challenge -->
 
 
+# Animal Shelter
 
+An animal shelter for 
+dogs and cats is 
+implemented in Java. 
+The refuge operates on 
+a first-in, first-out 
+basis. An animal rescuer 
+can request a cat or a 
+dog, and the animal 
+type that has been at 
+the shelter the longest 
+will be given to them. 
+If the rescuer does 
+not specify, the animal 
+that has been at the 
+shelter the longest 
+will be given to them.
 
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+* Create a class called Animal 
+  to represent an animal in the shelter.
+* Create a class called DogShelter 
+  that extends Animal to represent a dog.
+* Create a class called CatShelter 
+  that extends Animal to represent a cat.
+* Create a class called AnimalShelter 
+  which holds only dogs and cats, 
+  The shelter operates using a 
+  first-in, first-out approach.
+* Implement the following methods:
+   * enqueue(animal): adds animal to the shelter,
+     Animal can be either a dog, or a cat object,
+     This method has constant space and time complexity.
+   * dequeue(pref): returns either a dog or a cat,
+     If pref is not "dog" or "cat" then return
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
 
+https://miro.com/welcomeonboard/RWVOWnNIdmxXbVpjVGJWbFJTcmZieDkxc0szR3ZsUDBrSGljVzdzZW15aGRhcnVvajhyc0xFdVhRcnFSWEl0S3wzMDc0NDU3MzYwNjk1Mjc1MzE2
