@@ -5,6 +5,7 @@
 import types.PseudoQueue;
 import types.Queue;
 import types.Stack;
+import validateBrackets.ValidateBrackets;
 
 public class App {
 
@@ -78,44 +79,47 @@ public class App {
 
 //    System.out.println(pseudoQueueList);
 
-    pseudoQueueList.enqueue(20);
-    pseudoQueueList.enqueue(15);
-    pseudoQueueList.enqueue(10);
-
-    System.out.println(pseudoQueueList);
-
-    pseudoQueueList.enqueue(5);
+//    pseudoQueueList.enqueue(20);
+//    pseudoQueueList.enqueue(15);
+//    pseudoQueueList.enqueue(10);
 //
-    System.out.println(pseudoQueueList);
-
-    System.out.println("peek: " + pseudoQueueList.peek());
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
-
-    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
-
-    System.out.println(pseudoQueueList);
+//    System.out.println(pseudoQueueList);
+//
+//    pseudoQueueList.enqueue(5);
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println("peek: " + pseudoQueueList.peek());
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
+//
+//    System.out.println( "dequeue: "+ pseudoQueueList.dequeue());
+//
+//    System.out.println(pseudoQueueList);
 
 //    System.out.println("PseudoQueue List: "+pseudoQueueList.dequeue());
 
 //    System.out.println(pseudoQueueList);
+
+   boolean fuck = ValidateBrackets.validateBrackets("[()]");
+    System.out.println(fuck);
   }
 }
