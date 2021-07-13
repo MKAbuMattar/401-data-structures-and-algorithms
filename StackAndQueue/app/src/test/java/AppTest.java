@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import types.PseudoQueue;
 import types.Queue;
 import types.Stack;
+import validateBrackets.ValidateBrackets;
 
 import static org.junit.Assert.*;
 
@@ -19,6 +20,11 @@ public class AppTest {
   public AnimalShelter emptyAnimalShelter;
   public AnimalShelter singleAnimalShelter;
   public AnimalShelter multipleAnimalShelter;
+
+  String validateBracketsEmptyCode = "";
+  String validateBracketsNoBraces;
+  String validateBracketsTrue;
+  String validateBracketsFalse;
 
   /*
    * Code Challenge: Class 10: Stack and a Queue Implementation
@@ -383,5 +389,37 @@ public class AppTest {
     assertEquals("semsem", multipleAnimalShelter.dequeue("dog").getName());
     assertNull(multipleAnimalShelter.dequeue("dog"));
     assertNull(multipleAnimalShelter.dequeue("cat"));
+  }
+
+  /*
+   * Code Challenge: Class 13
+   */
+
+  @Before
+  public void validateBracketsSetUp() {
+    validateBracketsNoBraces = "asdasd asdasd asd dasddd oo ooooo";
+    validateBracketsTrue = "()[[Extra Characters]]";
+    validateBracketsFalse = "{}{Code[}[Fellows](())";
+  }
+
+
+  @Test
+  public void testValidateBracketsEmpty() {
+    assertTrue(ValidateBrackets.validateBrackets(validateBracketsEmptyCode));
+  }
+
+  @Test
+  public void testValidateBracketsNoBraces() {
+    assertTrue(ValidateBrackets.validateBrackets(validateBracketsNoBraces));
+  }
+
+  @Test
+  public void testValidateBracketsTrue() {
+    assertTrue(ValidateBrackets.validateBrackets(validateBracketsTrue));
+  }
+
+  @Test
+  public void testValidateBracketsFalse() {
+    assertFalse(ValidateBrackets.validateBrackets(validateBracketsFalse));
   }
 }

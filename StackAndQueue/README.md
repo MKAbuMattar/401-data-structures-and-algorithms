@@ -206,3 +206,31 @@ will be given to them.
 <!-- Embedded whiteboard image -->
 
 https://miro.com/welcomeonboard/RWVOWnNIdmxXbVpjVGJWbFJTcmZieDkxc0szR3ZsUDBrSGljVzdzZW15aGRhcnVvajhyc0xFdVhRcnFSWEl0S3wzMDc0NDU3MzYwNjk1Mjc1MzE2
+
+***
+
+# Challenge Summary
+<!-- Description of the challenge -->
+
+This function checks that brackets 
+('(', '[', ") in a code file are closed 
+appropriately. The function accepts a 
+text as input and returns a boolean 
+indicating if the brackets 
+are appropriately closed.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+* Create a stack to store each brace.
+* Traverse the string one character at a time.
+* Store each opening brace on the stack.
+* When a closing brace is encountered, pop the top brace off the stack.
+* If the closing brace does not match the popped opening brace, return false.
+* If the stack is not empty after traversal, return false.
+* If the stack is empty after traversal, return true.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+https://miro.com/welcomeonboard/SkJGYWc1UTk4NnFzQzVjajdzOElSZ2NKTTlESUJZaGkzWmFmbG9laWZBMjAySFlaUWw5ZDRJMDNGRmo0Zm9kU3wzMDc0NDU3MzYwNjk1Mjc1MzE2
