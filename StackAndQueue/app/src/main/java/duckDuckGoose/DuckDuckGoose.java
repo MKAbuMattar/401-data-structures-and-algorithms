@@ -1,41 +1,42 @@
 package duckDuckGoose;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class DuckDuckGoose {
 
-    public static String DuckDuckGoose(String[] arr, int k){
+    public static String duckDuckGoose(List<String> people, int k) {
 
-        int arrLength = arr.length;
-        String c = "";
-        int temp = 0;
-        int i = 0;
+        int arrSize = people.size();
+        int currIndex = 0;
 
-        while (arr.length > i) {
+        while (arrSize > 1) {
 
-            if (k > 0) {
-                temp += k;
+            for (int i = 0; i < k; i++) {
 
-                if (temp > arrLength) {
-                    temp -= arrLength;
+                if ((people.get(currIndex) == "_")) {
+                    i--;
+                } else if ((people.get(currIndex) != "_") && (i == k - 1)) {
+                    people.set(currIndex, "_");
+                    arrSize--;
+                }
+
+                currIndex++;
+
+                if (currIndex == people.size()) {
+                    currIndex = 0;
                 }
             }
 
-            if(arr[temp-1] != "__"){
-
-                c = arr[temp-1];
-
-                i++;
-
-                arr[temp-1] = "__";
-
-                System.out.println(Arrays.toString(arr));
-            }
-
+            System.out.println(people);
         }
 
-        return c;
+        for (int i = 0; i < people.size(); i++) {
+            String result = people.get(i);
+            if (result != "_") {
+                return "the winner is: " + result;
+            }
+        }
 
-
+        return null;
     }
 }

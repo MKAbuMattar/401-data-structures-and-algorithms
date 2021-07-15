@@ -5,6 +5,7 @@ import data.Node;
 public class Queue<T>  {
   private Node<T> front;
   private Node<T> back;
+  private int size = 0;
 
   public Queue() {
     front = new Node<>();
@@ -22,6 +23,7 @@ public class Queue<T>  {
       back.setNext(newNode);
       back = newNode;
     }
+    size++;
   }
 
   public T dequeue() {
@@ -34,11 +36,13 @@ public class Queue<T>  {
       back = new Node<>();
       front.setNext(back);
       temp.setNext(null);
+      size--;
       return temp.getData();
     } else {
       temp = new Node<>(front.getData());
       front = front.getNext();
       temp.setNext(null);
+      size--;
       return temp.getData();
     }
   }
@@ -49,6 +53,10 @@ public class Queue<T>  {
     } else {
       return front.getData();
     }
+  }
+
+  public int getSize() {
+    return size;
   }
 
   public boolean isEmpty() {

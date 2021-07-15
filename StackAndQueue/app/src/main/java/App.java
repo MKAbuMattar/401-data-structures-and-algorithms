@@ -8,16 +8,18 @@ import types.Queue;
 import types.Stack;
 import validateBrackets.ValidateBrackets;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
 
-  private static final Stack<Integer> stackList = new Stack<>();
-  private static final Queue<Integer> queueList = new Queue<>();
-  private static final PseudoQueue<Integer> pseudoQueueList = new PseudoQueue<>();
+    private static final Stack<Integer> stackList = new Stack<>();
+    private static final Queue<Integer> queueList = new Queue<>();
+    private static final PseudoQueue<Integer> pseudoQueueList = new PseudoQueue<>();
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
 //        stackList.push(1);
 //        stackList.push(2);
@@ -123,11 +125,16 @@ public class App {
 
 //    System.out.println(pseudoQueueList);
 
-      String[] arr = {"A", "B", "C", "D", "E"};
+        List<String> arrList = new ArrayList<>();
 
-      System.out.println(DuckDuckGoose.DuckDuckGoose(arr, 2));
+        arrList.add("A");
+        arrList.add("B");
+        arrList.add("C");
+        arrList.add("D");
+        arrList.add("E");
+
+        System.out.println(DuckDuckGoose.duckDuckGoose(arrList, 3));
 
 
-
-  }
+    }
 }
