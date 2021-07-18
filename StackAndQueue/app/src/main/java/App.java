@@ -132,6 +132,8 @@ public class App {
         arrList.add("C");
         arrList.add("D");
         arrList.add("E");
+        arrList.add("F");
+        arrList.add("G");
 
         System.out.println(DuckDuckGoose.duckDuckGoose(arrList, 3));
 
