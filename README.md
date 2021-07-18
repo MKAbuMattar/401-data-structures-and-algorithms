@@ -9,5 +9,5 @@
 | fibonacci| [Link](./fibonacci/) |
 | linked list | [Link](./linked-list/) |
 | Stacks and Queues | [Link](./StackAndQueue/) |
-
+| Trees | [Link](./trees/) |
 

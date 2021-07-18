@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3527c-d466-43f1-aaf1-8b0fd8592581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/types/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/types/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/types/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/types/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/src/main/java/data/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/src/main/java/types/BinarySearchTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/src/main/java/types/BinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/app/src/test/java/trees/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trees0/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +187,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626612279408</updated>
-      <workItem from="1626612281504" duration="4097000" />
+      <workItem from="1626612281504" duration="6190000" />
     </task>
     <servers />
   </component>

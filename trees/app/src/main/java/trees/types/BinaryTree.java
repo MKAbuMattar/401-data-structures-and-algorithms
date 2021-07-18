@@ -11,7 +11,7 @@ public class BinaryTree<T> {
     }
 
     public Node<T> getRoot() {
-        if(this.root == null) {
+        if(root == null) {
             return null;
         }
         return root;
