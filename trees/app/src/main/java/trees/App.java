@@ -18,5 +18,11 @@ public class App {
         binarySearchTree.add(7);
 
         System.out.println(binarySearchTree.contains(9));
+
+        binarySearchTree.inOrderTraverse(binarySearchTree.getRoot());
+        System.out.println("\n");
+        binarySearchTree.postOrderTraverse(binarySearchTree.getRoot());
+        System.out.println("\n");
+        binarySearchTree.preOrderTraverse(binarySearchTree.getRoot());
     }
 }
