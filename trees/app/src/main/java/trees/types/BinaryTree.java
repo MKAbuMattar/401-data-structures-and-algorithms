@@ -2,9 +2,11 @@ package trees.types;
 
 import trees.data.Node;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable<T>> {
     Node<T> root;
     StringBuilder dataOfBinaryTree = new StringBuilder();
+//    private T max = null;
+    private int max = 0;
 
     public BinaryTree() {
         root = new Node<T>();
@@ -47,5 +49,55 @@ public class BinaryTree<T> {
             preOrderTraverse(node.getRight()); // traverse right sub tree
         }
         return dataOfBinaryTree.toString();
+    }
+
+//    public T getMax(){
+//        if (root != null){
+//            max = swap(root);
+//        }
+//        return max;
+//    }
+//
+//    private T swap(Node<T> root){
+//        if ((root.getRight() == null) && (root.getLeft() == null)){
+//            if (max.compareTo(root.getData()) > 0){
+//                max = root.getData();
+//            }
+//        }
+//
+//        if (root.getRight() != null){
+//            swap(root.getRight());
+//        }
+//
+//        if (root.getLeft() != null){
+//            swap(root.getLeft());
+//        }
+//
+//        return max;
+//    }
+
+    public Number getMax(){
+        if (root.getData() != null){
+            max = (int) swap(root);
+        }
+        return max;
+    }
+
+    private Number swap(Node node){
+        if ((node.getRight() == null) && (node.getLeft() == null)){
+            if (max < (int) node.getData()){
+                max = (int) node.getData();
+            }
+        }
+
+        if (node.getRight() != null){
+            swap(node.getRight());
+        }
+
+        if (node.getLeft() != null){
+            swap(node.getLeft());
+        }
+
+        return max;
     }
 }

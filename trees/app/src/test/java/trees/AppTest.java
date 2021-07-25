@@ -89,4 +89,23 @@ public class AppTest {
         assertEquals("5 2 0 8 10 ", insertBinarySearchTree.preOrderTraverse(insertBinarySearchTree.getRoot()));
     }
 
+    @Test
+    public void testGetMaxEmpty(){
+        assertEquals(0, emptyBinaryTree.getMax());
+        assertEquals(0, emptyBinarySearchTree.getMax());
+    }
+
+    @Test
+    public void testGetMaxSingleRoot(){
+        assertEquals(10,singleRootBinaryTree.getMax());
+        assertEquals(30,singleRootSearchBinaryTree.getMax());
+    }
+
+    @Test
+    public void testGetMaxMultInsert(){
+        assertEquals(4,insertBinaryTree.getMax());
+        assertEquals(10,insertBinarySearchTree.getMax());
+    }
+
+
 }
