@@ -3,10 +3,13 @@
  */
 package trees;
 
+import trees.data.Node;
 import trees.types.BinarySearchTree;
+import trees.types.BinaryTree;
 
 public class App {
 
+    private static final BinaryTree<Integer> binaryTree = new BinaryTree<>();
     private static final BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
 
     public static void main(String[] args) {
@@ -24,5 +27,13 @@ public class App {
         binarySearchTree.postOrderTraverse(binarySearchTree.getRoot());
         System.out.println("\n");
         binarySearchTree.preOrderTraverse(binarySearchTree.getRoot());
+
+        binaryTree.setRoot(new Node<>(1));
+        binaryTree.getRoot().setLeft(new Node<>(2));
+        binaryTree.getRoot().setRight(new Node<>(3));
+        binaryTree.getRoot().getLeft().setLeft(new Node<>(4));
+
+        System.out.println(binarySearchTree.getMax());
+        System.out.println(binaryTree.getMax());
     }
 }
