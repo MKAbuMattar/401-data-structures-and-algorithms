@@ -49,7 +49,29 @@ Build all trees classes and methods  from scratch
 
 
 
+# Challenge Summary
+<!-- Description of the challenge -->
 
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+https://miro.com/welcomeonboard/Smo5VGZVYVhqTHo4TmQ5dGZibkJjUXNBZkF0OHc2Z1VwUGI2dDhPRWxYemlKUHNYaVpPUmVSWUthNEE1anhrenwzMDc0NDU3MzYwNjk1Mjc1MzE2
+
+![max tree](./max-tree.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* Big O of O(n)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+```bach
+git clone git@github.com:MKAbuMattar/401-data-structures-and-algorithms.git
+cd 401-data-structures-and-algorithms/tree
+
+gradlew run
+gradlew test
+```
 
 
 
