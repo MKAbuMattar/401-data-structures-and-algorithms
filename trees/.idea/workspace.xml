@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3527c-d466-43f1-aaf1-8b0fd8592581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tree-breadth-first.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/types/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/types/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +51,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1vUMaIZeMuZw0LqDIlNtlxZAc4o" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,9 +76,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Gradle.AppTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trees.App" />
       <module name="trees.app.main" />
@@ -81,15 +92,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,12 +124,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testGetMaxMultInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testBreadthFirstEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testGetMaxMultInsert&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirstEmpty&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -136,12 +145,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testGetMaxSingleRoot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testBreadthFirstInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testGetMaxSingleRoot&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirstInsert&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,25 +166,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest,testGetMaxEmpty and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trees.app.test" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="trees.AppTest,testGetMaxEmpty" />
-        <pattern testClass="trees.AppTest,testGetMaxSingleRoot" />
-        <pattern testClass="trees.AppTest,testGetMaxMultInsert" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="AppTest.testBreadthFirstSingleRoot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirstSingleRoot&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AppTest" />
-        <item itemvalue="JUnit.AppTest,testGetMaxEmpty and 2 more" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.AppTest.testGetMaxMultInsert" />
-        <item itemvalue="Gradle.AppTest.testGetMaxSingleRoot" />
+        <item itemvalue="Gradle.AppTest" />
+        <item itemvalue="Gradle.AppTest.testBreadthFirstInsert" />
+        <item itemvalue="Gradle.AppTest.testBreadthFirstSingleRoot" />
+        <item itemvalue="Gradle.AppTest.testBreadthFirstEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +206,11 @@
       <option name="presentableId" value="Default" />
       <updated>1626612279408</updated>
       <workItem from="1626612281504" duration="6190000" />
-      <workItem from="1627227411214" duration="5729000" />
+      <workItem from="1627227411214" duration="6094000" />
+      <workItem from="1627279421957" duration="102000" />
+      <workItem from="1627280647509" duration="2333000" />
+      <workItem from="1627287424644" duration="134000" />
+      <workItem from="1627300455450" duration="5929000" />
     </task>
     <servers />
   </component>
@@ -209,5 +231,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
