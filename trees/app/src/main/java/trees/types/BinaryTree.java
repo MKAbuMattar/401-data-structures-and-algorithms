@@ -77,6 +77,7 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
     public Queue<T> breadthFirst() {
+
         Queue<Node<T>> tempRoot = new Queue<>();
 
         Queue<T> root = new Queue<>();
