@@ -14,26 +14,26 @@ public class App {
 
     public static void main(String[] args) {
 
-        binarySearchTree.add(5);
-        binarySearchTree.add(3);
-        binarySearchTree.add(8);
-        binarySearchTree.add(1);
-        binarySearchTree.add(7);
+//        binarySearchTree.add(5);
+//        binarySearchTree.add(3);
+//        binarySearchTree.add(8);
+//        binarySearchTree.add(1);
+//        binarySearchTree.add(7);
 
-        System.out.println(binarySearchTree.contains(9));
-
-        binarySearchTree.inOrderTraverse(binarySearchTree.getRoot());
-        System.out.println("\n");
-        binarySearchTree.postOrderTraverse(binarySearchTree.getRoot());
-        System.out.println("\n");
-        binarySearchTree.preOrderTraverse(binarySearchTree.getRoot());
+//        System.out.println(binarySearchTree.contains(9));
+//
+//        binarySearchTree.inOrderTraverse(binarySearchTree.getRoot());
+//        System.out.println("\n");
+//        binarySearchTree.postOrderTraverse(binarySearchTree.getRoot());
+//        System.out.println("\n");
+//        binarySearchTree.preOrderTraverse(binarySearchTree.getRoot());
 
         binaryTree.setRoot(new Node<>(1));
         binaryTree.getRoot().setLeft(new Node<>(2));
         binaryTree.getRoot().setRight(new Node<>(3));
         binaryTree.getRoot().getLeft().setLeft(new Node<>(4));
 
-        System.out.println(binarySearchTree.getMax());
-        System.out.println(binaryTree.getMax());
+        System.out.println(binaryTree.breadthFirst());
+//        System.out.println(binaryTree.getMax());
     }
 }

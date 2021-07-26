@@ -1,19 +1,20 @@
 package trees.types;
 
+import queue.types.Queue;
 import trees.data.Node;
 
 public class BinaryTree<T extends Comparable<T>> {
     Node<T> root;
     StringBuilder dataOfBinaryTree = new StringBuilder();
-//    private T max = null;
-    private int max = 0;
+    private T max = null;
+//    private int max = 0;
 
     public BinaryTree() {
         root = new Node<T>();
     }
 
     public Node<T> getRoot() {
-        if(root == null) {
+        if (root == null) {
             return null;
         }
         return root;
@@ -33,7 +34,7 @@ public class BinaryTree<T extends Comparable<T>> {
         return dataOfBinaryTree.toString();
     }
 
-    public String postOrderTraverse(Node<T>  node) {
+    public String postOrderTraverse(Node<T> node) {
         if (node != null) {
             postOrderTraverse(node.getLeft()); // traverse left sub tree
             postOrderTraverse(node.getRight()); // traverse right sub tree
@@ -42,7 +43,7 @@ public class BinaryTree<T extends Comparable<T>> {
         return dataOfBinaryTree.toString();
     }
 
-    public String preOrderTraverse(Node<T>  node) {
+    public String preOrderTraverse(Node<T> node) {
         if (node != null) {
             dataOfBinaryTree.append(node.getData()).append(" "); // root
             preOrderTraverse(node.getLeft()); // traverse left sub tree
@@ -51,53 +52,55 @@ public class BinaryTree<T extends Comparable<T>> {
         return dataOfBinaryTree.toString();
     }
 
-//    public T getMax(){
-//        if (root != null){
-//            max = swap(root);
-//        }
-//        return max;
-//    }
-//
-//    private T swap(Node<T> root){
-//        if ((root.getRight() == null) && (root.getLeft() == null)){
-//            if (max.compareTo(root.getData()) > 0){
-//                max = root.getData();
-//            }
-//        }
-//
-//        if (root.getRight() != null){
-//            swap(root.getRight());
-//        }
-//
-//        if (root.getLeft() != null){
-//            swap(root.getLeft());
-//        }
-//
-//        return max;
-//    }
-
-    public Number getMax(){
-        if (root.getData() != null){
-            max = (int) swap(root);
+    public T getMax() {
+        if (root.getData() != null) {
+            max = root.getData();
+            max = swap(root);
         }
         return max;
     }
 
-    private Number swap(Node node){
-        if ((node.getRight() == null) && (node.getLeft() == null)){
-            if (max < (int) node.getData()){
-                max = (int) node.getData();
-            }
+    private T swap(Node<T> root) {
+        if (max.compareTo(root.getData()) < 0) {
+            max = root.getData();
         }
 
-        if (node.getRight() != null){
-            swap(node.getRight());
+        if (root.getRight() != null) {
+            swap(root.getRight());
         }
 
-        if (node.getLeft() != null){
-            swap(node.getLeft());
+        if (root.getLeft() != null) {
+            swap(root.getLeft());
         }
 
         return max;
+    }
+
+    public Queue<T> breadthFirst() {
+        Queue<Node<T>> tempRoot = new Queue<>();
+
+        Queue<T> root = new Queue<>();
+
+        Node<T> current = this.getRoot();
+
+        if (current != null) {
+            tempRoot.enqueue(this.getRoot());
+        }
+
+        while (!tempRoot.isEmpty()) {
+
+            current = tempRoot.dequeue();
+            root.enqueue(current.getData());
+
+            if (current.getLeft() != null) {
+                tempRoot.enqueue(current.getLeft());
+            }
+
+            if (current.getRight() != null) {
+                tempRoot.enqueue(current.getRight());
+            }
+        }
+
+        return root;
     }
 }

@@ -22,7 +22,7 @@ public class AppTest {
     BinarySearchTree<Integer> insertBinarySearchTree = new BinarySearchTree<>();
 
     @Before
-    public void init(){
+    public void init() {
         singleRootBinaryTree.setRoot(new Node<>(10));
 
         insertBinaryTree.setRoot(new Node<>(1));
@@ -51,7 +51,7 @@ public class AppTest {
 
     @Test
     public void testBinaryTreeInOrderTraverse() {
-        assertEquals( "4 2 1 3 ", insertBinaryTree.inOrderTraverse(insertBinaryTree.getRoot()));
+        assertEquals("4 2 1 3 ", insertBinaryTree.inOrderTraverse(insertBinaryTree.getRoot()));
     }
 
     @Test
@@ -76,7 +76,7 @@ public class AppTest {
 
     @Test
     public void testBinarySearchTreeInOrderTraverse() {
-        assertEquals( "0 2 5 8 10 ", insertBinarySearchTree.inOrderTraverse(insertBinarySearchTree.getRoot()));
+        assertEquals("0 2 5 8 10 ", insertBinarySearchTree.inOrderTraverse(insertBinarySearchTree.getRoot()));
     }
 
     @Test
@@ -90,22 +90,39 @@ public class AppTest {
     }
 
     @Test
-    public void testGetMaxEmpty(){
-        assertEquals(0, emptyBinaryTree.getMax());
-        assertEquals(0, emptyBinarySearchTree.getMax());
+    public void testGetMaxEmpty() {
+        assertNull(emptyBinaryTree.getMax());
+        assertNull(emptyBinarySearchTree.getMax());
     }
 
     @Test
-    public void testGetMaxSingleRoot(){
-        assertEquals(10,singleRootBinaryTree.getMax());
-        assertEquals(30,singleRootSearchBinaryTree.getMax());
+    public void testGetMaxSingleRoot() {
+        assertEquals(10, (int) singleRootBinaryTree.getMax());
+        assertEquals(30, (int) singleRootSearchBinaryTree.getMax());
     }
 
     @Test
-    public void testGetMaxMultInsert(){
-        assertEquals(4,insertBinaryTree.getMax());
-        assertEquals(10,insertBinarySearchTree.getMax());
+    public void testGetMaxMultInsert() {
+        assertEquals(4, (int) insertBinaryTree.getMax());
+        assertEquals(10, (int) insertBinarySearchTree.getMax());
     }
 
+    @Test
+    public void testBreadthFirstEmpty() {
+        assertEquals("Tree is empty",emptyBinaryTree.breadthFirst().toString());
+        assertEquals("Tree is empty", emptyBinarySearchTree.breadthFirst().toString());
+    }
+
+    @Test
+    public void testBreadthFirstSingleRoot() {
+        assertEquals("{10}-> {null}-> NULL", singleRootBinaryTree.breadthFirst().toString());
+        assertEquals("{30}-> {null}-> NULL", singleRootSearchBinaryTree.breadthFirst().toString());
+    }
+
+    @Test
+    public void testBreadthFirstInsert() {
+        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", insertBinaryTree.breadthFirst().toString());
+        assertEquals("{5}-> {2}-> {8}-> {0}-> {10}-> NULL", insertBinarySearchTree.breadthFirst().toString());
+    }
 
 }
