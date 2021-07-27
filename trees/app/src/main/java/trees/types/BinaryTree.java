@@ -7,7 +7,6 @@ public class BinaryTree<T extends Comparable<T>> {
     Node<T> root;
     StringBuilder dataOfBinaryTree = new StringBuilder();
     private T max = null;
-//    private int max = 0;
 
     public BinaryTree() {
         root = new Node<T>();
@@ -104,4 +103,59 @@ public class BinaryTree<T extends Comparable<T>> {
 
         return root;
     }
+
+    public BinaryTree<String> fizzBuzz(BinaryTree<Integer> tree) {
+
+        BinaryTree<String> newTree = new BinaryTree<>();
+
+        if (tree.getRoot().getData() != null) {
+            traverseFizzBuzzTree(tree.getRoot(), newTree.getRoot());
+        }
+
+        return newTree;
+    }
+
+    private void traverseFizzBuzzTree(Node<Integer> root, Node<String> newRoot) {
+
+        if (root.getData() % 15 == 0) {
+            newRoot.setData("FizzBuzz");
+        } else if (root.getData() % 5 == 0) {
+            newRoot.setData("Buzz");
+        } else if (root.getData() % 3 == 0) {
+            newRoot.setData("Fizz");
+        } else {
+            newRoot.setData(root.getData().toString());
+        }
+
+        if (root.getLeft() != null) {
+            newRoot.setLeft(new Node<>());
+            traverseFizzBuzzTree(root.getLeft(), newRoot.getLeft());
+        }
+
+        if (root.getRight() != null) {
+            newRoot.setRight(new Node<>());
+            traverseFizzBuzzTree(root.getRight(), newRoot.getRight());
+        }
+    }
+
+    public Queue<T> print() {
+        Queue<T> data = new Queue<>();
+
+        traversePrint(this.getRoot(), data);
+
+        return data;
+    }
+
+    private void traversePrint(Node<T> root, Queue<T> data) {
+
+        data.enqueue(root.getData());
+
+        if(root.getLeft() != null) {
+            traversePrint(root.getLeft(), data);
+        }
+        if (root.getRight() != null) {
+            traversePrint(root.getRight(), data);
+        }
+    }
+
 }

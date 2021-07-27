@@ -79,9 +79,7 @@ gradlew test
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
-https://miro.com/welcomeonboard/Smo5VGZVYVhqTHo4TmQ5dGZibkJjUXNBZkF0OHc2Z1VwUGI2dDhPRWxYemlKUHNYaVpPUmVSWUthNEE1anhrenwzMDc0NDU3MzYwNjk1Mjc1MzE2
-
-![tree-breadth-first(./tree-breadth-first.jpg)
+![tree-breadth-first](./tree-breadth-first.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -97,5 +95,23 @@ gradlew run
 gradlew test
 ```
 
+# Challenge Summary
+<!-- Description of the challenge -->
+
+A binary tree is used to solve the Fizz Buzz issue.
+Map each value in a tree of integers to a
+tree of strings with the same structure using the reasoning below.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+https://miro.com/welcomeonboard/dU1ybWEwcTZoM3A3RmVCV2NNR2hYT1M5dHRGcXJDRHVLV3I5eTl1dWhRMk9SaDRsb1NrWExHTTVYbnJ1SzlNdnwzMDc0NDU3MzYwNjk1Mjc1MzE2
+
+![FizzBuzz](./FizzBuzz.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+time/space complexity O(n)
 
 

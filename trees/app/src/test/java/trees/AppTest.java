@@ -115,14 +115,32 @@ public class AppTest {
 
     @Test
     public void testBreadthFirstSingleRoot() {
-        assertEquals("{10}-> {null}-> NULL", singleRootBinaryTree.breadthFirst().toString());
-        assertEquals("{30}-> {null}-> NULL", singleRootSearchBinaryTree.breadthFirst().toString());
+        assertEquals("{10}-> {null}-> ", singleRootBinaryTree.breadthFirst().toString());
+        assertEquals("{30}-> {null}-> ", singleRootSearchBinaryTree.breadthFirst().toString());
     }
 
     @Test
     public void testBreadthFirstInsert() {
-        assertEquals("{1}-> {2}-> {3}-> {4}-> NULL", insertBinaryTree.breadthFirst().toString());
-        assertEquals("{5}-> {2}-> {8}-> {0}-> {10}-> NULL", insertBinarySearchTree.breadthFirst().toString());
+        assertEquals("{1}-> {2}-> {3}-> {4}-> ", insertBinaryTree.breadthFirst().toString());
+        assertEquals("{5}-> {2}-> {8}-> {0}-> {10}-> ", insertBinarySearchTree.breadthFirst().toString());
+    }
+
+    @Test
+    public void testFizzBuzzIsEmptyTree() {
+        assertNull(emptyBinaryTree.fizzBuzz(emptyBinaryTree).getRoot().getData());
+        assertNull(emptyBinarySearchTree.fizzBuzz(emptyBinarySearchTree).getRoot().getData());
+    }
+
+    @Test
+    public void testFizzBuzzNotEmptyTree() {
+        assertNotNull(singleRootBinaryTree.fizzBuzz(singleRootBinaryTree).getRoot().getData());
+        assertNotNull(singleRootSearchBinaryTree.fizzBuzz(singleRootSearchBinaryTree).getRoot().getData());
+    }
+
+    @Test
+    public void testFizzBuzz() {
+        assertEquals("{1}-> {2}-> {4}-> {Fizz}-> ", insertBinaryTree.fizzBuzz(insertBinaryTree).print().toString());
+        assertEquals("{Buzz}-> {2}-> {FizzBuzz}-> {8}-> {Buzz}-> ", insertBinarySearchTree.fizzBuzz(insertBinarySearchTree).print().toString());
     }
 
 }

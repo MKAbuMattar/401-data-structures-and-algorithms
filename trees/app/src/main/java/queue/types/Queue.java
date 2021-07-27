@@ -73,7 +73,6 @@ public class Queue<T>  {
             showList.append("{").append(current.getData()).append("}-> ");
             current = current.getNext();
         }
-        showList.append("NULL");
         return showList.toString();
     }
 }
