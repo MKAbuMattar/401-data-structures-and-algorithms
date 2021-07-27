@@ -25,10 +25,11 @@ public class App {
         binarySearchTree.add(1);
         binarySearchTree.add(7);
         binarySearchTree.add(9);
-        binarySearchTree.add(19);
+        binarySearchTree.add(15);
         binarySearchTree.add(-1);
 
-        System.out.println(binaryTree.breadthFirst());
-        System.out.println(binarySearchTree.breadthFirst());
+//        System.out.println(binaryTree.breadthFirst());
+
+        System.out.println(binarySearchTree.fizzBuzz(binarySearchTree).print());
     }
 }
