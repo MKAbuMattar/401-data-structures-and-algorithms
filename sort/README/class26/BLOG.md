@@ -47,6 +47,8 @@ Pass 5
 
 The second pass will swap the 16 and the 30.
 
+![challenge26](./challenge26.jpg)
+
 ## Efficiency
 
 Time: O(n^2) / Space: O(1)
