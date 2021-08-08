@@ -29,13 +29,14 @@ public class AppTest {
         insertBinaryTree.getRoot().setLeft(new Node<>(2));
         insertBinaryTree.getRoot().setRight(new Node<>(3));
         insertBinaryTree.getRoot().getLeft().setLeft(new Node<>(4));
+        insertBinaryTree.getRoot().getLeft().setRight(new Node<>(27));
 
         singleRootSearchBinaryTree.add(30);
 
         insertBinarySearchTree.add(5);
         insertBinarySearchTree.add(2);
         insertBinarySearchTree.add(8);
-        insertBinarySearchTree.add(0);
+        insertBinarySearchTree.add(30);
         insertBinarySearchTree.add(10);
     }
 
@@ -139,8 +140,8 @@ public class AppTest {
 
     @Test
     public void testFizzBuzz() {
-        assertEquals("{1}-> {2}-> {4}-> {Fizz}-> ", insertBinaryTree.fizzBuzz(insertBinaryTree).print().toString());
-        assertEquals("{Buzz}-> {2}-> {FizzBuzz}-> {8}-> {Buzz}-> ", insertBinarySearchTree.fizzBuzz(insertBinarySearchTree).print().toString());
+        assertEquals("{1}-> {2}-> {4}-> {Fizz}-> {Fizz}-> ", insertBinaryTree.fizzBuzz(insertBinaryTree).print().toString());
+        assertEquals("{Buzz}-> {2}-> {8}-> {FizzBuzz}-> {Buzz}-> ", insertBinarySearchTree.fizzBuzz(insertBinarySearchTree).print().toString());
     }
 
 }
