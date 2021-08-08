@@ -10,5 +10,5 @@
 | linked list | [Link](./linked-list/) |
 | Stacks and Queues | [Link](./StackAndQueue/) |
 | Trees | [Link](./trees/) |
-| Class 26 | [Link](./code_challenge_class_26/) |
-| Class 26 BLOG | [Link](./code_challenge_class_26/BLOG.md) |
+| Class 26 | [Link](./sort/README/class26/README.md) |
+| Class 26 BLOG | [Link](./sort/README/class26/BLOG.md) |
