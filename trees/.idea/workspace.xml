@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1f3527c-d466-43f1-aaf1-8b0fd8592581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/trees/data/KNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/trees/types/KAryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/trees.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/trees/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/trees/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/trees/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,20 +81,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trees.App" />
-      <module name="trees.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trees.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.AppTest.testFizzBuzz">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -103,12 +95,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testBreadthFirstInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.AppTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirstInsert&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppTest.testBreadthFirstSingleRoot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testBreadthFirstSingleRoot&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -145,12 +158,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testNotEmptyTree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testFizzBuzzIsEmptyTree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testNotEmptyTree&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testFizzBuzzIsEmptyTree&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -166,12 +179,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.testResultPreOrder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.testFizzBuzzNotEmptyTree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testResultPreOrder&quot;" />
+        <option name="scriptParameters" value="--tests &quot;trees.AppTest.testFizzBuzzNotEmptyTree&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -189,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.AppTest" />
         <item itemvalue="Gradle.AppTest.testFizzBuzz" />
-        <item itemvalue="Gradle.AppTest.testResultPreOrder" />
-        <item itemvalue="Gradle.AppTest.testNotEmptyTree" />
+        <item itemvalue="Gradle.AppTest.testFizzBuzzNotEmptyTree" />
+        <item itemvalue="Gradle.AppTest.testFizzBuzzIsEmptyTree" />
+        <item itemvalue="Gradle.AppTest.testBreadthFirstInsert" />
+        <item itemvalue="Gradle.AppTest.testBreadthFirstSingleRoot" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +224,11 @@
       <workItem from="1627280647509" duration="2333000" />
       <workItem from="1627287424644" duration="134000" />
       <workItem from="1627300455450" duration="6354000" />
-      <workItem from="1627376938438" duration="4333000" />
+      <workItem from="1627376938438" duration="5245000" />
+      <workItem from="1627452444671" duration="5147000" />
+      <workItem from="1627469929834" duration="7000" />
+      <workItem from="1627749333628" duration="736000" />
+      <workItem from="1627763003073" duration="7000" />
     </task>
     <servers />
   </component>
