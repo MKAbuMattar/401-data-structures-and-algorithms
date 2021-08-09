@@ -3,8 +3,14 @@
  */
 package sort;
 
+import java.util.Arrays;
+
 public class App {
 
     public static void main(String[] args) {
+        Integer[] integerNegArr = new Integer[]{4, -25, 30, 15, -15, 99, 3, 0};
+        Sort<Integer> integerNegSort = new Sort<>();
+
+        System.out.println(Arrays.toString(integerNegSort.mergeSort(integerNegArr)));
     }
 }
