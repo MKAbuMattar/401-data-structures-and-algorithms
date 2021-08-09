@@ -12,3 +12,5 @@
 | Trees | [Link](./trees/) |
 | Class 26 | [Link](./sort/README/class26/README.md) |
 | Class 26 BLOG | [Link](./sort/README/class26/BLOG.md) |
+| Class 27 | [Link](./sort/README/class27/README.md) |
+| Class 27 BLOG | [Link](./sort/README/class27/BLOG.md) |
