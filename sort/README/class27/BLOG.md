@@ -73,7 +73,7 @@ Pass 7
 
 Final iteration will the finished merged array.
 
-![challenge26](./challenge26.jpg)
+![challenge27](./challenge27.jpg)
 
 ## Efficiency
 

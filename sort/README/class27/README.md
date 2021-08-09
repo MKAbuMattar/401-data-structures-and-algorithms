@@ -14,5 +14,4 @@ I started by reading the instructions and looking at the pseudocode. Then I prep
 
 Solution
 
-```
-```
+![challenge27](./challenge27.jpg)
