@@ -14,6 +14,8 @@ public class AppTest {
     Sort<Integer> integerSort;
     Integer[] integerNegArr;
     Sort<Integer> integerNegSort;
+    Integer[] uniquesIntegerArr;
+    Sort<Integer> uniquesIntegerSort;
 
     @Before
     public void init(){
@@ -23,6 +25,8 @@ public class AppTest {
         integerSort = new Sort<>();
         integerNegArr = new Integer[]{4, -25, 30, 15, -15, 99, 3, 0};
         integerNegSort = new Sort<>();
+        uniquesIntegerArr = new Integer[]{5,12,7,5,5,7};
+        uniquesIntegerSort = new Sort<>();
     }
 
     @Test
@@ -39,6 +43,34 @@ public class AppTest {
     public void testInsertionSortNeg() {
         assertArrayEquals(new Integer[]{-25, -15, 0, 3, 4, 15, 30, 99},
                 integerNegSort.insertionSort(integerNegArr));
+    }
+
+    @Test
+    public void testUniquesIntegerSort() {
+        assertArrayEquals(new Integer[]{5, 5, 5, 7, 7, 12},
+                integerNegSort.insertionSort(uniquesIntegerArr));
+    }
+
+    @Test
+    public void testInsertionSortEmptyMergeSort() {
+        assertArrayEquals(new Integer[]{}, emptySort.mergeSort(emptyArr));
+    }
+
+    @Test
+    public void testInsertionSortMultNumMergeSort() {
+        assertArrayEquals(new Integer[]{4, 15, 16, 25, 30}, integerSort.mergeSort(integerArr));
+    }
+
+    @Test
+    public void testInsertionSortNegMergeSort() {
+        assertArrayEquals(new Integer[]{-25, -15, 0, 3, 4, 15, 30, 99},
+                integerNegSort.mergeSort(integerNegArr));
+    }
+
+    @Test
+    public void testUniquesIntegerSortMergeSort() {
+        assertArrayEquals(new Integer[]{5, 5, 5, 7, 7, 12},
+                integerNegSort.mergeSort(uniquesIntegerArr));
     }
 
 }
