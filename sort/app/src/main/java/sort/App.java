@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        Integer[] integerNegArr = new Integer[] {8,4,23,42,16,15};
+        Integer[] integerNegArr = new Integer[] {4, 15, 16, 25, 30};
 
         Sort<Integer> integerNegSort = new Sort<>();
 
