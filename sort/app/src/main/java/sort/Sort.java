@@ -30,13 +30,13 @@ public class Sort<T extends Comparable<T>> {
             T[] right = Arrays.copyOfRange(arr, mid, arr.length);
             mergeSort(left);
             mergeSort(right);
-            mergeSort(left, right, arr);
+            merge(left, right, arr);
         }
 
         return arr;
     }
 
-    private void mergeSort(T[] left, T[] right, T[] original) {
+    private void merge(T[] left, T[] right, T[] original) {
         int leftIndex = 0;
         int rightIndex = 0;
         int originalIndex = 0;
@@ -70,4 +70,45 @@ public class Sort<T extends Comparable<T>> {
             }
         }
     }
+
+    public T[] quicksort(T[] arr, int left, int right) {
+        if(left < right) {
+            // Partition the array by setting the position of the pivot value
+            int partitionIndex = partition(arr, left, right);
+            // Sort the left
+            quicksort(arr, left, partitionIndex - 1);
+            // Sort the right
+            quicksort(arr, partitionIndex + 1, right);
+        }
+        return arr;
+    }
+
+    private int partition(T[] arr, int left, int right) {
+        // set a pivot value as a point of reference
+        T pivot = arr[right];
+
+        // create a variable to track the largest index of numbers lower than the defined pivot
+        int low = left - 1;
+
+        for(int i = left; i < right; i++) {
+            if(arr[i].compareTo(pivot) < 0) {
+                low++;
+                swap(arr, i, low);
+            }
+        }
+
+        // place the value of the pivot location in the middle.
+        // all numbers smaller than the pivot are on the left, larger on the right.
+        swap(arr, right, low + 1);
+
+        // return the pivot index point
+        return low + 1;
+    }
+
+    private void swap(T[] arr, int i, int low) {
+        T temp = arr[i];
+        arr[i] = arr[low];
+        arr[low] = temp;
+    }
+
 }

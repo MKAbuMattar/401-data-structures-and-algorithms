@@ -7,10 +7,16 @@ import java.util.Arrays;
 
 public class App {
 
+
+
     public static void main(String[] args) {
-        Integer[] integerNegArr = new Integer[]{4, -25, 30, 15, -15, 99, 3, 0};
+
+        Integer[] integerNegArr = new Integer[] {8,4,23,42,16,15};
+
         Sort<Integer> integerNegSort = new Sort<>();
 
-        System.out.println(Arrays.toString(integerNegSort.mergeSort(integerNegArr)));
+        System.out.println(Arrays.toString(
+                integerNegSort.quicksort(integerNegArr, 0, (integerNegArr.length -1))
+        ));
     }
 }
