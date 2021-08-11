@@ -73,4 +73,31 @@ public class AppTest {
                 integerNegSort.mergeSort(uniquesIntegerArr));
     }
 
+    @Test
+    public void testInsertionSortEmptyQuickSort() {
+        assertArrayEquals(new Integer[]{},
+                emptySort.quicksort(emptyArr, 0,  (emptyArr.length - 1) ));
+    }
+
+    @Test
+    public void testInsertionSortMultNumQuickSort() {
+        assertArrayEquals(new Integer[]{4, 15, 16, 25, 30},
+                integerSort.quicksort(integerArr, 0, (integerArr.length - 1))
+        );
+    }
+
+    @Test
+    public void testInsertionSortNegQuickSort() {
+        assertArrayEquals(new Integer[]{-25, -15, 0, 3, 4, 15, 30, 99},
+                integerNegSort.quicksort(integerNegArr,0, (integerNegArr.length - 1))
+        );
+    }
+
+    @Test
+    public void testUniquesIntegerSortQuickSort() {
+        assertArrayEquals(new Integer[]{5, 5, 5, 7, 7, 12},
+                integerNegSort.quicksort(uniquesIntegerArr,0, (uniquesIntegerArr.length - 1))
+        );
+    }
+
 }
