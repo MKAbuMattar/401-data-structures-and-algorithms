@@ -1,5 +1,7 @@
 package LinkedList.data;
 
+import java.util.LinkedList;
+
 public class Node<T> {
   private Node<T> next;
   private Node<T> prev;
@@ -7,6 +9,12 @@ public class Node<T> {
 
   public Node(T data) {
     this.data = data;
+  }
+
+  public Node(Node<T> next, Node<T> prev, T data) {
+    this.data = data;
+    this.next = next;
+    this.prev = prev;
   }
 
   public Node<T> getNext() {

@@ -12,6 +12,10 @@ public class LinkedList<T> {
   public LinkedList() {
   }
 
+  public int getSize() {
+    return size;
+  }
+
   public void add(T data) {
     Node<T> node = new Node<>(data);
     if (head == null) {

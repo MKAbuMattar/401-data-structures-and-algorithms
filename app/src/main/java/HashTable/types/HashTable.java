@@ -81,7 +81,8 @@ public class HashTable<V> {
         bucketArray.add(null);
       }
 
-      for (Node<V> headNode : temp) {
+      for (int i = 0; i <= temp.getSize(); i++) {
+        Node<V> headNode = temp.get(i);
         while (headNode != null) {
           add(headNode.getKey(), headNode.getValue());
           headNode = headNode.getNext();
