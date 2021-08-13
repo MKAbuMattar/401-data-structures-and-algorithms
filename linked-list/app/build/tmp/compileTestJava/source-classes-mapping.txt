@@ -1,2 +1,0 @@
-linked/list/AppTest.java
- linked.list.AppTest

@@ -1,6 +1,0 @@
-data/Node.java
- data.Node
-types/LinkedList.java
- types.LinkedList
-Main.java
- Main
