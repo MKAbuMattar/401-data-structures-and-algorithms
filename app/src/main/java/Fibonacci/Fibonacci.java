@@ -2,13 +2,13 @@ package Fibonacci;
 
 public class Fibonacci {
 
-    public int fibonacci(int num) {
+  public int fibonacci(int num) {
 
-        if (num <= 1) {
-            return num;
-        }
-
-        return fibonacci(num - 1) + fibonacci(num - 2);
+    if (num <= 1) {
+      return num;
     }
+
+    return fibonacci(num - 1) + fibonacci(num - 2);
+  }
 
 }
