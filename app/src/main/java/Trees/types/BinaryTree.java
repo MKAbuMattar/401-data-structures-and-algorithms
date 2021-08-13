@@ -3,159 +3,159 @@ package Trees.types;
 import StackAndQueue.types.Queue;
 import Trees.data.Node;
 
-public class BinaryTree<T extends Comparable<T>>{
+public class BinaryTree<T extends Comparable<T>> {
 
-    Node<T> root;
-    StringBuilder dataOfBinaryTree = new StringBuilder();
-    private T max = null;
+  Node<T> root;
+  StringBuilder dataOfBinaryTree = new StringBuilder();
+  private T max = null;
 
-    public BinaryTree() {
-        root = new Node<T>();
+  public BinaryTree() {
+    root = new Node<T>();
+  }
+
+  public Node<T> getRoot() {
+    if (root == null) {
+      return null;
+    }
+    return root;
+  }
+
+  public void setRoot(Node<T> root) {
+    this.root = root;
+  }
+
+  public String inOrderTraverse(Node<T> node) {
+    if (node != null) {
+      inOrderTraverse(node.getLeft()); // traverse left sub tree
+      dataOfBinaryTree.append(node.getData()).append(" "); // root
+      inOrderTraverse(node.getRight()); // traverse right sub tree
     }
 
-    public Node<T> getRoot() {
-        if (root == null) {
-            return null;
-        }
-        return root;
+    return dataOfBinaryTree.toString();
+  }
+
+  public String postOrderTraverse(Node<T> node) {
+    if (node != null) {
+      postOrderTraverse(node.getLeft()); // traverse left sub tree
+      postOrderTraverse(node.getRight()); // traverse right sub tree
+      dataOfBinaryTree.append(node.getData()).append(" ");// root
+    }
+    return dataOfBinaryTree.toString();
+  }
+
+  public String preOrderTraverse(Node<T> node) {
+    if (node != null) {
+      dataOfBinaryTree.append(node.getData()).append(" "); // root
+      preOrderTraverse(node.getLeft()); // traverse left sub tree
+      preOrderTraverse(node.getRight()); // traverse right sub tree
+    }
+    return dataOfBinaryTree.toString();
+  }
+
+  public T getMax() {
+    if (root.getData() != null) {
+      max = root.getData();
+      max = swap(root);
+    }
+    return max;
+  }
+
+  private T swap(Node<T> root) {
+    if (max.compareTo(root.getData()) < 0) {
+      max = root.getData();
     }
 
-    public void setRoot(Node<T> root) {
-        this.root = root;
+    if (root.getRight() != null) {
+      swap(root.getRight());
     }
 
-    public String inOrderTraverse(Node<T> node) {
-        if (node != null) {
-            inOrderTraverse(node.getLeft()); // traverse left sub tree
-            dataOfBinaryTree.append(node.getData()).append(" "); // root
-            inOrderTraverse(node.getRight()); // traverse right sub tree
-        }
-
-        return dataOfBinaryTree.toString();
+    if (root.getLeft() != null) {
+      swap(root.getLeft());
     }
 
-    public String postOrderTraverse(Node<T> node) {
-        if (node != null) {
-            postOrderTraverse(node.getLeft()); // traverse left sub tree
-            postOrderTraverse(node.getRight()); // traverse right sub tree
-            dataOfBinaryTree.append(node.getData()).append(" ");// root
-        }
-        return dataOfBinaryTree.toString();
+    return max;
+  }
+
+  public Queue<T> breadthFirst() {
+
+    Queue<Node<T>> tempRoot = new Queue<>();
+
+    Queue<T> root = new Queue<>();
+
+    Node<T> current = this.getRoot();
+
+    if (current != null) {
+      tempRoot.enqueue(this.getRoot());
     }
 
-    public String preOrderTraverse(Node<T> node) {
-        if (node != null) {
-            dataOfBinaryTree.append(node.getData()).append(" "); // root
-            preOrderTraverse(node.getLeft()); // traverse left sub tree
-            preOrderTraverse(node.getRight()); // traverse right sub tree
-        }
-        return dataOfBinaryTree.toString();
+    while (!tempRoot.isEmpty()) {
+
+      current = tempRoot.dequeue();
+      root.enqueue(current.getData());
+
+      if (current.getLeft() != null) {
+        tempRoot.enqueue(current.getLeft());
+      }
+
+      if (current.getRight() != null) {
+        tempRoot.enqueue(current.getRight());
+      }
     }
 
-    public T getMax() {
-        if (root.getData() != null) {
-            max = root.getData();
-            max = swap(root);
-        }
-        return max;
+    return root;
+  }
+
+  public BinaryTree<String> fizzBuzz(BinaryTree<Integer> tree) {
+
+    BinaryTree<String> newTree = new BinaryTree<>();
+
+    if (tree.getRoot().getData() != null) {
+      traverseFizzBuzzTree(tree.getRoot(), newTree.getRoot());
     }
 
-    private T swap(Node<T> root) {
-        if (max.compareTo(root.getData()) < 0) {
-            max = root.getData();
-        }
+    return newTree;
+  }
 
-        if (root.getRight() != null) {
-            swap(root.getRight());
-        }
+  private void traverseFizzBuzzTree(Node<Integer> root, Node<String> newRoot) {
 
-        if (root.getLeft() != null) {
-            swap(root.getLeft());
-        }
-
-        return max;
+    if (root.getData() % 15 == 0) {
+      newRoot.setData("FizzBuzz");
+    } else if (root.getData() % 5 == 0) {
+      newRoot.setData("Buzz");
+    } else if (root.getData() % 3 == 0) {
+      newRoot.setData("Fizz");
+    } else {
+      newRoot.setData(root.getData().toString());
     }
 
-    public Queue<T> breadthFirst() {
-
-        Queue<Node<T>> tempRoot = new Queue<>();
-
-        Queue<T> root = new Queue<>();
-
-        Node<T> current = this.getRoot();
-
-        if (current != null) {
-            tempRoot.enqueue(this.getRoot());
-        }
-
-        while (!tempRoot.isEmpty()) {
-
-            current = tempRoot.dequeue();
-            root.enqueue(current.getData());
-
-            if (current.getLeft() != null) {
-                tempRoot.enqueue(current.getLeft());
-            }
-
-            if (current.getRight() != null) {
-                tempRoot.enqueue(current.getRight());
-            }
-        }
-
-        return root;
+    if (root.getLeft() != null) {
+      newRoot.setLeft(new Node<>());
+      traverseFizzBuzzTree(root.getLeft(), newRoot.getLeft());
     }
 
-    public BinaryTree<String> fizzBuzz(BinaryTree<Integer> tree) {
-
-        BinaryTree<String> newTree = new BinaryTree<>();
-
-        if (tree.getRoot().getData() != null) {
-            traverseFizzBuzzTree(tree.getRoot(), newTree.getRoot());
-        }
-
-        return newTree;
+    if (root.getRight() != null) {
+      newRoot.setRight(new Node<>());
+      traverseFizzBuzzTree(root.getRight(), newRoot.getRight());
     }
+  }
 
-    private void traverseFizzBuzzTree(Node<Integer> root, Node<String> newRoot) {
+  public Queue<T> print() {
+    Queue<T> data = new Queue<>();
 
-        if (root.getData() % 15 == 0) {
-            newRoot.setData("FizzBuzz");
-        } else if (root.getData() % 5 == 0) {
-            newRoot.setData("Buzz");
-        } else if (root.getData() % 3 == 0) {
-            newRoot.setData("Fizz");
-        } else {
-            newRoot.setData(root.getData().toString());
-        }
+    traversePrint(this.getRoot(), data);
 
-        if (root.getLeft() != null) {
-            newRoot.setLeft(new Node<>());
-            traverseFizzBuzzTree(root.getLeft(), newRoot.getLeft());
-        }
+    return data;
+  }
 
-        if (root.getRight() != null) {
-            newRoot.setRight(new Node<>());
-            traverseFizzBuzzTree(root.getRight(), newRoot.getRight());
-        }
+  private void traversePrint(Node<T> root, Queue<T> data) {
+
+    data.enqueue(root.getData());
+
+    if (root.getLeft() != null) {
+      traversePrint(root.getLeft(), data);
     }
-
-    public Queue<T> print() {
-        Queue<T> data = new Queue<>();
-
-        traversePrint(this.getRoot(), data);
-
-        return data;
+    if (root.getRight() != null) {
+      traversePrint(root.getRight(), data);
     }
-
-    private void traversePrint(Node<T> root, Queue<T> data) {
-
-        data.enqueue(root.getData());
-
-        if(root.getLeft() != null) {
-            traversePrint(root.getLeft(), data);
-        }
-        if (root.getRight() != null) {
-            traversePrint(root.getRight(), data);
-        }
-    }
+  }
 }
