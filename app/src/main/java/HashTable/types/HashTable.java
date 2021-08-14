@@ -31,12 +31,8 @@ public class HashTable<V> {
 
   private int getBucketIndex(String key) {
     int hashCode = hashCode(key);
-
     int index = hashCode % numBucket;
-
-    index = index < 0 ? index * -1 : index;
-
-    return index;
+    return Math.abs(index);
   }
 
   public int getSize() {
@@ -46,7 +42,6 @@ public class HashTable<V> {
   public boolean isEmpty() {
     return getSize() == 0;
   }
-
 
   public void add(String key, V value) {
     int bucketIndex = getBucketIndex(key);
@@ -72,7 +67,7 @@ public class HashTable<V> {
     if ((1.0 * size) / numBucket >= 0.7) {
       LinkedList<Node<V>> temp = bucketArray;
       bucketArray = new LinkedList<>();
-      numBucket = 2 * numBucket;
+      numBucket *=  2;
       size = 0;
       for (int index = 0; index < numBucket; index++) {
         bucketArray.append(null);
@@ -116,7 +111,6 @@ public class HashTable<V> {
     } else {
       bucketArray.set(bucketIndex, head.getNext());
     }
-
 
     return head.getValue();
   }
