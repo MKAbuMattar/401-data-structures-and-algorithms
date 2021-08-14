@@ -69,8 +69,11 @@ public class HashtableTest {
 
   @Test
   public void TestHashTableIntegerGet() {
+    assertEquals(Integer.valueOf(21), ages.get("Raghad"));
     assertEquals(Integer.valueOf(40), ages.get("Ali"));
     assertEquals(Integer.valueOf(5), ages.get("Ahmad"));
+    assertEquals(Integer.valueOf(23), ages.get("Rana"));
+    assertEquals(Integer.valueOf(26), ages.get("Mohammad"));
   }
 
   @Test
