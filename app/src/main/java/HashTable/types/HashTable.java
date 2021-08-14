@@ -3,21 +3,36 @@ package HashTable.types;
 import HashTable.data.Node;
 import LinkedList.types.LinkedList;
 
+import java.util.Objects;
+
 public class HashTable<V> {
 
   private LinkedList<Node<V>> bucketArray;
-  private int numBuckets;
+  private int numBucket;
   private int size;
 
+
   public HashTable() {
+
     bucketArray = new LinkedList<>();
-    numBuckets = 10;
+    numBucket = 10;
     size = 0;
 
-    for (int i = 0; i < numBuckets; i++) {
-      bucketArray.add(null);
+    for (int index = 0; index < numBucket; index++) {
+      bucketArray.append(null);
     }
 
+  }
+
+  private int hashCode(String key) {
+    return Objects.hashCode(key);
+  }
+
+
+  private int getBucketIndex(String key) {
+    int hashCode = hashCode(key);
+    int index = hashCode % numBucket;
+    return Math.abs(index);
   }
 
   public int getSize() {
@@ -26,27 +41,6 @@ public class HashTable<V> {
 
   public boolean isEmpty() {
     return getSize() == 0;
-  }
-
-  private int hashCode(String key) {
-    char[] letters = key.toCharArray();
-
-    double sum = 0;
-
-    for (int i = 0; i < letters.length; i++) {
-      double power = Math.pow((int) letters[i], i + 1);
-      sum += power;
-    }
-
-    sum = (sum * 600) % getSize() + 1;
-
-    return (int) sum;
-  }
-
-  private int getBucketIndex(String key) {
-    int hashCode = hashCode(key);
-    int index = hashCode % numBuckets;
-    return Math.abs(index);
   }
 
   public void add(String key, V value) {
@@ -61,24 +55,22 @@ public class HashTable<V> {
       }
       head = head.getNext();
     }
-
     size++;
     head = bucketArray.get(bucketIndex);
-    Node<V> newNode = new Node<V>(key, value, hashCode);
+    Node<V> newNode = new Node<>(key, value, hashCode);
     newNode.setNext(head);
     bucketArray.set(bucketIndex, newNode);
-
     resize();
   }
 
   private void resize() {
-    if ((1.0 * size) / numBuckets >= 0.7) {
+    if ((1.0 * size) / numBucket >= 0.7) {
       LinkedList<Node<V>> temp = bucketArray;
       bucketArray = new LinkedList<>();
-      numBuckets *= 2;
+      numBucket *=  2;
       size = 0;
-      for (int i = 0; i < numBuckets; i++) {
-        bucketArray.add(null);
+      for (int index = 0; index < numBucket; index++) {
+        bucketArray.append(null);
       }
 
       for (int i = 0; i <= temp.getSize(); i++) {
@@ -88,38 +80,22 @@ public class HashTable<V> {
           headNode = headNode.getNext();
         }
       }
+
     }
-  }
-
-  public V get(String key) {
-    int bucketIndex = getBucketIndex(key);
-
-    int hashCode = hashCode(key);
-
-    Node<V> head = bucketArray.get(bucketIndex);
-
-    while (head != null) {
-      if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
-        return head.getValue();
-      }
-
-      head = head.getNext();
-    }
-
-    return null;
   }
 
   public V remove(String key) {
     int bucketIndex = getBucketIndex(key);
     int hashCode = hashCode(key);
+
     Node<V> head = bucketArray.get(bucketIndex);
 
     Node<V> prev = null;
+
     while (head != null) {
-      if (head.getKey().equals(key) && hashCode == head.getHashCode()) {
+      if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
         break;
       }
-
       prev = head;
       head = head.getNext();
     }
@@ -137,5 +113,22 @@ public class HashTable<V> {
     }
 
     return head.getValue();
+  }
+
+
+  public V get(String key) {
+    int bucketIndex = getBucketIndex(key);
+    int hashCode = hashCode(key);
+
+    Node<V> head = bucketArray.get(bucketIndex);
+
+    while (head != null) {
+      if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
+        return head.getValue();
+      }
+      head = head.getNext();
+    }
+
+    return null;
   }
 }

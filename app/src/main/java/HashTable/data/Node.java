@@ -3,9 +3,10 @@ package HashTable.data;
 public class Node<V> {
   private String key;
   private V value;
-  private final int hashCode;
 
-  Node<V> next;
+  private int hashCode;
+
+  private Node<V> next;
 
   public Node(String key, V value, int hashCode) {
     this.key = key;
@@ -31,6 +32,10 @@ public class Node<V> {
 
   public int getHashCode() {
     return hashCode;
+  }
+
+  public void setHashCode(int hashCode) {
+    this.hashCode = hashCode;
   }
 
   public Node<V> getNext() {

@@ -1,18 +1,17 @@
 import HashTable.types.HashTable;
-import LinkedList.types.LinkedList;
-
-import java.util.Arrays;
 
 public class App {
   public static void main(String[] args) {
     HashTable<Integer> map = new HashTable<>();
-    map.add("this", 1);
-    map.add("coder", 2);
-    map.add("this", 4);
-    map.add("hi", 5);
+    map.add("1", 1);
+    map.add("2", 2);
+    map.add("3", 3);
     System.out.println(map.getSize());
-    System.out.println(map.remove("this"));
+    System.out.println(map.get("1"));
+    System.out.println(map.remove("1"));
     System.out.println(map.getSize());
-    System.out.println(map.isEmpty());
+    System.out.println(map.get("1"));
+    System.out.println(map.get("2"));
+    System.out.println(map.get("3"));
   }
 }

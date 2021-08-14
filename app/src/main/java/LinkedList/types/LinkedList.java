@@ -283,20 +283,20 @@ public class LinkedList<T> {
     }
   }
 
-  Node<T> node(int index) {
+  private Node<T> node(int index) {
     Node<T> temp;
     int i;
-    if (index < this.size >> 1) {
+    if (index < this.size && this.size > 0) {
       temp = head;
 
-      for(i = 0; i < index; ++i) {
+      for (i = 0; i < index; ++i) {
         temp = temp.getNext();
       }
 
     } else {
       temp = last;
 
-      for(i = this.size - 1; i > index; --i) {
+      for (i = this.size - 1; i > index; --i) {
         temp = temp.getPrev();
       }
 
