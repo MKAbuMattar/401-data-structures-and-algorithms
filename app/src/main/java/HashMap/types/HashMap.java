@@ -15,17 +15,17 @@ public class HashMap<K,V> {
     int index = getIndex(key);
     while(true) {
       if(array[index] == null) {
-        Node<K,V> add = new Node<>(key, value);
-        array[index] = add;
+        Node<K,V> newNode = new Node<>(key, value);
+        array[index] = newNode;
         ++size;
-        checkForExpansion();
+        resize();
         return null;
       } else if(array[index].getKey().equals(key)) {
         V old = array[index].getValue();
         array[index] = new Node<>(key, value);
         return old;
       } else {
-        index = incIndex(index);
+        index = includeIndex(index);
       }
     }
   }
@@ -38,12 +38,12 @@ public class HashMap<K,V> {
       } else if(array[index].getKey().equals(key)) {
         return array[index].getValue();
       } else {
-        index = incIndex(index);
+        index = includeIndex(index);
       }
     }
   }
 
-  private int incIndex(int index) {
+  private int includeIndex(int index) {
     ++index;
     if(index >= array.length) {
       index = 0;
@@ -55,7 +55,7 @@ public class HashMap<K,V> {
     return Math.abs(key.hashCode()) % array.length;
   }
 
-  private void checkForExpansion() {
+  private void resize() {
     if((size * 10) / array.length > 2) {
       Node<K,V>[] old = array;
       array = new Node[array.length*2];
@@ -67,5 +67,4 @@ public class HashMap<K,V> {
       }
     }
   }
-
 }
