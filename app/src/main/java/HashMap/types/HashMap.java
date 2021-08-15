@@ -2,8 +2,6 @@ package HashMap.types;
 
 import HashMap.data.Node;
 
-import java.util.Arrays;
-
 public class HashMap<K, V> {
 
   private Node<K, V>[] array;
