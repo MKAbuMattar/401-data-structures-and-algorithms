@@ -2,9 +2,11 @@ package HashMap.types;
 
 import HashMap.data.Node;
 
-public class HashMap<K,V> {
+import java.util.Arrays;
 
-  private Node<K,V>[] array;
+public class HashMap<K, V> {
+
+  private Node<K, V>[] array;
   private int size;
 
   public HashMap() {
@@ -13,14 +15,14 @@ public class HashMap<K,V> {
 
   public V put(K key, V value) {
     int index = getIndex(key);
-    while(true) {
-      if(array[index] == null) {
-        Node<K,V> newNode = new Node<>(key, value);
+    while (true) {
+      if (array[index] == null) {
+        Node<K, V> newNode = new Node<>(key, value);
         array[index] = newNode;
         ++size;
         resize();
         return null;
-      } else if(array[index].getKey().equals(key)) {
+      } else if (array[index].getKey().equals(key)) {
         V old = array[index].getValue();
         array[index] = new Node<>(key, value);
         return old;
@@ -32,10 +34,10 @@ public class HashMap<K,V> {
 
   public V get(K key) {
     int index = getIndex(key);
-    while(true) {
-      if(array[index] == null) {
+    while (true) {
+      if (array[index] == null) {
         return null;
-      } else if(array[index].getKey().equals(key)) {
+      } else if (array[index].getKey().equals(key)) {
         return array[index].getValue();
       } else {
         index = includeIndex(index);
@@ -45,7 +47,7 @@ public class HashMap<K,V> {
 
   private int includeIndex(int index) {
     ++index;
-    if(index >= array.length) {
+    if (index >= array.length) {
       index = 0;
     }
     return index;
@@ -56,9 +58,9 @@ public class HashMap<K,V> {
   }
 
   private void resize() {
-    if((size * 10) / array.length > 2) {
-      Node<K,V>[] old = array;
-      array = new Node[array.length*2];
+    if ((size * 10) / array.length > 2) {
+      Node<K, V>[] old = array;
+      array = new Node[array.length * 2];
       size = 0;
       for (Node<K, V> newNode : old) {
         if (newNode != null) {
@@ -66,5 +68,27 @@ public class HashMap<K,V> {
         }
       }
     }
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder printArray = new StringBuilder();
+
+    printArray.append("[");
+
+    int b = 0;
+
+    for (Node<K, V> kvNode : array) {
+      if (kvNode != null) {
+        if (b != 0) {
+          printArray.append(",");
+        }
+        b++;
+        printArray.append(kvNode);
+      }
+    }
+
+    printArray.append("]");
+    return printArray.toString();
   }
 }

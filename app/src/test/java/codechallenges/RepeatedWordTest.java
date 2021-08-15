@@ -23,32 +23,32 @@ public class RepeatedWordTest {
   }
 
   @Test
-  public void TestRepeatedWordEmpty(){
+  public void TestRepeatedWordEmpty() {
     assertNull(word.repeatedWord(empty));
   }
 
   @Test
-  public void TestRepeatedWordOneWordRepeated(){
+  public void TestRepeatedWordOneWordRepeated() {
     assertEquals("a", word.repeatedWord(oneWordRepeated));
   }
 
   @Test
-  public void TestRepeatedWordMultiWordRepeated(){
+  public void TestRepeatedWordMultiWordRepeated() {
     assertEquals("summer", word.repeatedWord(multiWordRepeated));
   }
 
   @Test
-  public void TestRepeatedWordsEmpty(){
-    assertEquals("Linked list is empty",word.repeatedWords(empty));
+  public void TestRepeatedWordsEmpty() {
+    assertEquals("[]", word.repeatedWords(empty));
   }
 
   @Test
-  public void TestRepeatedWordsOneWordRepeated(){
-    assertEquals("{a}-> NULL", word.repeatedWords(oneWordRepeated));
+  public void TestRepeatedWordsOneWordRepeated() {
+    assertEquals("[a]", word.repeatedWords(oneWordRepeated));
   }
 
   @Test
-  public void TestRepeatedWordsMultiWordRepeated(){
-    assertEquals("{was}-> {summer}-> {the}-> {I}-> NULL", word.repeatedWords(multiWordRepeated));
+  public void TestRepeatedWordsMultiWordRepeated() {
+    assertEquals("[was,summer,the,I]", word.repeatedWords(multiWordRepeated));
   }
 }

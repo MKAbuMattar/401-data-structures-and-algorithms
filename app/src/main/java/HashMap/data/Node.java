@@ -1,6 +1,6 @@
 package HashMap.data;
 
-public class Node<K,V> {
+public class Node<K, V> {
   private final K key;
   private final V value;
 
@@ -15,5 +15,10 @@ public class Node<K,V> {
 
   public V getValue() {
     return value;
+  }
+
+  @Override
+  public String toString() {
+    return key.toString();
   }
 }

@@ -14,4 +14,9 @@ public class ImplementHashMap<V> {
   public boolean contains(Object obj) {
     return table.get((V) obj) != null;
   }
+
+  @Override
+  public String toString() {
+    return table.toString();
+  }
 }

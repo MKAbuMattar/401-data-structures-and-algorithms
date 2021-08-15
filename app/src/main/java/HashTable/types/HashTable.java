@@ -2,6 +2,7 @@ package HashTable.types;
 
 import HashTable.data.Node;
 import LinkedList.types.LinkedList;
+
 import java.util.Objects;
 
 public class HashTable<V> {
@@ -64,7 +65,7 @@ public class HashTable<V> {
     if ((1.0 * size) / numBucket >= 0.7) {
       LinkedList<Node<V>> temp = bucketArray;
       bucketArray = new LinkedList<>();
-      numBucket *=  2;
+      numBucket *= 2;
       size = 0;
       for (int index = 0; index < numBucket; index++) {
         bucketArray.append(null);

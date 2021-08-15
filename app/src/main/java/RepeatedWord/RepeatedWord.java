@@ -10,11 +10,11 @@ public class RepeatedWord {
 
   private static final String PATTERN = "\\W+";
 
-  public String repeatedWord(String str){
+  public String repeatedWord(String str) {
     String[] words = str.split(PATTERN);
     ImplementHashMap<String> wordTable = new ImplementHashMap<>();
-    for(String word : words) {
-      if(wordTable.contains(word)){
+    for (String word : words) {
+      if (wordTable.contains(word)) {
         return word;
       } else {
         wordTable.add(word);
@@ -25,7 +25,7 @@ public class RepeatedWord {
 
   public String repeatedWords(String str) {
     int count;
-    LinkedList<String> temp = new LinkedList<>();
+    ImplementHashMap<String> temp = new ImplementHashMap<>();
     String[] words = str.split(PATTERN);
 
     for (int i = 0; i < words.length; i++) {
