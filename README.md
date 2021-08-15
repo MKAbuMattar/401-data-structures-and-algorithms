@@ -17,3 +17,4 @@
 | Class 28 | [Link](./README/Sort/README/class28/README.md) |
 | Class 28 BLOG | [Link](./README/Sort/README/class28/BLOG.md) |
 | HashTable | [Link](./README/HashTable/) |
+| HashMap | [Link](./README/HashMap/) |
