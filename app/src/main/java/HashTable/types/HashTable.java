@@ -3,6 +3,7 @@ package HashTable.types;
 import HashTable.data.Node;
 import LinkedList.types.LinkedList;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class HashTable<V> {
@@ -10,7 +11,8 @@ public class HashTable<V> {
   private LinkedList<Node<V>> bucketArray;
   private int numBucket;
   private int size;
-
+  private HashMap<V, Object> table = new HashMap<>();
+  private static final Object PRESENT = new Object();
 
   public HashTable() {
 
@@ -27,7 +29,6 @@ public class HashTable<V> {
   private int hashCode(String key) {
     return Objects.hashCode(key);
   }
-
 
   private int getBucketIndex(String key) {
     int hashCode = hashCode(key);
@@ -115,7 +116,6 @@ public class HashTable<V> {
     return head.getValue();
   }
 
-
   public V get(String key) {
     int bucketIndex = getBucketIndex(key);
     int hashCode = hashCode(key);
@@ -130,5 +130,13 @@ public class HashTable<V> {
     }
 
     return null;
+  }
+
+  public boolean add(V value) {
+    return table.put(value, PRESENT) == null;
+  }
+
+  public boolean contains(Object o) {
+    return table.containsKey(o);
   }
 }
