@@ -1,7 +1,9 @@
 package RepeatedWord;
 
-import HashTable.types.HashTable;
+
+import HashMap.Implement.ImplementHashMap;
 import LinkedList.types.LinkedList;
+
 import java.util.*;
 
 public class RepeatedWord {
@@ -10,7 +12,7 @@ public class RepeatedWord {
 
   public String repeatedWord(String str){
     String[] words = str.split(PATTERN);
-    HashTable<String> wordTable = new HashTable<>();
+    ImplementHashMap<String> wordTable = new ImplementHashMap<>();
     for(String word : words) {
       if(wordTable.contains(word)){
         return word;

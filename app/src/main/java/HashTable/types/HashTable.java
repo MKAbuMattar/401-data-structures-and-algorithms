@@ -1,6 +1,5 @@
 package HashTable.types;
 
-import HashMap.types.HashMap;
 import HashTable.data.Node;
 import LinkedList.types.LinkedList;
 import java.util.Objects;
@@ -10,8 +9,6 @@ public class HashTable<V> {
   private LinkedList<Node<V>> bucketArray;
   private int numBucket;
   private int size;
-  private HashMap<V, Object> table = new HashMap<V, Object>();
-  private static final Object PRESENT = new Object();
 
   public HashTable() {
 
@@ -129,13 +126,5 @@ public class HashTable<V> {
     }
 
     return null;
-  }
-
-  public boolean add(V value) {
-    return table.put(value, PRESENT) == null;
-  }
-
-  public boolean contains(Object o) {
-    return table.get((V) o) != null;
   }
 }
