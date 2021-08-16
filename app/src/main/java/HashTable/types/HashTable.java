@@ -128,4 +128,9 @@ public class HashTable<V> {
 
     return null;
   }
+
+  public boolean contains(String key) {
+    return get(key) != null;
+  }
+
 }

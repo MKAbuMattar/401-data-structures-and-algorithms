@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class HashtableTest {
+public class HashTableTest {
 
   HashTable<Integer> emptyHashtable;
   HashTable<Integer> ages;
@@ -93,6 +93,18 @@ public class HashtableTest {
     assertEquals("Kibbeh", foods.get("Syria"));
     foods.remove("Syria");
     assertNull(ages.get("Syria"));
+  }
+
+  @Test
+  public void TestHashTableIntegerContains() {
+    assertTrue(ages.contains("Ali"));
+    assertFalse(ages.contains("Mohammad Khaled"));
+  }
+
+  @Test
+  public void TestHashTableStringContains() {
+    assertTrue(foods.contains("Syria"));
+    assertFalse(foods.contains("USA"));
   }
 
 }
