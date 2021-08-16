@@ -3,7 +3,7 @@ package RepeatedWord;
 
 import HashMap.Implement.ImplementHashMap;
 
-import java.util.*;
+import java.util.Objects;
 
 public class RepeatedWord {
 

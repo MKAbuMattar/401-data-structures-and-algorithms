@@ -41,9 +41,9 @@ public class PseudoQueue<T> {
 //    }
 //  }
 
-  public T dequeue(){
+  public T dequeue() {
     T tempData = null;
-    if (temp.getTop() == null && main.getTop() == null){
+    if (temp.getTop() == null && main.getTop() == null) {
       return null;
     }
 
@@ -62,7 +62,7 @@ public class PseudoQueue<T> {
 
   public T peek() {
     T tempData = null;
-    if (temp.getTop() == null && main.getTop() == null){
+    if (temp.getTop() == null && main.getTop() == null) {
       return null;
     }
 
@@ -88,9 +88,9 @@ public class PseudoQueue<T> {
 
   @Override
   public String toString() {
-    if(isEmpty()){
+    if (isEmpty()) {
       return "Pseudo Queue list is empty";
-    }else {
+    } else {
       return main.toString();
     }
   }

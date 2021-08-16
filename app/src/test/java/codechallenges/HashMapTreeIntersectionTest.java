@@ -18,6 +18,9 @@ public class HashMapTreeIntersectionTest {
   BinarySearchTree<Integer> intNoDuplicateFirstTree;
   BinarySearchTree<Integer> intNoDuplicateSecondTree;
 
+  BinarySearchTree<Integer> intNegativeNumberFirstTree;
+  BinarySearchTree<Integer> intNegativeNumberSecondTree;
+
   HashMapTreeIntersection hashMapTreeIntersection;
 
   @Before
@@ -30,6 +33,9 @@ public class HashMapTreeIntersectionTest {
 
     intNoDuplicateFirstTree = new BinarySearchTree<>();
     intNoDuplicateSecondTree = new BinarySearchTree<>();
+
+    intNegativeNumberFirstTree = new BinarySearchTree<>();
+    intNegativeNumberSecondTree = new BinarySearchTree<>();
 
     hashMapTreeIntersection = new HashMapTreeIntersection();
 
@@ -44,7 +50,6 @@ public class HashMapTreeIntersectionTest {
     intFirstTree.add(175);
     intFirstTree.add(300);
     intFirstTree.add(500);
-
     intSecondTree.add(42);
     intSecondTree.add(100);
     intSecondTree.add(600);
@@ -65,6 +70,27 @@ public class HashMapTreeIntersectionTest {
     intNoDuplicateSecondTree.add(30);
     intNoDuplicateSecondTree.add(10);
     intNoDuplicateSecondTree.add(12);
+
+    intNegativeNumberFirstTree.add(150);
+    intNegativeNumberFirstTree.add(100);
+    intNegativeNumberFirstTree.add(250);
+    intNegativeNumberFirstTree.add(75);
+    intNegativeNumberFirstTree.add(160);
+    intNegativeNumberFirstTree.add(-200);
+    intNegativeNumberFirstTree.add(-350);
+    intNegativeNumberFirstTree.add(125);
+    intNegativeNumberFirstTree.add(-175);
+    intNegativeNumberFirstTree.add(300);
+    intNegativeNumberFirstTree.add(500);
+    intNegativeNumberSecondTree.add(42);
+    intNegativeNumberSecondTree.add(100);
+    intNegativeNumberSecondTree.add(1);
+    intNegativeNumberSecondTree.add(-200);
+    intNegativeNumberSecondTree.add(-350);
+    intNegativeNumberSecondTree.add(125);
+    intNegativeNumberSecondTree.add(-175);
+    intNegativeNumberSecondTree.add(4);
+    intNegativeNumberSecondTree.add(500);
   }
 
 
@@ -91,6 +117,15 @@ public class HashMapTreeIntersectionTest {
     assertEquals("[]",
         hashMapTreeIntersection
             .hashMapTreeIntersection(intNoDuplicateFirstTree, intNoDuplicateSecondTree)
+            .toString()
+    );
+  }
+
+  @Test
+  public void testNegativeNumberHashMapTreeIntersectionTest() {
+    assertEquals("[-200,125,-175,100,500,-350]",
+        hashMapTreeIntersection
+            .hashMapTreeIntersection(intNegativeNumberFirstTree, intNegativeNumberSecondTree)
             .toString()
     );
   }

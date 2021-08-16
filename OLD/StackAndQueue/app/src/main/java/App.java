@@ -15,11 +15,11 @@ import java.util.Scanner;
 
 public class App {
 
-    private static final Stack<Integer> stackList = new Stack<>();
-    private static final Queue<Integer> queueList = new Queue<>();
-    private static final PseudoQueue<Integer> pseudoQueueList = new PseudoQueue<>();
+  private static final Stack<Integer> stackList = new Stack<>();
+  private static final Queue<Integer> queueList = new Queue<>();
+  private static final PseudoQueue<Integer> pseudoQueueList = new PseudoQueue<>();
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
 //        stackList.push(1);
 //        stackList.push(2);
@@ -125,18 +125,18 @@ public class App {
 
 //    System.out.println(pseudoQueueList);
 
-        List<String> arrList = new ArrayList<>();
+    List<String> arrList = new ArrayList<>();
 
-        arrList.add("A");
-        arrList.add("B");
-        arrList.add("C");
-        arrList.add("D");
-        arrList.add("E");
-        arrList.add("F");
-        arrList.add("G");
+    arrList.add("A");
+    arrList.add("B");
+    arrList.add("C");
+    arrList.add("D");
+    arrList.add("E");
+    arrList.add("F");
+    arrList.add("G");
 
-        System.out.println(DuckDuckGoose.duckDuckGoose(arrList, 3));
+    System.out.println(DuckDuckGoose.duckDuckGoose(arrList, 3));
 
 
-    }
+  }
 }

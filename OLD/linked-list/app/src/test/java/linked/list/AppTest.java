@@ -266,7 +266,7 @@ public class AppTest {
     list2.insert(9);
     list2.insert(4);
 
-    list.zipLists(list,list2);
+    list.zipLists(list, list2);
     assertEquals("{1}-> {5}-> {3}-> {9}-> {2}-> {4}-> NULL", list.toString());
   }
 
@@ -285,7 +285,7 @@ public class AppTest {
     list2.insert(5);
     list2.insert(4);
 
-    list.zipLists(list,list2);
+    list.zipLists(list, list2);
     assertEquals("{1}-> {5}-> {3}-> {4}-> {2}-> NULL", list.toString());
   }
 
@@ -303,7 +303,7 @@ public class AppTest {
     list2.insert(9);
     list2.insert(4);
 
-    list.zipLists(list,list2);
+    list.zipLists(list, list2);
     assertEquals("{1}-> {5}-> {3}-> {9}-> {4}-> NULL", list.toString());
   }
 
@@ -312,7 +312,7 @@ public class AppTest {
    */
 
   @Test
-  public void testLinkedListReverse(){
+  public void testLinkedListReverse() {
     list = new LinkedList<>();
     list.insert(1);
     list.insert(2);
@@ -324,7 +324,7 @@ public class AppTest {
   }
 
   @Test
-  public void testLinkedListReverseOneElement(){
+  public void testLinkedListReverseOneElement() {
     list = new LinkedList<>();
     list.insert(1);
     list.reverse();
@@ -332,14 +332,14 @@ public class AppTest {
   }
 
   @Test
-  public void testLinkedListReverseEmpty(){
+  public void testLinkedListReverseEmpty() {
     list = new LinkedList<>();
     list.reverse();
     assertEquals("Linked list is empty", list.toString());
   }
 
   @Test
-  public void testLinkedListPalindromeTrue(){
+  public void testLinkedListPalindromeTrue() {
     list3 = new LinkedList<>();
     list3.insert("t");
     list3.insert("a");
@@ -353,7 +353,7 @@ public class AppTest {
   }
 
   @Test
-  public void testLinkedListPalindromeFalse(){
+  public void testLinkedListPalindromeFalse() {
     list3 = new LinkedList<>();
     list3.insert("h");
     list3.insert("o");
@@ -365,7 +365,7 @@ public class AppTest {
   }
 
   @Test
-  public void testLinkedListPalindromeOneElement(){
+  public void testLinkedListPalindromeOneElement() {
     list3 = new LinkedList<>();
     list3.insert("h");
 
@@ -373,7 +373,7 @@ public class AppTest {
   }
 
   @Test
-  public void testLinkedListPalindromeEmpty(){
+  public void testLinkedListPalindromeEmpty() {
     list3 = new LinkedList<>();
 
     assertEquals(true, list3.palindrome());

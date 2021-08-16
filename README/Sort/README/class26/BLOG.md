@@ -29,7 +29,9 @@ Sample Array: [4, 25, 30, 15, 16]
 
 Pass 1
 
-The array will be traversed first, and the numbers in the array will be compared. The array will be divided into two parts: sorted and unsorted. In the next passes, the unsorted numbers will be selected and placed in the appropriate locations.
+The array will be traversed first, and the numbers in the array will be compared. The array will be
+divided into two parts: sorted and unsorted. In the next passes, the unsorted numbers will be
+selected and placed in the appropriate locations.
 
 Pass 2
 

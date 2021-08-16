@@ -2,7 +2,7 @@ package codechallenges;
 
 import LinkedList.types.LinkedList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class LinkedListTest {
 

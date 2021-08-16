@@ -157,7 +157,7 @@ public class LinkedList<T> {
     Node<T> temp;
 
     while (second != null && second.getNext() != null) {
-      first = first.getNext() ;
+      first = first.getNext();
       second = second.getNext().getNext();
     }
 
@@ -176,7 +176,7 @@ public class LinkedList<T> {
     first = previous;
 
     while (first != null) {
-      if (second.getData() != first.getData()){
+      if (second.getData() != first.getData()) {
         result = false;
       }
       second = second.getNext();
