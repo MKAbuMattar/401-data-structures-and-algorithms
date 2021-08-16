@@ -89,4 +89,8 @@ public class HashMap<K, V> {
     printArray.append("]");
     return printArray.toString();
   }
+
+  public int getSize() {
+    return size;
+  }
 }

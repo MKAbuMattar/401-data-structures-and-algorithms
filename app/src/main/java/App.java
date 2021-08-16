@@ -1,18 +1,29 @@
+import HashMapTreeIntersection.HashMapTreeIntersection;
 import HashTable.types.HashTable;
 import RepeatedWord.RepeatedWord;
+import Trees.types.BinarySearchTree;
 
-import java.util.Arrays;
 
 public class App {
   public static void main(String[] args) {
 
-    RepeatedWord word = new RepeatedWord();
+    BinarySearchTree<Integer> intFirstTree = new BinarySearchTree<>();
+    BinarySearchTree<Integer> intSecondTree = new BinarySearchTree<>();
 
-    String text = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
+    intFirstTree.add(1);
+    intFirstTree.add(2);
+    intFirstTree.add(3);
+    intFirstTree.add(4);
+    intFirstTree.add(5);
+    intSecondTree.add(18);
+    intSecondTree.add(5);
+    intSecondTree.add(30);
+    intSecondTree.add(10);
+    intSecondTree.add(2);
 
-    System.out.println(word.repeatedWord(text));
+    HashMapTreeIntersection hashMapTreeIntersection = new HashMapTreeIntersection();
 
-    System.out.println(word.repeatedWords(text));
+    System.out.println(hashMapTreeIntersection.hashMapTreeIntersection(intFirstTree, intSecondTree));
 
   }
 }
