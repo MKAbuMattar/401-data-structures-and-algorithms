@@ -32,7 +32,6 @@ public class App {
     intSecondTree.add(4);
     intSecondTree.add(500);
 
-
     HashMapTreeIntersection hashMapTreeIntersection = new HashMapTreeIntersection();
 
     System.out.println(hashMapTreeIntersection.hashMapTreeIntersection(intFirstTree, intSecondTree));

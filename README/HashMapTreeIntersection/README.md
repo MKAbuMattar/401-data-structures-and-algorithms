@@ -6,8 +6,10 @@ Create a HashMapTreeIntersection function that accepts two binary Search tree in
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 
+![HashMapTreeIntersection](./Challenge32.jpg)
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-The Big O space is O(n), and the time is 0(n + m + x).
+The Big O space is O(n), and the time is O(n + m + x).
 
