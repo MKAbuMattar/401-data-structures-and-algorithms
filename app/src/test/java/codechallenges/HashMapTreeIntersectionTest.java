@@ -33,16 +33,27 @@ public class HashMapTreeIntersectionTest {
 
     hashMapTreeIntersection = new HashMapTreeIntersection();
 
-    intFirstTree.add(1);
-    intFirstTree.add(2);
-    intFirstTree.add(3);
-    intFirstTree.add(4);
-    intFirstTree.add(5);
-    intSecondTree.add(18);
-    intSecondTree.add(5);
-    intSecondTree.add(30);
-    intSecondTree.add(10);
-    intSecondTree.add(2);
+    intFirstTree.add(150);
+    intFirstTree.add(100);
+    intFirstTree.add(250);
+    intFirstTree.add(75);
+    intFirstTree.add(160);
+    intFirstTree.add(200);
+    intFirstTree.add(350);
+    intFirstTree.add(125);
+    intFirstTree.add(175);
+    intFirstTree.add(300);
+    intFirstTree.add(500);
+
+    intSecondTree.add(42);
+    intSecondTree.add(100);
+    intSecondTree.add(600);
+    intSecondTree.add(200);
+    intSecondTree.add(350);
+    intSecondTree.add(125);
+    intSecondTree.add(175);
+    intSecondTree.add(4);
+    intSecondTree.add(500);
 
     intNoDuplicateFirstTree.add(1);
     intNoDuplicateFirstTree.add(20);
@@ -68,7 +79,7 @@ public class HashMapTreeIntersectionTest {
 
   @Test
   public void testNotEmptyHashMapTreeIntersectionTest() {
-    assertEquals("[2,5]",
+    assertEquals("[200,125,175,100,500,350]",
         hashMapTreeIntersection
             .hashMapTreeIntersection(intFirstTree, intSecondTree)
             .toString()

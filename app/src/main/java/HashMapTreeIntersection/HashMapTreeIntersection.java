@@ -12,6 +12,7 @@ public class HashMapTreeIntersection {
   ) {
 
     Queue<Integer> firstTreeValues = firstTree.breadthFirst();
+    Queue<Integer> firstTreeValuesTemp = firstTree.breadthFirst();
     Queue<Integer> secondTreeValues = secondTree.breadthFirst();
 
     ImplementHashMap<Integer> firstTreeHashMap = new ImplementHashMap<>();
@@ -29,8 +30,13 @@ public class HashMapTreeIntersection {
     ImplementHashMap<Integer> intersections = new ImplementHashMap<>();
 
     for(int i = 0; i <= firstTreeHashMap.getSize(); i++) {
-      if(secondTreeHashMap.contains(i)){
-        intersections.add(i);
+      int temp = 0;
+      if(firstTreeValuesTemp.peek() != null){
+        temp = firstTreeValuesTemp.dequeue();
+      }
+      
+      if(secondTreeHashMap.contains(temp)){
+        intersections.add(temp);
       }
     }
 
