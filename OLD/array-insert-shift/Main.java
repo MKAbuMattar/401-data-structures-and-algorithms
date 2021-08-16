@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Main {
-  static int[] testArr = { 1, 2, 3, 4, 5 };
+  static int[] testArr = {1, 2, 3, 4, 5};
 
   public static void main(String[] args) {
     insertShiftArray(testArr, 10);

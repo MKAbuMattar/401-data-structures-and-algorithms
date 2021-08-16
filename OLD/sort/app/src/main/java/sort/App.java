@@ -8,15 +8,14 @@ import java.util.Arrays;
 public class App {
 
 
+  public static void main(String[] args) {
 
-    public static void main(String[] args) {
+    Integer[] integerNegArr = new Integer[]{4, 15, 16, 25, 30};
 
-        Integer[] integerNegArr = new Integer[] {4, 15, 16, 25, 30};
+    Sort<Integer> integerNegSort = new Sort<>();
 
-        Sort<Integer> integerNegSort = new Sort<>();
-
-        System.out.println(Arrays.toString(
-                integerNegSort.quicksort(integerNegArr, 0, (integerNegArr.length -1))
-        ));
-    }
+    System.out.println(Arrays.toString(
+        integerNegSort.quicksort(integerNegArr, 0, (integerNegArr.length - 1))
+    ));
+  }
 }

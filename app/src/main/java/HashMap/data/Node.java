@@ -5,7 +5,7 @@ public class Node<K, V> {
   private final V value;
   Node<K, V> next;
 
-  public Node(K key, V value, Node<K, V>  next) {
+  public Node(K key, V value, Node<K, V> next) {
     this.key = key;
     this.value = value;
     this.next = next;

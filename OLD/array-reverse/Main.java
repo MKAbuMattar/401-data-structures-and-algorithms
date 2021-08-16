@@ -1,7 +1,7 @@
 public class Main {
   public static void main(String[] args) {
 
-    int[] arr = { 89, 2354, 3546, 23, 10, -923, 823, -12 };
+    int[] arr = {89, 2354, 3546, 23, 10, -923, 823, -12};
     int[] reverseArr = new int[arr.length];
     int tempLength = arr.length;
 

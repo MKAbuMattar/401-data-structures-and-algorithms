@@ -2,7 +2,8 @@ Blog
 
 ## Merge Sort
 
-Sorting an array by dividing it in half numerous times until it is sorted and mergeable, and then merging it.
+Sorting an array by dividing it in half numerous times until it is sorted and mergeable, and then
+merging it.
 
 ## Pseudocode
 
@@ -38,7 +39,6 @@ else
    set remaining entries in arr to remaining values in left
 ```
 
-
 ## Trace
 
 ```
@@ -69,7 +69,7 @@ Pass 6
 
 Both sides will merge once the sorting is done.
 
-Pass 7 
+Pass 7
 
 Final iteration will the finished merged array.
 

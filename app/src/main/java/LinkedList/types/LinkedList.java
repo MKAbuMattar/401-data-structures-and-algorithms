@@ -2,8 +2,6 @@ package LinkedList.types;
 
 import LinkedList.data.Node;
 
-import java.util.Collection;
-
 public class LinkedList<T> {
   private Node<T> head;
   private Node<T> last;

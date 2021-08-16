@@ -1,7 +1,5 @@
 package LinkedList.data;
 
-import java.util.LinkedList;
-
 public class Node<T> {
   private Node<T> next;
   private Node<T> prev;

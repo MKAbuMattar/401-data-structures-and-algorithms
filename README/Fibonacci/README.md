@@ -1,6 +1,7 @@
 # Reverse an Array
 
-build java method to set of integers in which each number is the sum of the two preceding or preceding numbers.
+build java method to set of integers in which each number is the sum of the two preceding or
+preceding numbers.
 
 ## Whiteboard Process
 
@@ -8,8 +9,8 @@ build java method to set of integers in which each number is the sum of the two 
 
 ## Approach & Efficiency
 
-Analyzing inputs and outputs, beginning to understand the meaning of an idea and analyze, to build algorithm to search in array as minimal time in process.
-
+Analyzing inputs and outputs, beginning to understand the meaning of an idea and analyze, to build
+algorithm to search in array as minimal time in process.
 
 ## Interview questions
 

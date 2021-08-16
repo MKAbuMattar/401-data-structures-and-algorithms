@@ -35,7 +35,6 @@ public class AppTest {
    */
 
   //Queue
-
   @BeforeEach
   public void initSetUpStack() {
 
@@ -346,7 +345,7 @@ public class AppTest {
     emptyAnimalShelter = new AnimalShelter();
 
     singleAnimalShelter = new AnimalShelter();
-    singleAnimalShelter.enqueue(new DogShelter( "KeKe", 5));
+    singleAnimalShelter.enqueue(new DogShelter("KeKe", 5));
 
     multipleAnimalShelter = new AnimalShelter();
     multipleAnimalShelter.enqueue(new DogShelter("Max", 13));
