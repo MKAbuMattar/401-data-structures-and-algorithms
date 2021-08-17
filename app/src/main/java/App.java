@@ -1,38 +1,29 @@
-import HashMapTreeIntersection.HashMapTreeIntersection;
-import Trees.types.BinarySearchTree;
+import LeftJoin.LeftJoin;
+
+import java.util.*;
 
 
 public class App {
   public static void main(String[] args) {
+    HashMap<String, String> map1 = new HashMap<>();
+    HashMap<String, String> map2 = new HashMap<>();
 
-    BinarySearchTree<Integer> intFirstTree = new BinarySearchTree<>();
-    BinarySearchTree<Integer> intSecondTree = new BinarySearchTree<>();
+    map1.put("fond","enamored");
+    map1.put("wrath","anger");
+    map1.put("diligent","employed");
+    map1.put("outift","grab");
+    map1.put("guide","usher");
 
-    intFirstTree.add(150);
-    intFirstTree.add(100);
-    intFirstTree.add(250);
-    intFirstTree.add(75);
-    intFirstTree.add(160);
-    intFirstTree.add(-200);
-    intFirstTree.add(-350);
-    intFirstTree.add(125);
-    intFirstTree.add(-175);
-    intFirstTree.add(300);
-    intFirstTree.add(500);
+    map2.put("fond","averse");
+    map2.put("wrath","delight");
+    map2.put("diligent","idle");
+    map2.put("guide","follow");
+    map2.put("flow","jam");
 
-    intSecondTree.add(42);
-    intSecondTree.add(100);
-    intSecondTree.add(1);
-    intSecondTree.add(-200);
-    intSecondTree.add(-350);
-    intSecondTree.add(125);
-    intSecondTree.add(-175);
-    intSecondTree.add(4);
-    intSecondTree.add(500);
+    LeftJoin lj = new LeftJoin();
+    System.out.println(lj.leftJoin(map1, map2));
 
-    HashMapTreeIntersection hashMapTreeIntersection = new HashMapTreeIntersection();
 
-    System.out.println(hashMapTreeIntersection.hashMapTreeIntersection(intFirstTree, intSecondTree));
 
   }
 }

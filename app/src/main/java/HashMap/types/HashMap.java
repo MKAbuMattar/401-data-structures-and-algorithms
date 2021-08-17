@@ -2,10 +2,14 @@ package HashMap.types;
 
 import HashMap.data.Node;
 
+import java.util.*;
+import java.util.function.Consumer;
+
 public class HashMap<K, V> {
 
   private Node<K, V>[] array;
   private int size;
+  transient Set<Node<K, V>> entrySet;
 
   public HashMap() {
     array = new Node[10];
@@ -93,4 +97,5 @@ public class HashMap<K, V> {
   public int getSize() {
     return size;
   }
+
 }

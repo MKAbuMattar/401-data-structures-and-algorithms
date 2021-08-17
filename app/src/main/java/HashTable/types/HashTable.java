@@ -11,6 +11,26 @@ public class HashTable<V> {
   private int numBucket;
   private int size;
 
+  public LinkedList<Node<V>> getBucketArray() {
+    return bucketArray;
+  }
+
+  public void setBucketArray(LinkedList<Node<V>> bucketArray) {
+    this.bucketArray = bucketArray;
+  }
+
+  public int getNumBucket() {
+    return numBucket;
+  }
+
+  public void setNumBucket(int numBucket) {
+    this.numBucket = numBucket;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+
   public HashTable() {
 
     bucketArray = new LinkedList<>();
