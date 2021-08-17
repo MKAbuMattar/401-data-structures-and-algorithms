@@ -98,4 +98,20 @@ public class HashMap<K, V> {
     return size;
   }
 
+  public boolean contain(K key){
+    return get(key)!= null;
+  }
+
+  public List<K> keySet(){
+    List<K> keyList = new ArrayList<>();
+    for (Node<K,V> node : array){
+      if (node!=null){
+        if (node.getKey()!=null){
+          keyList.add(node.getKey());
+        }
+      }
+    }
+    return keyList;
+  }
+
 }

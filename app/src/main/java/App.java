@@ -1,6 +1,10 @@
+import HashMap.types.HashMap;
 import LeftJoin.LeftJoin;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+
+//import java.util.*;
 
 
 public class App {
@@ -21,7 +25,13 @@ public class App {
     map2.put("flow","jam");
 
     LeftJoin lj = new LeftJoin();
-    System.out.println(lj.leftJoin(map1, map2));
+
+    List<String[]> list = lj.leftJoin(map1,map2);
+    System.out.println(Arrays.toString(list.get(2)));
+
+//    for (String[] item : list){
+//      System.out.println(Arrays.toString(item));
+//    }
 
 
 
