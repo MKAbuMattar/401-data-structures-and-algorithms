@@ -1,8 +1,8 @@
 package HashMap.data;
 
 public class Node<K, V> {
-  private final K key;
-  private final V value;
+  private K key;
+  private  V value;
   Node<K, V> next;
 
   public Node(K key, V value, Node<K, V> next) {
@@ -16,12 +16,23 @@ public class Node<K, V> {
     this.value = value;
   }
 
+  public Node() {
+  }
+
   public K getKey() {
     return key;
   }
 
   public V getValue() {
     return value;
+  }
+
+  public void setKey(K key) {
+    this.key = key;
+  }
+
+  public void setValue(V value) {
+    this.value = value;
   }
 
   @Override
