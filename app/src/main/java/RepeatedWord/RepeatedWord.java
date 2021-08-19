@@ -10,7 +10,7 @@ public class RepeatedWord {
   private static final String PATTERN = "\\W+";
 
   public String repeatedWord(String str) {
-    String[] words = str.split(PATTERN);
+    String[] words = str.toLowerCase().split(PATTERN);
     ImplementHashMap<String> wordTable = new ImplementHashMap<>();
     for (String word : words) {
       if (wordTable.contains(word)) {
@@ -25,7 +25,7 @@ public class RepeatedWord {
   public String repeatedWords(String str) {
     int count;
     ImplementHashMap<String> temp = new ImplementHashMap<>();
-    String[] words = str.split(PATTERN);
+    String[] words = str.toLowerCase().split(PATTERN);
 
     for (int i = 0; i < words.length; i++) {
       count = 1;

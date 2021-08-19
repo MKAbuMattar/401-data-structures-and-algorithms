@@ -2,14 +2,15 @@ package HashMap.types;
 
 import HashMap.data.Node;
 
-import java.util.*;
-import java.util.function.Consumer;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class HashMap<K, V> {
 
+  transient Set<Node<K, V>> entrySet;
   private Node<K, V>[] array;
   private int size;
-  transient Set<Node<K, V>> entrySet;
 
   public HashMap() {
     array = new Node[10];
@@ -98,15 +99,15 @@ public class HashMap<K, V> {
     return size;
   }
 
-  public boolean contain(K key){
-    return get(key)!= null;
+  public boolean contain(K key) {
+    return get(key) != null;
   }
 
-  public List<K> keySet(){
+  public List<K> keySet() {
     List<K> keyList = new ArrayList<>();
-    for (Node<K,V> node : array){
-      if (node!=null){
-        if (node.getKey()!=null){
+    for (Node<K, V> node : array) {
+      if (node != null) {
+        if (node.getKey() != null) {
           keyList.add(node.getKey());
         }
       }

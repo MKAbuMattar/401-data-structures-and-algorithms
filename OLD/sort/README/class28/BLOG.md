@@ -81,6 +81,7 @@ pivot value. There is no swap because 42 is more than 23. Because 16 is less tha
 with the low index of 3. The partition index of 4 is defined by swapping 23 with 42. Then, using 3
 as the left and right values, we call quicksort. Nothing is done since 3 is not less than 3. Then,
 with 5 as the left and right values, we call quicksort. Nothing is done because 5 is not less than
+
 5. We've completed the right half of 15!
 
 Pass 7
