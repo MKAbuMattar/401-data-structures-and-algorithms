@@ -18,4 +18,5 @@
 | HashTable | [Link](./README/HashTable/) |
 | HashMap | [Link](./README/HashMap/) |
 | HashMap Tree Intersection | [Link](./README/HashMapTreeIntersection/) |
-
+| LeftJoin | [Link](./README/LeftJoin/) |
+| Graph | [Link](./README/Graph/) |

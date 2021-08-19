@@ -1,9 +1,9 @@
 package HashMap.data;
 
 public class Node<K, V> {
-  private K key;
-  private  V value;
   Node<K, V> next;
+  private K key;
+  private V value;
 
   public Node(K key, V value, Node<K, V> next) {
     this.key = key;
@@ -23,12 +23,12 @@ public class Node<K, V> {
     return key;
   }
 
-  public V getValue() {
-    return value;
-  }
-
   public void setKey(K key) {
     this.key = key;
+  }
+
+  public V getValue() {
+    return value;
   }
 
   public void setValue(V value) {

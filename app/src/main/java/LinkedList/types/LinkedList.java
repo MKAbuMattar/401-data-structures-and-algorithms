@@ -329,4 +329,12 @@ public class LinkedList<T> {
     return showList.toString();
   }
 
+  public boolean contains(T conn) {
+    for (int i = 0; i < this.getSize(); i++) {
+      if (this.get(i) == conn) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

@@ -11,6 +11,18 @@ public class HashTable<V> {
   private int numBucket;
   private int size;
 
+  public HashTable() {
+
+    bucketArray = new LinkedList<>();
+    numBucket = 10;
+    size = 0;
+
+    for (int index = 0; index < numBucket; index++) {
+      bucketArray.append(null);
+    }
+
+  }
+
   public LinkedList<Node<V>> getBucketArray() {
     return bucketArray;
   }
@@ -27,22 +39,6 @@ public class HashTable<V> {
     this.numBucket = numBucket;
   }
 
-  public void setSize(int size) {
-    this.size = size;
-  }
-
-  public HashTable() {
-
-    bucketArray = new LinkedList<>();
-    numBucket = 10;
-    size = 0;
-
-    for (int index = 0; index < numBucket; index++) {
-      bucketArray.append(null);
-    }
-
-  }
-
   private int hashCode(String key) {
     return Objects.hashCode(key);
   }
@@ -55,6 +51,10 @@ public class HashTable<V> {
 
   public int getSize() {
     return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
   }
 
   public boolean isEmpty() {

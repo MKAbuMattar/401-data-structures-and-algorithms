@@ -30,27 +30,27 @@ public class LeftJoin {
 //  }
 
   public List<String[]> leftJoin(
-      HashMap<String,String> firstHashMap,
-      HashMap<String,String> secondHashMap
-  ){
+      HashMap<String, String> firstHashMap,
+      HashMap<String, String> secondHashMap
+  ) {
 
     List<String[]> result = new ArrayList<>();
 
     List<String> firstMapKeys = firstHashMap.keySet();
 
-    if(firstMapKeys.size()>0){
-      for (String key : firstMapKeys){
-        if (secondHashMap.contain(key)){
-          String[] joinedValues = {key ,firstHashMap.get(key) , secondHashMap.get(key)};
+    if (firstMapKeys.size() > 0) {
+      for (String key : firstMapKeys) {
+        if (secondHashMap.contain(key)) {
+          String[] joinedValues = {key, firstHashMap.get(key), secondHashMap.get(key)};
           result.add(joinedValues);
         } else {
-          String[] joinedValues = {key ,firstHashMap.get(key),"NULL"};
+          String[] joinedValues = {key, firstHashMap.get(key), "NULL"};
           result.add(joinedValues);
         }
       }
     }
 
-    return (result != null) ? result : null ;
+    return (result != null) ? result : null;
   }
 
 }
