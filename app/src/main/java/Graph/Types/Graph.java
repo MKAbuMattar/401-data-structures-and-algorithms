@@ -60,10 +60,12 @@ public class Graph<T, W> {
 
   public Queue<T> breadthFirst() {
 
-    T node = null;
+    T node;
 
-    if(getSize() > 0){
+    if(!Objects.equals(getNodes().toString(), "[]")){
       node = getNodes().get(0);
+    } else {
+      return null;
     }
 
 

@@ -150,39 +150,43 @@ public class App {
 //
 //    System.out.println(airports.breadthFirst("Azraq - Muwaffaq Salti Air Base"));
 
-    Graph<String, Integer> test = new Graph<>();
-    test.addNode("Pandora");
-    test.addNode("Arendelle");
-    test.addNode("Metroville");
-    test.addNode("Monstropolis");
-    test.addNode("Narnia");
-    test.addNode("Naboo");
+//    Graph<String, Integer> test = new Graph<>();
+//    test.addNode("Pandora");
+//    test.addNode("Arendelle");
+//    test.addNode("Metroville");
+//    test.addNode("Monstropolis");
+//    test.addNode("Narnia");
+//    test.addNode("Naboo");
+//
+//    test.addEdge("Pandora", "Arendelle");
+//
+//    test.addEdge("Arendelle", "Pandora");
+//    test.addEdge("Arendelle", "Metroville");
+//    test.addEdge("Arendelle", "Monstropolis");
+//
+//    test.addEdge("Metroville", "Arendelle");
+//    test.addEdge("Metroville", "Monstropolis");
+//    test.addEdge("Metroville", "Narnia");
+//    test.addEdge("Metroville", "Naboo");
+//
+//    test.addEdge("Monstropolis", "Arendelle");
+//    test.addEdge("Monstropolis", "Metroville");
+//    test.addEdge("Monstropolis", "Naboo");
+//
+//    test.addEdge("Naboo", "Monstropolis");
+//    test.addEdge("Naboo", "Metroville");
+//    test.addEdge("Naboo", "Naboo");
+//
+//    test.addEdge("Narnia", "Naboo");
+//    test.addEdge("Narnia", "Metroville");
+//
+//    System.out.println(test.breadthFirst());
+//    System.out.println(test.breadthFirstTraversal("Pandora"));
+//    System.out.println(test.getNodes());
 
-    test.addEdge("Pandora", "Arendelle");
-
-    test.addEdge("Arendelle", "Pandora");
-    test.addEdge("Arendelle", "Metroville");
-    test.addEdge("Arendelle", "Monstropolis");
-
-    test.addEdge("Metroville", "Arendelle");
-    test.addEdge("Metroville", "Monstropolis");
-    test.addEdge("Metroville", "Narnia");
-    test.addEdge("Metroville", "Naboo");
-
-    test.addEdge("Monstropolis", "Arendelle");
-    test.addEdge("Monstropolis", "Metroville");
-    test.addEdge("Monstropolis", "Naboo");
-
-    test.addEdge("Naboo", "Monstropolis");
-    test.addEdge("Naboo", "Metroville");
-    test.addEdge("Naboo", "Naboo");
-
-    test.addEdge("Narnia", "Naboo");
-    test.addEdge("Narnia", "Metroville");
-
-    System.out.println(test.breadthFirst());
-    System.out.println(test.breadthFirstTraversal("Pandora"));
-    System.out.println(test.getNodes());
+    Graph<Integer, Integer> empty = new Graph<>();
+//    System.out.println(empty.breadthFirst());;
+    System.out.println(empty.breadthFirstTraversal(1));;
 
   }
 }
