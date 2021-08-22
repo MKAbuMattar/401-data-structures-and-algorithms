@@ -60,7 +60,12 @@ public class Graph<T, W> {
 
   public Queue<T> breadthFirst() {
 
-    T node = getNodes().get(0);
+    T node = null;
+
+    if(getSize() > 0){
+      node = getNodes().get(0);
+    }
+
 
     if (!nodes.contain(node)) {
       return null;
