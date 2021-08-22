@@ -160,6 +160,7 @@ public class App {
 
     test.addEdge("Pandora", "Arendelle");
 
+    test.addEdge("Arendelle", "Pandora");
     test.addEdge("Arendelle", "Metroville");
     test.addEdge("Arendelle", "Monstropolis");
 
@@ -179,7 +180,7 @@ public class App {
     test.addEdge("Narnia", "Naboo");
     test.addEdge("Narnia", "Metroville");
 
-    System.out.println(test.breadthFirstTraversal("Naboo"));
+    System.out.println(test.breadthFirstTraversal("Pandora"));
 
   }
 }

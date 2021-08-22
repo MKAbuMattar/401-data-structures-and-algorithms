@@ -1,6 +1,7 @@
 package Graph.Types;
 
 import Graph.Data.Edge;
+import HashMap.Implement.ImplementHashMap;
 import HashMap.types.HashMap;
 import LinkedList.types.LinkedList;
 import StackAndQueue.types.Queue;
@@ -65,7 +66,7 @@ public class Graph<T, W> {
 
     Queue<T> nodesToProcess = new Queue<>();
 
-    LinkedList<T> nodesSeen = new LinkedList<>();
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
 
     Queue<T> searchResults = new Queue<>();
 
