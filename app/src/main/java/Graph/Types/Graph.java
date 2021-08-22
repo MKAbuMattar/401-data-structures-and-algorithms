@@ -65,7 +65,7 @@ public class Graph<T, W> {
 
     Queue<T> nodesToProcess = new Queue<>();
 
-    HashSet<T> nodesSeen = new HashSet<>();
+    LinkedList<T> nodesSeen = new LinkedList<>();
 
     Queue<T> searchResults = new Queue<>();
 
@@ -76,7 +76,6 @@ public class Graph<T, W> {
     while (!nodesToProcess.isEmpty()) {
 
       LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
-
 
       for (int i = 0; i < edges.getSize(); i++) {
 
