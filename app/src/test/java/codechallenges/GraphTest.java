@@ -148,7 +148,7 @@ public class GraphTest {
         airports.breadthFirst().toString()
     );
   }
-  
+
   @Test
   public void breadthFirstTraversalTest() {
     assertEquals("{1}-> {2}-> NULL", busStops.breadthFirstTraversal(1).toString());
