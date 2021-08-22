@@ -3,6 +3,7 @@ package RepeatedWord;
 
 import HashMap.Implement.ImplementHashMap;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class RepeatedWord {
@@ -24,7 +25,27 @@ public class RepeatedWord {
 
   public String repeatedWords(String str) {
     int count;
-    ImplementHashMap<String> temp = new ImplementHashMap<>();
+    HashMap<String, Integer> temp = new HashMap<>();
+    String[] words = str.toLowerCase().split(PATTERN);
+
+    for (int i = 0; i < words.length; i++) {
+      count = 1;
+      for (int j = i + 1; j < words.length; j++) {
+        if (words[i].equals(words[j])) {
+          count++;
+          words[j] = "0";
+        }
+      }
+      if (count >= 1 && !Objects.equals(words[i], "0")) {
+        temp.put(words[i], count);
+      }
+    }
+    return temp.toString();
+  }
+
+  public String repeatedWordsFrequently(String str) {
+    int count;
+    HashMap<String, Integer> temp = new HashMap<>();
     String[] words = str.toLowerCase().split(PATTERN);
 
     for (int i = 0; i < words.length; i++) {
@@ -36,7 +57,7 @@ public class RepeatedWord {
         }
       }
       if (count > 1 && !Objects.equals(words[i], "0")) {
-        temp.add(words[i]);
+        temp.put(words[i], count);
       }
     }
     return temp.toString();
