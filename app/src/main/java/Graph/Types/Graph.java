@@ -1,8 +1,10 @@
 package Graph.Types;
 
 import Graph.Data.Edge;
+import HashMap.Implement.ImplementHashMap;
 import HashMap.types.HashMap;
 import LinkedList.types.LinkedList;
+import StackAndQueue.types.Queue;
 
 import java.util.*;
 
@@ -54,6 +56,89 @@ public class Graph<T, W> {
 
   public List<T> getNodes() {
     return nodes.keySet();
+  }
+
+  public Queue<T> breadthFirst() {
+
+    T node;
+
+    if(!Objects.equals(getNodes().toString(), "[]")){
+      node = getNodes().get(0);
+    } else {
+      return null;
+    }
+
+
+    if (!nodes.contain(node)) {
+      return null;
+    }
+
+    Queue<T> nodesToProcess = new Queue<>();
+
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
+
+    Queue<T> searchResults = new Queue<>();
+
+    nodesSeen.add(node);
+    nodesToProcess.enqueue(node);
+    searchResults.enqueue(node);
+
+    while (!nodesToProcess.isEmpty()) {
+
+      LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
+
+      for (int i = 0; i < edges.getSize(); i++) {
+
+        Edge<T, W> edge = edges.get(i);
+
+        if (!nodesSeen.contains(edge.getValue())) {
+
+          nodesToProcess.enqueue(edge.getValue());
+          searchResults.enqueue(edge.getValue());
+          nodesSeen.add(edge.getValue());
+
+        }
+      }
+    }
+
+    return searchResults;
+  }
+
+  public Queue<T> breadthFirstTraversal(T node) {
+
+    if (!nodes.contain(node)) {
+      return null;
+    }
+
+    Queue<T> nodesToProcess = new Queue<>();
+
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
+
+    Queue<T> searchResults = new Queue<>();
+
+    nodesSeen.add(node);
+    nodesToProcess.enqueue(node);
+    searchResults.enqueue(node);
+
+    while (!nodesToProcess.isEmpty()) {
+
+      LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
+
+      for (int i = 0; i < edges.getSize(); i++) {
+
+        Edge<T, W> edge = edges.get(i);
+
+        if (!nodesSeen.contains(edge.getValue())) {
+
+          nodesToProcess.enqueue(edge.getValue());
+          searchResults.enqueue(edge.getValue());
+          nodesSeen.add(edge.getValue());
+
+        }
+      }
+    }
+
+    return searchResults;
   }
 
 }
