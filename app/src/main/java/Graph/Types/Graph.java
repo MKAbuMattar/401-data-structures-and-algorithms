@@ -58,6 +58,45 @@ public class Graph<T, W> {
     return nodes.keySet();
   }
 
+  public Queue<T> breadthFirst() {
+
+    T node = getNodes().get(0);
+
+    if (!nodes.contain(node)) {
+      return null;
+    }
+
+    Queue<T> nodesToProcess = new Queue<>();
+
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
+
+    Queue<T> searchResults = new Queue<>();
+
+    nodesSeen.add(node);
+    nodesToProcess.enqueue(node);
+    searchResults.enqueue(node);
+
+    while (!nodesToProcess.isEmpty()) {
+
+      LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
+
+      for (int i = 0; i < edges.getSize(); i++) {
+
+        Edge<T, W> edge = edges.get(i);
+
+        if (!nodesSeen.contains(edge.getValue())) {
+
+          nodesToProcess.enqueue(edge.getValue());
+          searchResults.enqueue(edge.getValue());
+          nodesSeen.add(edge.getValue());
+
+        }
+      }
+    }
+
+    return searchResults;
+  }
+
   public Queue<T> breadthFirstTraversal(T node) {
 
     if (!nodes.contain(node)) {

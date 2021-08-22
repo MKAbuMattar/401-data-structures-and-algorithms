@@ -180,7 +180,9 @@ public class App {
     test.addEdge("Narnia", "Naboo");
     test.addEdge("Narnia", "Metroville");
 
+    System.out.println(test.breadthFirst());
     System.out.println(test.breadthFirstTraversal("Pandora"));
+    System.out.println(test.getNodes());
 
   }
 }
