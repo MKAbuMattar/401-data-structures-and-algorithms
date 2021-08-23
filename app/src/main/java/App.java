@@ -183,9 +183,9 @@ public class App {
 
 
     System.out.println(test.businessTrip(test, new String[]{"Metroville","Pandora"}));
-    System.out.println(test.businessTrip(test, new String[]{"Arendelle","Monstropolis","Naboo"}));
-    System.out.println(test.businessTrip(test, new String[]{"Naboo","Pandora"}));
-    System.out.println(test.businessTrip(test, new String[]{"Narnia","Arendelle","Naboo"}));
+//    System.out.println(test.businessTrip(test, new String[]{"Arendelle","Monstropolis","Naboo"}));
+//    System.out.println(test.businessTrip(test, new String[]{"Naboo","Pandora"}));
+//    System.out.println(test.businessTrip(test, new String[]{"Narnia","Arendelle","Naboo"}));
 
   }
 }

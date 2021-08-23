@@ -142,7 +142,10 @@ public class Graph<T, W> {
     return searchResults;
   }
 
-  public String businessTrip(Graph<String, Integer> graph, String[] connections) {
+  public String businessTrip(
+      Graph<String, Integer> graph,
+      String[] connections
+  ) {
 
     String result = "";
     boolean pathExists = true;
