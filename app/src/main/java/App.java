@@ -165,7 +165,6 @@ public class App {
     test.addEdge("Arendelle", "Metroville",99);
     test.addEdge("Arendelle", "Monstropolis",42);
 
-    test.addEdge("Metroville", "Pandora",82);
     test.addEdge("Metroville", "Arendelle",99);
     test.addEdge("Metroville", "Monstropolis",105);
     test.addEdge("Metroville", "Narnia",37);
@@ -173,24 +172,20 @@ public class App {
 
     test.addEdge("Monstropolis", "Arendelle",42);
     test.addEdge("Monstropolis", "Metroville",105);
-    test.addEdge("Monstropolis", "Naboo",37);
+    test.addEdge("Monstropolis", "Naboo",73);
 
-    test.addEdge("Naboo", "Monstropolis",37);
+    test.addEdge("Naboo", "Monstropolis",73);
     test.addEdge("Naboo", "Metroville",26);
     test.addEdge("Naboo", "Narnia",250);
 
     test.addEdge("Narnia", "Naboo",250);
     test.addEdge("Narnia", "Metroville",37);
 
-//    System.out.println(test.breadthFirst());
-//    System.out.println(test.breadthFirstTraversal("Pandora"));
-//    System.out.println(test.depthFirst());
-//    System.out.println(test.depthFirstTraversal("Pandora"));
-//    System.out.println(test.isPath(test, new String[]{"Pandora", "Naboo"}));
-//    System.out.println(test.isPath(test, new String[]{"Pandora", "Metroville"}));
-    System.out.println(test.businessTrip(test, new String[]{"Pandora", "Metroville",
-        "Monstropolis", "Naboo"}));
-//    System.out.println(test.isPath(test, new String[]{}));
+
+    System.out.println(test.businessTrip(test, new String[]{"Metroville","Pandora"}));
+    System.out.println(test.businessTrip(test, new String[]{"Arendelle","Monstropolis","Naboo"}));
+    System.out.println(test.businessTrip(test, new String[]{"Naboo","Pandora"}));
+    System.out.println(test.businessTrip(test, new String[]{"Narnia","Arendelle","Naboo"}));
 
   }
 }
