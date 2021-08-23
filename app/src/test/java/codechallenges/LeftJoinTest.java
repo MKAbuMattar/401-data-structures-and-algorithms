@@ -63,15 +63,15 @@ public class LeftJoinTest {
   @Test
   public void TestLeftJoinNull() {
     results = leftJoin.leftJoin(map1, map2);
-    assertEquals("[outift, grab, NULL]", Arrays.toString(results.get(4)));
+    assertEquals("[outift, grab, null]", Arrays.toString(results.get(4)));
   }
 
   @Test
   public void TestLeftJoinEmptyMapRight() {
     results = leftJoin.leftJoin(map1, emptyMap2);
-    assertEquals("[fond, enamored, NULL]", Arrays.toString(results.get(0)));
-    assertEquals("[wrath, anger, NULL]", Arrays.toString(results.get(1)));
-    assertEquals("[diligent, employed, NULL]", Arrays.toString(results.get(2)));
+    assertEquals("[fond, enamored, null]", Arrays.toString(results.get(0)));
+    assertEquals("[wrath, anger, null]", Arrays.toString(results.get(1)));
+    assertEquals("[diligent, employed, null]", Arrays.toString(results.get(2)));
   }
 
   @Test

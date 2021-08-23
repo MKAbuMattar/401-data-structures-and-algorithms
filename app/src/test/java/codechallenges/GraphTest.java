@@ -191,4 +191,49 @@ public class GraphTest {
     assertNull(empty.breadthFirstTraversal(3));
     assertNull(empty.breadthFirstTraversal(4));
   }
+
+
+  @Test
+  public void businessTripTrueTest() {
+    assertEquals("True, $53",
+        airports.businessTrip(
+            airports,
+            new String[]{
+                "Amman - Queen Alia International Airport",
+                "Aqaba - King Hussein International Airport"
+            }
+        )
+    );
+    assertEquals("True, $683",
+        airports.businessTrip(
+            airports,
+            new String[]{
+                "Aqaba - King Hussein International Airport",
+                "Mafraq - King Hussein Air Base"
+            }
+        )
+    );
+  }
+
+  @Test
+  public void businessTripFalseTest() {
+    assertEquals("False, $0",
+        airports.businessTrip(
+            airports,
+            new String[]{
+                "Amman - Queen Alia International Airport",
+                ""
+            }
+        )
+    );
+    assertEquals("False, $0",
+        airports.businessTrip(
+            airports,
+            new String[]{
+                "Aqaba - King Hussein International Airport",
+                "Dafyanah - Prince Hassan Air Base"
+            }
+        )
+    );
+  }
 }

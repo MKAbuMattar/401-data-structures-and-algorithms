@@ -5,6 +5,7 @@ import HashMap.Implement.ImplementHashMap;
 import HashMap.types.HashMap;
 import LinkedList.types.LinkedList;
 import StackAndQueue.types.Queue;
+import StackAndQueue.types.Stack;
 
 import java.util.*;
 
@@ -139,6 +140,56 @@ public class Graph<T, W> {
     }
 
     return searchResults;
+  }
+
+  public String businessTrip(
+      Graph<String, Integer> graph,
+      String[] connections
+  ) {
+
+    String result = "";
+    boolean pathExists = true;
+    Integer cost = 0;
+
+    if (connections.length <= 1) {
+      pathExists = false;
+    } else {
+
+      for (String conn : connections) {
+        if (!graph.getNodes().contains(conn)) {
+          pathExists = false;
+        }
+      }
+
+      for (int i = 0; i < connections.length - 1 && pathExists; i++) {
+
+        LinkedList<Edge<String, Integer>> links = graph.getNeighbors(connections[i]);
+
+        pathExists = false;
+
+        for (int j = 0; j < links.getSize(); j++) {
+
+          Edge<String, Integer> link = links.get(j);
+
+          if (link.getValue().equals(connections[i + 1])) {
+
+            pathExists = true;
+            cost += link.getWeight();
+
+          }
+
+        }
+      }
+
+    }
+
+    if (pathExists) {
+      result = "True, $" + cost;
+    } else {
+      result = "False, $" + cost;
+    }
+
+    return result;
   }
 
 }
