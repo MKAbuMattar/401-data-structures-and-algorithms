@@ -44,7 +44,7 @@ public class LeftJoin {
           String[] joinedValues = {key, firstHashMap.get(key), secondHashMap.get(key)};
           result.add(joinedValues);
         } else {
-          String[] joinedValues = {key, firstHashMap.get(key), "NULL"};
+          String[] joinedValues = {key, firstHashMap.get(key), null};
           result.add(joinedValues);
         }
       }

@@ -13,7 +13,7 @@ public class App {
 //    System.out.println("repeated word ==>> "+ word.repeatedWord(str));
 //    System.out.println("repeated words ==>> "+ word.repeatedWords(str));
 //    System.out.println("repeated words frequently ==>> "+ word.repeatedWordsFrequently(str));
-
+//
 //    HashMap<String, String> map1 = new HashMap<>();
 //    HashMap<String, String> map2 = new HashMap<>();
 //
@@ -32,7 +32,7 @@ public class App {
 //    LeftJoin lj = new LeftJoin();
 //
 //    List<String[]> list = lj.leftJoin(map1,map2);
-//    System.out.println(Arrays.toString(list.get(2)));
+//    System.out.println(Arrays.toString(list.get(4)));
 //
 ////    for (String[] item : list){
 ////      System.out.println(Arrays.toString(item));
@@ -150,43 +150,47 @@ public class App {
 //
 //    System.out.println(airports.breadthFirst("Azraq - Muwaffaq Salti Air Base"));
 
-//    Graph<String, Integer> test = new Graph<>();
-//    test.addNode("Pandora");
-//    test.addNode("Arendelle");
-//    test.addNode("Metroville");
-//    test.addNode("Monstropolis");
-//    test.addNode("Narnia");
-//    test.addNode("Naboo");
-//
-//    test.addEdge("Pandora", "Arendelle");
-//
-//    test.addEdge("Arendelle", "Pandora");
-//    test.addEdge("Arendelle", "Metroville");
-//    test.addEdge("Arendelle", "Monstropolis");
-//
-//    test.addEdge("Metroville", "Arendelle");
-//    test.addEdge("Metroville", "Monstropolis");
-//    test.addEdge("Metroville", "Narnia");
-//    test.addEdge("Metroville", "Naboo");
-//
-//    test.addEdge("Monstropolis", "Arendelle");
-//    test.addEdge("Monstropolis", "Metroville");
-//    test.addEdge("Monstropolis", "Naboo");
-//
-//    test.addEdge("Naboo", "Monstropolis");
-//    test.addEdge("Naboo", "Metroville");
-//    test.addEdge("Naboo", "Naboo");
-//
-//    test.addEdge("Narnia", "Naboo");
-//    test.addEdge("Narnia", "Metroville");
-//
+    Graph<String, Integer> test = new Graph<>();
+    test.addNode("Pandora");
+    test.addNode("Arendelle");
+    test.addNode("Metroville");
+    test.addNode("Monstropolis");
+    test.addNode("Narnia");
+    test.addNode("Naboo");
+
+    test.addEdge("Pandora", "Arendelle", 150);
+    test.addEdge("Pandora", "Metroville", 82);
+
+    test.addEdge("Arendelle", "Pandora", 150);
+    test.addEdge("Arendelle", "Metroville",99);
+    test.addEdge("Arendelle", "Monstropolis",42);
+
+    test.addEdge("Metroville", "Pandora",82);
+    test.addEdge("Metroville", "Arendelle",99);
+    test.addEdge("Metroville", "Monstropolis",105);
+    test.addEdge("Metroville", "Narnia",37);
+    test.addEdge("Metroville", "Naboo",26);
+
+    test.addEdge("Monstropolis", "Arendelle",42);
+    test.addEdge("Monstropolis", "Metroville",105);
+    test.addEdge("Monstropolis", "Naboo",37);
+
+    test.addEdge("Naboo", "Monstropolis",37);
+    test.addEdge("Naboo", "Metroville",26);
+    test.addEdge("Naboo", "Narnia",250);
+
+    test.addEdge("Narnia", "Naboo",250);
+    test.addEdge("Narnia", "Metroville",37);
+
 //    System.out.println(test.breadthFirst());
 //    System.out.println(test.breadthFirstTraversal("Pandora"));
-//    System.out.println(test.getNodes());
-
-    Graph<Integer, Integer> empty = new Graph<>();
-//    System.out.println(empty.breadthFirst());;
-    System.out.println(empty.breadthFirstTraversal(1));;
+//    System.out.println(test.depthFirst());
+//    System.out.println(test.depthFirstTraversal("Pandora"));
+//    System.out.println(test.isPath(test, new String[]{"Pandora", "Naboo"}));
+//    System.out.println(test.isPath(test, new String[]{"Pandora", "Metroville"}));
+    System.out.println(test.businessTrip(test, new String[]{"Pandora", "Metroville",
+        "Monstropolis", "Naboo"}));
+//    System.out.println(test.isPath(test, new String[]{}));
 
   }
 }
