@@ -193,7 +193,5 @@ public class App {
 
     System.out.println(test.depthFirst());
     System.out.println(test.depthFirstTraversal("Naboo"));
-
-
   }
 }
