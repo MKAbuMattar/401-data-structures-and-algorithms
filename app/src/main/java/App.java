@@ -182,10 +182,18 @@ public class App {
     test.addEdge("Narnia", "Metroville",37);
 
 
+    System.out.println(test.businessTrip(test, new String[]{}));
+    System.out.println(test.businessTrip(test, new String[]{"Naboo"}));
+    System.out.println(test.businessTrip(test, new String[]{"BarBados"}));
     System.out.println(test.businessTrip(test, new String[]{"Metroville","Pandora"}));
-//    System.out.println(test.businessTrip(test, new String[]{"Arendelle","Monstropolis","Naboo"}));
-//    System.out.println(test.businessTrip(test, new String[]{"Naboo","Pandora"}));
-//    System.out.println(test.businessTrip(test, new String[]{"Narnia","Arendelle","Naboo"}));
+    System.out.println(test.businessTrip(test, new String[]{"Arendelle","Monstropolis","Naboo"}));
+    System.out.println(test.businessTrip(test, new String[]{"Naboo","Pandora"}));
+    System.out.println(test.businessTrip(test, new String[]{"Narnia","Arendelle","Naboo"}));
+
+
+    System.out.println(test.depthFirst());
+    System.out.println(test.depthFirstTraversal("Naboo"));
+
 
   }
 }
