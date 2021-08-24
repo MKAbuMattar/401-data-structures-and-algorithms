@@ -236,4 +236,15 @@ public class GraphTest {
         )
     );
   }
+
+  @Test
+  public void depthFirstTest() {
+    assertEquals("{1}-> {2}-> NULL", busStops.depthFirst().toString());
+    assertEquals(
+        "{Azraq - Muwaffaq Salti Air Base}-> {Assab - H-4 Air Base}-> {Amman - Queen Alia International Airport}-> {Amman - Amman Civil Airport}-> {Aqaba - King Hussein International Airport}-> {Mafraq - King Hussein Air Base}-> {Dafyanah - Prince Hassan Air Base}-> NULL",
+        airports.depthFirst().toString()
+    );
+
+    assertNull(empty.depthFirst());
+  }
 }
