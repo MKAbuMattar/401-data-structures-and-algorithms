@@ -1,15 +1,15 @@
 package Graph.Data;
 
-public class Edge<T, W> {
+public class Vertex<T, W> {
 
   private T value;
   private W weight;
 
-  public Edge(T value) {
+  public Vertex(T value) {
     this.value = value;
   }
 
-  public Edge(T value, W weight) {
+  public Vertex(T value, W weight) {
     this.value = value;
     this.weight = weight;
   }

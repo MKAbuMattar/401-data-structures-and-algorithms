@@ -1,6 +1,6 @@
 package Graph.Types;
 
-import Graph.Data.Edge;
+import Graph.Data.Vertex;
 import HashMap.Implement.ImplementHashMap;
 import HashMap.types.HashMap;
 import LinkedList.types.LinkedList;
@@ -12,7 +12,7 @@ import java.util.*;
 
 public class Graph<T, W> {
 
-  private HashMap<T, LinkedList<Edge<T, W>>> nodes;
+  private HashMap<T, LinkedList<Vertex<T, W>>> nodes;
   private long size;
 
   public Graph() {
@@ -34,8 +34,8 @@ public class Graph<T, W> {
       return;
     }
 
-    nodes.get(firstNode).add(new Edge<T, W>(secondValue));
-    nodes.get(secondValue).add(new Edge<T, W>(firstNode));
+    nodes.get(firstNode).add(new Vertex<T, W>(secondValue));
+    nodes.get(secondValue).add(new Vertex<T, W>(firstNode));
   }
 
   public void addEdge(T firstNode, T secondValue, W weight){
@@ -43,11 +43,11 @@ public class Graph<T, W> {
       return;
     }
 
-    nodes.get(firstNode).add(new Edge<T, W>(secondValue, weight));
-    nodes.get(secondValue).add(new Edge<T, W>(firstNode, weight));
+    nodes.get(firstNode).add(new Vertex<T, W>(secondValue, weight));
+    nodes.get(secondValue).add(new Vertex<T, W>(firstNode, weight));
   }
 
-  public LinkedList<Edge<T, W>> getNeighbors(T node) {
+  public LinkedList<Vertex<T, W>> getNeighbors(T node) {
     if (!nodes.contain(node)) {
       return null;
     }
@@ -86,11 +86,11 @@ public class Graph<T, W> {
 
     while (!nodesToProcess.isEmpty()) {
 
-      LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
+      LinkedList<Vertex<T, W>> edges = nodes.get(nodesToProcess.dequeue());
 
       for (int i = 0; i < edges.getSize(); i++) {
 
-        Edge<T, W> edge = edges.get(i);
+        Vertex<T, W> edge = edges.get(i);
 
         if (!nodesSeen.contains(edge.getValue())) {
 
@@ -123,11 +123,11 @@ public class Graph<T, W> {
 
     while (!nodesToProcess.isEmpty()) {
 
-      LinkedList<Edge<T, W>> edges = nodes.get(nodesToProcess.dequeue());
+      LinkedList<Vertex<T, W>> edges = nodes.get(nodesToProcess.dequeue());
 
       for (int i = 0; i < edges.getSize(); i++) {
 
-        Edge<T, W> edge = edges.get(i);
+        Vertex<T, W> edge = edges.get(i);
 
         if (!nodesSeen.contains(edge.getValue())) {
 
@@ -142,36 +142,116 @@ public class Graph<T, W> {
     return searchResults;
   }
 
+  public Queue<T> depthFirst() {
+
+    T node;
+
+    if(!Objects.equals(getNodes().toString(), "[]")){
+      node = getNodes().get(0);
+    } else {
+      return null;
+    }
+
+    if (!nodes.contain(node)) {
+      return null;
+    }
+
+    Stack<T> nodesToProcess = new Stack<>();
+
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
+
+    Queue<T> searchResults = new Queue<>();
+
+    nodesSeen.add(node);
+    nodesToProcess.push(node);
+    searchResults.enqueue(node);
+
+    while (!nodesToProcess.isEmpty()) {
+
+      LinkedList<Vertex<T, W>> edges = nodes.get(nodesToProcess.pop());
+
+      for (int i = 0; i < edges.getSize(); i++) {
+
+        Vertex<T, W> edge = edges.get(i);
+
+        if (!nodesSeen.contains(edge.getValue())) {
+          nodesToProcess.push(edge.getValue());
+          searchResults.enqueue(edge.getValue());
+          nodesSeen.add(edge.getValue());
+        }
+
+      }
+    }
+
+    return searchResults;
+  }
+
+  public Queue<T> depthFirstTraversal(T node) {
+
+    if (!nodes.contain(node)) {
+      return null;
+    }
+
+    Stack<T> nodesToProcess = new Stack<>();
+
+    ImplementHashMap<T> nodesSeen = new ImplementHashMap<>();
+
+    Queue<T> searchResults = new Queue<>();
+
+    nodesSeen.add(node);
+    nodesToProcess.push(node);
+    searchResults.enqueue(node);
+
+    while (!nodesToProcess.isEmpty()) {
+
+      LinkedList<Vertex<T, W>> edges = nodes.get(nodesToProcess.pop());
+
+      for (int i = 0; i < edges.getSize(); i++) {
+
+        Vertex<T, W> edge = edges.get(i);
+
+        if (!nodesSeen.contains(edge.getValue())) {
+          nodesToProcess.push(edge.getValue());
+          searchResults.enqueue(edge.getValue());
+          nodesSeen.add(edge.getValue());
+        }
+
+      }
+    }
+
+    return searchResults;
+  }
+
   public String businessTrip(
-      Graph<String, Integer> graph,
-      String[] connections
+      Graph<String, Integer> routeMap,
+      String[] itinerary
   ) {
 
     String result = "";
     boolean pathExists = true;
     Integer cost = 0;
 
-    if (connections.length <= 1) {
+    if (itinerary.length <= 1) {
       pathExists = false;
     } else {
 
-      for (String conn : connections) {
-        if (!graph.getNodes().contains(conn)) {
+      for (String destination : itinerary) {
+        if (!routeMap.getNodes().contains(destination)) {
           pathExists = false;
         }
       }
 
-      for (int i = 0; i < connections.length - 1 && pathExists; i++) {
+      for (int index = 0; index < itinerary.length - 1 && pathExists; index++) {
 
-        LinkedList<Edge<String, Integer>> links = graph.getNeighbors(connections[i]);
+        LinkedList<Vertex<String, Integer>> links = routeMap.getNeighbors(itinerary[index]);
 
         pathExists = false;
 
         for (int j = 0; j < links.getSize(); j++) {
 
-          Edge<String, Integer> link = links.get(j);
+          Vertex<String, Integer> link = links.get(j);
 
-          if (link.getValue().equals(connections[i + 1])) {
+          if (link.getValue().equals(itinerary[index + 1])) {
 
             pathExists = true;
             cost += link.getWeight();

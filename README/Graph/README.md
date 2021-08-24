@@ -73,3 +73,22 @@ The Big O space is O(n) / time is O(n).
 ## Solution
 
 ![](./challenge37.jpg)
+
+
+# Code Challenge: Class 38
+
+## Challenge Summary
+
+Creat a depth first preorder on a graph.
+
+
+## Challenge Description
+
+Create a function that takes an adjacency list as a graph and traverses it from the bottom up. Return a collection of nodes in their pre-order depth-first traversal order without using any of your language's built-in functions.
+## Approach & Efficiency
+
+The Big O space is O(n*2) / time is O(n).
+
+## Solution
+
+![](./challenge38.jpg)
